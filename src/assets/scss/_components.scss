@@ -1,0 +1,139 @@
+/**
+* icon system
+*/
+
+.default-icon {
+    --size-base: 30px;
+    --size-child: 14px;
+
+    flex: 0 0 var(--size-base);
+    max-width: var(--size-base);
+    max-height: var(--size-base);
+    font-size: var(--size-child);
+    height: var(--size-base);
+    color: currentColor;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &>* {
+        font-size: var(--size-child);
+        max-height: var(--size-child);
+        max-width: var(--size-child);
+        object-fit: contain;
+        margin: 0;
+        color: currentColor;
+    }
+}
+
+.input-icon {
+    --size-base: 16px;
+    --size-child: 10px;
+}
+
+.sm-icon {
+    --size-base: 30px;
+    --size-child: 18px;
+}
+
+.md-icon {
+    --size-base: 30px;
+    --size-child: 21px;
+}
+
+.b-icon {
+    --size-base: 49px;
+    --size-child: 42px;
+}
+
+.badge-info {
+    --size: 22px;
+    font-size: 11px;
+    height: var(--size);
+    width: var(--size);
+    flex: 0 0 var(--size);
+    color: white;
+    background-color: skyblue;
+    border-radius: calc(var(--size) / 2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: inherit;
+        line-height: 1em;
+    }
+}
+
+.tag-primary {
+    --size-element: 21px;
+    height: var(--size-element);
+    padding: 10px 0;
+    background-color: rgba(103, 20, 143, 1);
+    color: white;
+    border-radius: calc(var(--size-element) / 2);
+
+    font-size: 12px;
+    font-weight: 500;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: inherit;
+        line-height: 1em;
+        padding: 0 10px;
+    }
+}
+
+.primary-button {
+    --size-element: 36px;
+    height: var(--size-element);
+    border-radius: calc(var(--size-element) / 2);
+    background-color: rgba(103, 20, 143, 1);
+    padding: 2px;
+    min-width: 1px;
+    border: none;
+
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--icon {
+        --size-element: 32px;
+        height: var(--size-element);
+        width: var(--size-element);
+        flex: 0 0 var(--size-element);
+        background-color: white;
+        border-radius: calc(var(--size-element) / 2);
+
+        svg {
+            fill: rgba(103, 20, 143, 1);
+        }
+    }
+
+    &--content {
+        padding: 0;
+        color: white;
+        width: 0px;
+        overflow: hidden;
+
+        transition: .3s all ease-in-out;
+    }
+
+    &:hover, &.active {
+        min-width: 152px;
+        cursor: pointer;
+
+        .primary-button {
+            &--content {
+                padding: 0 16px;
+                min-width: 49px;
+                overflow: visible;
+            }
+        }
+    }
+}
