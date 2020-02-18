@@ -1,4 +1,51 @@
 :root {
-    --color-primary: rgb(149, 80, 182);
-    --color-primary-dark: rgb(149, 80, 182);
+  --color-primary: rgb(149, 80, 182);
+  --color-primary-dark: rgb(149, 80, 182);
+}
+
+.ico {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &.register-primary,
+  &.register-alternate,
+  &.save-primary,
+  &.save-alternate {
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      background-position: center;
+      background-size: contain;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &.register-primary {
+    &::before {
+      background-image: url("assets/svg/register-primary.svg");
+    }
+  }
+
+  &.register-alternate {
+    &::before {
+      background-image: url("assets/svg/register-alternate.svg");
+    }
+  }
+
+  &.save-primary {
+    &::before {
+      background-image: url("assets/svg/save-primary.svg");
+    }
+  }
+  &.save-alternate {
+    &::before {
+      background-image: url("assets/svg/save-alternate.svg");
+    }
+  }
 }
