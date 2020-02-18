@@ -34,7 +34,7 @@
     flex: 0 0 var(--size-grid);
     padding: 0 15px;
     width: var(--size-grid);
-    background: linear-gradient(90deg, tomato, green);
+    // background: linear-gradient(90deg, tomato, green);
   }
 }
 
@@ -71,7 +71,7 @@
       --size-grid: calc((var(--size-base) * #{$i}) / 12);
       flex: 0 0 var(--size-grid);
       padding: 0 15px;
-      background: linear-gradient(90deg, tomato, blue);
+      // background: linear-gradient(90deg, tomato, blue);
     }
   }
 
@@ -86,7 +86,7 @@
       --size-grid: calc((var(--size-base) * #{$i}) / 12);
       flex: 0 0 var(--size-grid);
       padding: 0 15px;
-      background: linear-gradient(90deg, tomato, skyblue);
+      // background: linear-gradient(90deg, tomato, skyblue);
     }
   }
 

@@ -1,6 +1,9 @@
 :root {
   --color-primary: rgb(149, 80, 182);
-  --color-primary-dark: rgb(149, 80, 182);
+  --color-primary-dark: rgb(103, 20, 143);
+  --color-primary-light: rgb(212, 142, 245);
+
+  --font-display: 'Quicksand', sans-serif;
 }
 
 .ico {
@@ -11,7 +14,9 @@
   &.register-primary,
   &.register-alternate,
   &.save-primary,
-  &.save-alternate {
+  &.save-alternate,
+  &.home-primary,
+  &.home-alternate {
     &::before {
       content: '';
       position: absolute;
@@ -46,6 +51,11 @@
   &.save-alternate {
     &::before {
       background-image: url("assets/svg/save-alternate.svg");
+    }
+  }
+  &.home-alternate {
+    &::before {
+      background-image: url("assets/svg/home-alternate.svg");
     }
   }
 }
