@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AccessComponent } from './components/access/access.component';
 import { NavComponent } from './components/nav/nav.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

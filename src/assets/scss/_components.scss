@@ -98,6 +98,8 @@
     padding: 2px;
     min-width: 1px;
     border: none;
+    font-family: var(--font-display);
+    text-transform: capitalize;
 
     display: inline-flex;
     justify-content: flex-start;

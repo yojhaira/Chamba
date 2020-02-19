@@ -16,7 +16,8 @@
   &.save-primary,
   &.save-alternate,
   &.home-primary,
-  &.home-alternate {
+  &.home-alternate,
+  &.search-primary {
     &::before {
       content: '';
       position: absolute;
@@ -56,6 +57,11 @@
   &.home-alternate {
     &::before {
       background-image: url("assets/svg/home-alternate.svg");
+    }
+  }
+  &.search-primary {
+    &::before {
+      background-image: url("assets/svg/save-primary.svg");
     }
   }
 }
