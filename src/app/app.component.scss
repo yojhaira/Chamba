@@ -3,4 +3,12 @@
     &-nav {
         flex: 0 0 126px;
     }
+
+    &-content {
+        flex-grow: 1;
+        border-bottom-left-radius: 31.5px;
+        border-top-left-radius: 31.5px;
+        overflow: hidden;
+        background-color: white;
+    }
 }

@@ -1,0 +1,46 @@
+// @mixin border-element($size-base) {
+//     border-radius: calc($size-base / 2);
+//   }
+
+.header-main {
+    --size-header: 63px;
+    min-height: var(--size-header);
+    border-bottom: 1px solid var(--color-support-light);
+    width: 100%;
+    padding-right: 30px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &>* {
+        margin-right: 14px;
+    }
+
+    &--search {
+        --size-input: 32px;
+        position: relative;
+        z-index: 1;
+
+        &-icon {
+            background-color: white;
+            border-radius: calc(var(--size-input) / 2);
+            border: 2px solid var(--color-primary-dark);
+            margin: -2px;
+        }
+        
+        &-input {
+            height: var(--size-input);
+            margin-left: calc((var(--size-input) - (var(--size-input) * 2)));
+            z-index: -1;
+            position: relative;
+            border-radius: calc(var(--size-input) / 2);
+            overflow: hidden;
+            
+            & input {
+                padding-left: calc(var(--size-input) + 10px);
+                height: 100%;
+            }
+        }
+    }
+}

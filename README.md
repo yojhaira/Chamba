@@ -58,3 +58,9 @@ o esto (cualquiera de las dos opciones sirve)
     ]
 ```
 
+Finalmente agregamos en el html, para mayor referencia sobre los iconos y la sintaxis para su uso visitar [font awesome](https://fontawesome.com/icons?d=gallery&m=free)
+
+```
+    <i class="fab fa-angular"></i>
+```
+
