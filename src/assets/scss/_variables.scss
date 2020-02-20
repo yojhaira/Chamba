@@ -3,6 +3,11 @@
   --color-primary-dark: rgb(103, 20, 143);
   --color-primary-light: rgb(212, 142, 245);
 
+  // Secondary
+  --color-secondary: rgb(25, 25, 39);
+  --color-secondary-dark: rgb(12, 12, 18);
+  --color-secondary-light: rgb(61, 61, 71);
+
   // Gray
   --color-support: rgb(189, 189, 189);
   --color-support-dark: rgb(166, 166, 166);
@@ -10,6 +15,7 @@
 
   // Fonts
   --font-display: 'Quicksand', sans-serif;
+  --font-source: 'Source Sans Pro', sans-serif;
 }
 
 .ico {
