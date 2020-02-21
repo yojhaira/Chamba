@@ -25,6 +25,10 @@
         object-fit: contain;
         margin: 0;
         color: currentColor;
+
+        & * {
+            color: currentColor;
+        }
     }
 }
 
