@@ -1,5 +1,37 @@
-body{
+.background{
     background: purple;
     margin: 0;
     padding: 0;
+}
+
+.body{
+    padding: 19px 100px 19px 100px;
+    display: flex;
+    justify-content: space-between;
+
+    &-register{
+        background: white;
+        padding: 15px 25px 15px 25px;
+
+        &-logo{
+            padding: 5px;
+        }
+
+        &--text{
+            padding: 5px;
+            display: inline-block;
+
+
+            input{
+              border-color: #67148F ;
+              border-radius: 10px; 
+              padding: 5px;
+
+            }
+        }
+    }
+
+    &-text{
+        background: gray;
+    }
 }

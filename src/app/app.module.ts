@@ -9,6 +9,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AccessComponent } from './components/access/access.component';
 import { NavComponent } from './components/nav/nav.component';
 
+import { RegisterComponent} from './register/register.component';
+
+
 
 
 @NgModule({
@@ -19,6 +22,7 @@ import { NavComponent } from './components/nav/nav.component';
     HomeComponent,
     AccessComponent,
     NavComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
