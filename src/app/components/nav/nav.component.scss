@@ -8,9 +8,12 @@
 }
 
 .nav-main {
+  --size-list-item: 126px;
   background-color: var(--color-primary-dark);
   min-height: 100vh;
   font-family: var(--font-display);
+  position: fixed;
+  max-width: var(--size-list-item);
 
   &--logo {
     height: 63px;
@@ -33,7 +36,6 @@
     perspective: 1000px;
 
     &-item {
-      --size-list-item: 126px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -79,16 +81,16 @@
         @include create-pseudoelement;
 
         transition: background-color .3s ease;
-    }
-    
-    &:hover {
+      }
+
+      &:hover {
         transform-origin: top left;
         transform: skewY(3deg);
         box-shadow: 0 3px 5px rgba(0, 0, 0, .21);
         cursor: pointer;
-        
+
         &::before {
-            background-color: rgba(255, 255, 255, .16);
+          background-color: rgba(255, 255, 255, .16);
         }
       }
     }

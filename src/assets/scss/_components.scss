@@ -172,3 +172,15 @@
     justify-content: center;
     align-items: center;
 }
+
+.header-section {
+    
+    &--secondary {
+
+        &>*:first-child {
+            font-size: 21px;
+            font-weight: 600;
+            margin: 0 0 3px;
+        }
+    }
+}

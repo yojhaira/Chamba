@@ -10,6 +10,8 @@
         border-top-left-radius: 30px;
         overflow: hidden;
         background-color: white;
+        max-height: 100vh;
+        overflow-y: auto;
     }
 }
 
