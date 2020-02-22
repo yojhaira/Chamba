@@ -29,7 +29,9 @@
   &.save-alternate,
   &.home-primary,
   &.home-alternate,
-  &.search-primary {
+  &.search-primary,
+  &.gardening-primary,
+  &.gardening-alternate {
     &::before {
       content: '';
       position: absolute;
@@ -74,6 +76,16 @@
   &.search-primary {
     &::before {
       background-image: url("assets/svg/save-primary.svg");
+    }
+  }
+  &.gardening-primary {
+    &::before {
+      background-image: url("assets/svg/planta-primary.svg");
+    }
+  }
+  &.gardening-alternate {
+    &::before {
+      background-image: url("assets/svg/planta-alternative.svg");
     }
   }
 }

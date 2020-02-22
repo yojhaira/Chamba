@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AccessComponent } from './components/access/access.component';
 import { NavComponent } from './components/nav/nav.component';
+import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
 
 
 
@@ -19,6 +20,7 @@ import { NavComponent } from './components/nav/nav.component';
     HomeComponent,
     AccessComponent,
     NavComponent,
+    MostWantedComponent
   ],
   imports: [
     BrowserModule,
