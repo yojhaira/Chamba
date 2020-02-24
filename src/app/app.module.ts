@@ -11,6 +11,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
 
 import { RegisterComponent} from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -24,7 +25,8 @@ import { RegisterComponent} from './register/register.component';
     AccessComponent,
     NavComponent,
     RegisterComponent,
-    MostWantedComponent
+    MostWantedComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

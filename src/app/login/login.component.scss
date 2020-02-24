@@ -1,0 +1,15 @@
+.body{
+    padding: 59px 100px 59px 100px;
+    display: flex;
+    justify-content: space-between;
+    
+    &-login{
+        background: white;
+        padding: 64px 25px 15px 40p;
+
+        &--logo{
+            width: 30%;
+            padding-bottom: 30px;
+        }
+    }
+}
