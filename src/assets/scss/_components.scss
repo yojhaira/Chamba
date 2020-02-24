@@ -10,11 +10,11 @@
     height: var(--size-base);
     width: var(--size-base);
     color: currentColor;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     &>* {
         font-size: var(--size-child);
         max-height: var(--size-child);
@@ -22,6 +22,7 @@
         object-fit: contain;
         margin: 0;
         color: currentColor;
+        width: 100%;
 
         & * {
             color: currentColor;
@@ -32,7 +33,9 @@
 .default-icon,
 .input-icon,
 .sm-icon,
-.b-icon {
+.md-icon,
+.b-icon,
+.icon-valuation {
     @include icon-properties();
 }
 
@@ -59,6 +62,26 @@
 .b-icon {
     --size-base: 49px;
     --size-child: 42px;
+}
+
+.icon-valuation {
+    --size-base: 14px;
+    --size-child: 14px;
+
+    svg {
+        .cls-1 {
+            fill: transparent;
+            transition: .3s fill ease;
+        }
+    }
+
+    &.active {
+        svg {
+            .cls-1 {
+                fill: yellow;
+            }
+        }
+    }
 }
 
 .badge-info {
