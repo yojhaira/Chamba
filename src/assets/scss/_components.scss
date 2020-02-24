@@ -2,10 +2,7 @@
 * icon system
 */
 
-.default-icon {
-    --size-base: 30px;
-    --size-child: 14px;
-
+@mixin icon-properties {
     flex: 0 0 var(--size-base);
     max-width: var(--size-base);
     max-height: var(--size-base);
@@ -30,6 +27,18 @@
             color: currentColor;
         }
     }
+}
+
+.default-icon,
+.input-icon,
+.sm-icon,
+.b-icon {
+    @include icon-properties();
+}
+
+.default-icon {
+    --size-base: 30px;
+    --size-child: 14px;
 }
 
 .input-icon {
@@ -141,6 +150,37 @@
                 width: auto;
                 overflow: visible;
             }
+        }
+    }
+}
+
+.primary-tag {
+    --size-tag: 21px;
+    height: var(--size-tag);
+    background-color: var(--color-primary-dark);
+    padding: 0 10px;
+    border-radius: calc(var(--size-tag) / 2);
+    font-family: var(--font-source);
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-section {
+    
+    &--secondary {
+
+        &>*:first-child {
+            font-size: 21px;
+            font-weight: 600;
+            margin: 0 0 3px;
         }
     }
 }
