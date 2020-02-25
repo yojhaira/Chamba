@@ -135,11 +135,14 @@
     min-width: 1px;
     border: none;
     font-family: var(--font-display);
-    text-transform: capitalize;
 
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
+
+    &:first-letter {
+        text-transform: capitalize;
+    }
 
     &--icon {
         --size-element: 32px;
@@ -175,6 +178,12 @@
             }
         }
     }
+
+    &.o-right {
+        &>*:first-child {
+            order: 1;
+        }
+    }
 }
 
 .primary-tag {
@@ -197,6 +206,15 @@
 }
 
 .header-section {
+
+    &--primary{
+        &>*:first-child {
+            font-size: 35px;
+            font-weight: 700;
+            font-family: var(--font-display);
+            color: var(--color-secondary-dark);
+        }
+    }
     
     &--secondary {
 
