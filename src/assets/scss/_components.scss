@@ -209,19 +209,26 @@
 
     &--primary{
         &>*:first-child {
-            font-size: 35px;
+            font-size: 42px;
             font-weight: 700;
             font-family: var(--font-display);
             color: var(--color-secondary-dark);
+            margin: 0 0 3px;
+        }
+
+        &>*:nth-child(2) {
+            font-size: 14px;
+            font-weight: 500;
         }
     }
     
     &--secondary {
-
+        
         &>*:first-child {
-            font-size: 21px;
+            font-size: 35px;
             font-weight: 600;
             margin: 0 0 3px;
+            font-family: var(--font-display);
         }
     }
 }
