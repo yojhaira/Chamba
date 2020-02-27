@@ -49,6 +49,7 @@
     
     &:hover {
         cursor: pointer;
+        transform: scale(1.05);
         
         // .primary-tag::before {
         // }
@@ -56,7 +57,6 @@
     }
 }
 
-.primary-tag:hover .primary-tag::before {
+.primary-tag:hover::before {
     background-color: rgba(255, 255, 255, .14);
-    transform: scale(1.05);
 }
