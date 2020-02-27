@@ -39,6 +39,15 @@
                     color: currentColor var( --color-error);
                 }
 
+                input:focus{
+                    box-shadow: 0 0 2px 0px #67148f;
+                    border-radius: 10px;
+                    border: none;
+                    border: 1px solid #67148f;
+                    outline: none;
+                }
+
+
                 
                 .menssage--button{
                     padding: 2px 10px 2px 10px;
