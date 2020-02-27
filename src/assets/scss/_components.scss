@@ -126,11 +126,16 @@
     }
 }
 
-.primary-button {
+.primary-button,
+.alternate-button {
+    --background-color: var(--color-secondary-dark);
+    --color-text-content: white;
+    --background-color-icon: white;
+    --color-icon: var(--color-secondary-dartk);
     --size-element: 36px;
     height: var(--size-element);
     border-radius: calc(var(--size-element) / 2);
-    background-color: rgba(103, 20, 143, 1);
+    background-color: var(--background-color);
     padding: 2px;
     min-width: 1px;
     border: none;
@@ -150,17 +155,18 @@
         height: var(--size-element);
         width: var(--size-element);
         flex: 0 0 var(--size-element);
-        background-color: white;
+        background-color: var(--background-color-icon);
+        color: var(--color-icon);
         border-radius: calc(var(--size-element) / 2);
 
         svg {
-            fill: rgba(103, 20, 143, 1);
+            fill: currentColor;
         }
     }
 
     &--content {
         padding: 0;
-        color: white;
+        color: var(--color-text-content);
         width: 0px;
         overflow: hidden;
         font-weight: 500;
@@ -196,6 +202,13 @@
             order: 1;
         }
     }
+}
+
+.alternate-button {
+    --background-color: white;
+    --color-text-content: var(--color-primary-dark);
+    --background-color-icon: var(--color-primary-dark);
+    --color-icon: white;
 }
 
 .primary-tag {
@@ -249,15 +262,16 @@
             font-weight: 600;
             margin: 0 0 3px;
             font-family: var(--font-display);
+            color: var(--color-secondary-dartk);
         }
     }
 
     &--third {
         
         &>*:first-child {
-            font-size: 21px;
+            font-size: 28px;
             font-weight: 600;
-            // font-family: var(--font-source);
+            margin-bottom: 3px;
         }
     }
 }

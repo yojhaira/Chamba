@@ -114,6 +114,7 @@
           font-weight: 700;
           font-size: 15px;
           position: relative;
+          overflow: hidden;
 
           &::before {
             @include absolute-pseudoelement();
@@ -123,10 +124,6 @@
 
           &:hover {
             cursor: pointer;
-
-            &::before {
-              background-color: var(--color-support-light);
-            }
           }
         }
       }
@@ -148,7 +145,7 @@
   margin-bottom: 63px;
 
   .header-section {
-    &--secondary {
+    &--second {
       margin-bottom: 35px;
     }
   }
@@ -173,8 +170,10 @@
       justify-content: center;
       align-items: center;
 
+      will-change: transform;
+
       transition: .3s background-color ease-in-out,
-        .3s transform ease,
+        /*.2s .2s transform ease-in-out,*/
         .3s border-radius ease-in-out;
 
       & .b-icon {
@@ -226,7 +225,7 @@
   position: relative;
   margin-bottom: 94px;
 
-  & .header-section--secondary {
+  & .header-section--third {
       margin-bottom: 35px;
   }
 
@@ -400,7 +399,7 @@
     width: 100%;
     margin: 0 auto;
 
-    & .header-section--secondary {
+    & .header-section--second {
       margin-bottom: 42px;
       text-align: right;
     }
@@ -452,4 +451,12 @@
       }
     }
   }
+ }
+
+ /**
+ * Register professional
+ */
+
+ .register {
+   background-color: var(--color-secondary-dark);
  }
