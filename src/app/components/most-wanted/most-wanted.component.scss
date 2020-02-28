@@ -49,11 +49,7 @@
     
     &:hover {
         cursor: pointer;
-        transform: scale(1.05);
-        
-        // .primary-tag::before {
-        // }
-        
+        transform: translateY(-3px);
     }
 }
 
