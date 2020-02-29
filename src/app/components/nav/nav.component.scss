@@ -88,13 +88,13 @@
         transform: skewY(3deg);
         box-shadow: 0 3px 5px rgba(0, 0, 0, .21);
         cursor: pointer;
-
-        &::before {
-          background-color: rgba(255, 255, 255, .16);
-        }
       }
     }
   }
+}
+
+.nav-main--list-item:hover::before {
+  background-color: rgba(255, 255, 255, .16);
 }
 
 @for $j from 1 through 5 {
