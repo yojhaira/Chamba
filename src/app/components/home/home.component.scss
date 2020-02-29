@@ -490,15 +490,64 @@
     &--images {
       position: relative;
 
-      &--item {
-        position: absolute;
+      &-group {
+        background-color: red;
+        position: relative;
+        line-height: 24px;
+        padding: 21px 33px;
+        border-radius: 10px 30px;
+        max-width: 201px;
+        z-index: 1;
 
-        & svg {
-          fill: #ffffff;
+        &::before {
+          @include absolute-pseudoelement();
+          background-color: white;
+          border-radius: 10px 30px;
+          z-index: 2;
         }
-
-        &:first-child {}
+        
+        & svg {
+          fill: var(--color-primary-dark);
+          margin-bottom: -10px;
+          position: relative;
+          z-index: 3;
+        }
       }
+    }
+  }
+}
+
+.images-group {
+
+  &--item {
+    --size: 250px;
+    --border-element: 0px 42px;
+    --size-detail: 35px;
+    --size-position: calc((var(--size) - var(--size-detail)) - ((var(--size) - var(--size-detail)) * 2) );
+    position: absolute;
+    height: var(--size);
+    width: var(--size);
+    border-radius: var(--border-element);
+    z-index: -1;
+    top: var(--size-position);
+    left: var(--size-position);
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: var(--size-detail);
+      width: var(--size-detail);
+      background-color: var(--color-primary-light);
+      opacity: .07;
+      z-index: 1;
+      bottom: 0;
+      right: 0;
+    }
+
+    & img {
+      height: 100%;
+      border-radius: var(--border-element);
+      object-fit: cover;
     }
   }
 }
