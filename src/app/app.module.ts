@@ -12,7 +12,11 @@ import { MostWantedComponent } from './components/most-wanted/most-wanted.compon
 
 import { RegisterComponent} from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { C404Component } from './components/c404/c404.component';
+import { C404Component } from './components/c404/c404.component'; 
+
+
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+
 
 
 
@@ -32,7 +36,9 @@ import { C404Component } from './components/c404/c404.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

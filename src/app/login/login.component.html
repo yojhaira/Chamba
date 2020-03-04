@@ -5,68 +5,73 @@
 
 
             <p class="body-register--text"> INICIAR SESION </p>
-
-            <div class="body-register--input">
-                <div class="input-global">
-                    <div class="input-global--contenedor">
-                        
-                        <input class="body-register--text-input" type="text" name="" id="" placeholder=""> <label for=""> E-mail </label>
-
-                        <div class="menssage--button">
-                            <div class="input-icon">
-                                <i class="fas fa-user-alt" id="register"></i>
+            <form  [formGroup]="formLogin" >
+                <div class="body-register--input">
+                    <div class="input-global" [ngClass]= "[(formLogin.get('user').touched && formLogin.get('user').invalid)?'is-invalid-in':'']">
+                        <div class="input-global--contenedor" >
+                            
+                            <input class="body-register--text-input" type="text" name="mail" formControlName="user"  id=""> <label for="" class="label-input"> E-mail </label>
+    
+                            <div class="menssage-button">
+                                <div class="input-icon input-register">
+                                    <i class="fas fa-user-alt" id="register"></i>
+                                </div>
+    
+                                <div class="ms-icon input-clean" (click)="cleanInput(formLogin.get('user'))">
+                                    <i class="fas fa-times-circle" id="clean"></i>
+                                </div>
+    
                             </div>
-
-                            <div class="ms-icon">
-                                <i class="fas fa-times-circle" id="clean"></i>
-                            </div>
-
+                        </div>
+    
+                        <div class="input-global--menssage"  *ngIf="formLogin.get('user').touched && formLogin.get('user').invalid">
+                            <span class="menssage-error">  {{getErrorUserName()}}</span>
+    
+                            <span class="menssage-errorInfo"> </span>
                         </div>
                     </div>
 
-                    <div class="input-global--menssage">
-                        <span class="menssage-error"> </span>
-
-                        <span class="menssage-errorInfo"> </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="body-register--input">
-                <div class="input-global">
-                    <div class="input-global--contenedor">
-                        <input class="body-register--text-input" type="password" name="" id="" placeholder="Contraseña">
-
-                        <div class="menssage--button">
-                            <div class="input-icon">
-                                <i class="fas fa-user-alt" id="register"></i>
+                    <div class="input-global" [ngClass]= "[(formLogin.get('password').touched && formLogin.get('password').invalid)?'is-invalid-in':'']">
+                        <div class="input-global--contenedor" >
+                            
+                            <input class="body-register--text-input" type="text" name="password" formControlName="password"  id=""  > <label for=""> Password </label>
+    
+                            <div class="menssage-button">
+                                <div class="input-icon input-register">
+                                    <i class="fas fa-user-alt" id="register"></i>
+                                </div>
+    
+                                <div class="ms-icon input-clean" (click)="cleanInput(formLogin.get('password'))">
+                                    <i class="fas fa-times-circle" id="clean"></i>
+                                </div>
+    
                             </div>
-
-                            <div class="ms-icon">
-                                <i class="fas fa-times-circle" id="clean"></i>
-                            </div>
-
+                        </div>
+    
+                        <div class="input-global--menssage"  *ngIf="formLogin.get('password').touched && formLogin.get('password').invalid">
+                            <span class="menssage-error">  {{getErrorPassword()}}</span>
+    
+                            <span class="menssage-errorInfo"> </span>
                         </div>
                     </div>
-
-                    <div class="input-global--menssage">
-                        <span class="menssage-error"> </span>
-
-                        <span class="menssage-errorInfo"> </span>
-                    </div>
                 </div>
-            </div>
+
+                
+            </form>
+            
+
+            
             <div class="body-register-cuenta">
                 <div>
-                    <input id="radiobtn_1" class="checkbox-selector" name="cuenta" type="radio" value="cuenta"
+                    <input type="radio" value="cuenta"
                         tabindex="1">
-                    <span></span>
-                    <label for="radiobtn_1">Recordar mi cuenta</label>
+                    <span> </span>
+                    <label for="radiobtn_1"> Recordar mi cuenta</label>
                 </div>
 
                 <div>
                     <i class="fas fa-unlock icono" ></i>
-                    <label for="">Olvide Contraseña</label>
+                    <label for=""> Olvide Contraseña</label>
                 </div>
 
             </div>
@@ -85,7 +90,7 @@
                         </div>
                     </div>
                     <div class="primary-button--content">
-                        <span>registarse</span>
+                        <span> Iniciar Sesion</span>
                     </div>
                 </button>
 
