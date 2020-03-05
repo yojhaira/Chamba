@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
+
 
 
 @Component({
@@ -9,7 +11,7 @@ import { FormGroup, FormControl,Validators} from '@angular/forms';
 })
 
 export class LoginComponent implements OnInit {
-
+//app-routing.module
   // instanciamos el formilario que fue creado en login.html
   public formLogin= new FormGroup({
     user: new FormControl('',[
@@ -53,4 +55,11 @@ export class LoginComponent implements OnInit {
   }
 
 
+  public evaluar(valor){
+    if(valor.value=='')
+    console.log("tamano 0")
+    else
+    console.log("siii");
+    
+  }
 }

@@ -10,7 +10,7 @@
                     <div class="input-global" [ngClass]= "[(formLogin.get('user').touched && formLogin.get('user').invalid)?'is-invalid-in':'']">
                         <div class="input-global--contenedor" >
                             
-                            <input class="body-register--text-input" type="text" name="mail" formControlName="user"  id=""> <label for="" class="label-input"> E-mail </label>
+                            <input class="body-register--text-input "  type="text" name="mail"  (blur)="evaluar(formLogin.get('user'))"  formControlName="user"  id=""> <label for="" class="label-input"> E-mail </label>
     
                             <div class="menssage-button">
                                 <div class="input-icon input-register">

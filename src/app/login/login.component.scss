@@ -29,6 +29,7 @@
           display: flex;
           position: relative;
           justify-content: space-between;
+
         }
 
         &--menssage{
@@ -43,8 +44,21 @@
             
           }
         }
-
-        input {
+         
+        
+        label {
+          position: absolute;
+          background: white;
+          left: 20px;
+          top: 12px;
+          pointer-events: none;
+         // transform: none !important;
+          -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+          transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+          //transform: translateY(-20px);
+        }
+ 
+          input {
           border: none;
           padding: 8px;
           padding: 10px 0px 10px 15px;
@@ -52,25 +66,34 @@
           width: 100%;
           border-radius: 15px;
           border: 1px solid var(--color-support-dark);
-        }
-        input:focus {
-          box-shadow: 0 0 2px 0px #67148f;
-          border-radius: 10px;
-          border: none;
-          border: 1px solid #67148f;
-          outline: none;
-          z-index: 1;
-        }
-        
 
-        label {
-          position: absolute;
-          background: white;
-          left: 20px;
-          top: 12px;
-          pointer-events: none;
-          //transform: translateY(-20px);
+          &:focus {
+            box-shadow: 0 0 2px 0px #67148f;
+            border-radius: 10px;
+            border: none;
+            border: 1px solid #67148f;
+            outline: none;
+            //z-index: 1;
+            +label{
+             top: -10px;
+              color: #67148f;
+              background: white;
+            }
+            
+          }
+
+          &:valid+label {
+            //top: -20px;
+           // color:;
+            background: white;
+          }
+          &:invalid{
+            background: green;
+          }
         }
+
+
+        
 
         .menssage-button {
 
@@ -100,22 +123,17 @@
 
         input{
           border:  1px solid var(--color-error);
-           &:focus .label-input{
-           color:blue !important;
-           transform: translateY(-20px);
-         }
-         
         }
-        label{
-          color: currentColor;
-          transform: translateY(-20px);
-        }
-
         .input-register{
           display: none  !important;
           
         }
 
+        input:invalid+label {
+          // transform: translateY(-20px);
+           color:yellow;
+           background: white;
+         } 
         .input-clean{
           display: block  !important;
         }
