@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 
-=======
-import { Component, Inject, OnInit } from '@angular/core';
 
 import { DOCUMENT } from '@angular/common';
 import { fromEvent, Observable, empty } from 'rxjs';
 import { share, auditTime, map } from 'rxjs/operators';
->>>>>>> dad1d7aa2557409b97910e78dde45b7774b1bbc4
 
 @Component({
 	selector: 'app-root',
