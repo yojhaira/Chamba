@@ -7,8 +7,8 @@
 }
 
 @mixin absolute-pseudoelement {
-  @include absolute-element();
   content: '';
+  @include absolute-element();
 }
 
 .banner-main {
@@ -338,7 +338,7 @@
  */
 
 .action {
-  margin-bottom: 114px;
+  margin-bottom: 214px;
   position: relative;
   z-index: 1;
 
@@ -460,21 +460,27 @@
 .register {
 
   &-wrapper {
-    padding: 88px 15px;
+    padding: 88px 15px 0;
     background-color: var(--color-primary-dark);
 
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
 
+    &--content,
+    &--images {
+      flex: 0 0 50%;
+    }
+
     &--content {
       color: white;
       flex: 0 0 50%;
-      padding: 0 15px;
+      padding: 0 15px 88px;
 
       & .header-section {
         &--first {
           margin-bottom: 21px;
+          padding-right: 15px;
 
           &>* {
             color: currentColor;
@@ -489,15 +495,23 @@
 
     &--images {
       position: relative;
+      display: flex;
+      padding-bottom: 28px;
+      padding-right: 15px;
 
       &-group {
-        background-color: red;
+        --size: 250px;
+        --border-element: 0px 42px;
+        --size-detail: 35px;
+        --size-position: calc(100% - var(--size-detail));
         position: relative;
         line-height: 24px;
         padding: 21px 33px;
         border-radius: 10px 30px;
         max-width: 201px;
         z-index: 1;
+        margin-top: auto;
+        margin-left: auto;
 
         &::before {
           @include absolute-pseudoelement();
@@ -505,10 +519,23 @@
           border-radius: 10px 30px;
           z-index: 2;
         }
-        
+
+        &::after {
+          @include absolute-pseudoelement();
+          --border-element: 10px 0 14px 0;
+          height: var(--size-detail);
+          width: var(--size-detail);
+          background-color: var(--color-primary);
+          border-radius: var(--border-element);
+          opacity: .07;
+          z-index: 2;
+          top: 0;
+          left: 0;
+        }
+
         & svg {
           fill: var(--color-primary-dark);
-          margin-bottom: -10px;
+          margin-bottom: -14px;
           position: relative;
           z-index: 3;
         }
@@ -520,34 +547,79 @@
 .images-group {
 
   &--item {
-    --size: 250px;
-    --border-element: 0px 42px;
-    --size-detail: 35px;
-    --size-position: calc((var(--size) - var(--size-detail)) - ((var(--size) - var(--size-detail)) * 2) );
+    --border-element: 14px 42px;
+    --size-detail: 63px;
     position: absolute;
     height: var(--size);
     width: var(--size);
     border-radius: var(--border-element);
     z-index: -1;
-    top: var(--size-position);
-    left: var(--size-position);
-
+    bottom: var(--size-position);
+    right: var(--size-position);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    
     &::before {
-      content: '';
-      position: absolute;
+      --size-detail: 125px;
+      --border-element: 0 42px;
+      @include absolute-pseudoelement;
       height: var(--size-detail);
       width: var(--size-detail);
-      background-color: var(--color-primary-light);
-      opacity: .07;
-      z-index: 1;
-      bottom: 0;
+      background-color: var(--color-primary);
+      border-radius: var(--border-element);
+      opacity: .49;
       right: 0;
+      top: 0;
+      left: initial;
     }
 
     & img {
       height: 100%;
       border-radius: var(--border-element);
       object-fit: cover;
+    }
+    
+    &-lower {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+
+      &:nth-child(2) {
+        --size: 180px;
+        --border-element: 14px 42px;
+        --size-position: calc(100% - var(--size-detail));
+        height: var(--size);
+        width: var(--size);
+        border-radius: var(--border-element);
+        bottom: var(--size-position);
+        right: var(--size-position);
+        position: absolute;
+
+        &::before {
+          --border-element: 14px 0;
+          @include absolute-pseudoelement;
+          height: var(--size-detail);
+          width: var(--size-detail);
+          background-color: var(--color-primary-dark);
+          border-radius: var(--border-element);
+          opacity: .21;
+          top: initial;
+          left: initial;
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        --size: 300px;
+        --border-element: 14px 42px;
+        --size-detail: 125px;
+        --size-position: calc(100% - var(--size-detail));
+        height: var(--size);
+        width: var(--size);
+        border-radius: var(--border-element);
+        bottom: var(--size-position);
+        left: var(--size-position);
+        position: absolute;
+        z-index: -1;
+      }
     }
   }
 }

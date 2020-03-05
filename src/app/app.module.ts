@@ -10,7 +10,7 @@ import { AccessComponent } from './components/access/access.component';
 import { NavComponent } from './components/nav/nav.component';
 import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
 
-
+import { WindowScrollService } from './services/window-scroll.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { MostWantedComponent } from './components/most-wanted/most-wanted.compon
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [WindowScrollService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
