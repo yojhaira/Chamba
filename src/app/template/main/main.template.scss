@@ -11,6 +11,26 @@
   @include absolute-element();
 }
 
+.main {
+  display: flex;
+  overflow: hidden;
+
+  &-nav {
+      flex: 0 0 126px;
+  }
+
+  &-content {
+      flex-grow: 1;
+      border-bottom-left-radius: 30px;
+      border-top-left-radius: 30px;
+      overflow: hidden;
+      background-color: white;
+      max-height: 100vh;
+      overflow-y: auto;
+      margin-right: -17px;
+  }
+}
+
 .banner-main {
   padding: 21px 30px 21px 15px;
   border-bottom: 1px solid var(--color-support-light);

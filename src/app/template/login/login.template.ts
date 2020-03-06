@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
-
-
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'login-template',
+  templateUrl: './login.template.html',
+  styleUrls: ['./login.template.scss']
 })
 
-export class LoginComponent implements OnInit {
+export class LoginTemplate implements OnInit {
 //app-routing.module
   // instanciamos el formilario que fue creado en login.html
   public formLogin= new FormGroup({

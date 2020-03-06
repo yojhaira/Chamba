@@ -1,39 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
-import { AccessComponent } from './components/access/access.component';
+
+/**
+* Template
+*/
+import { MainTemplate } from './template/main/main.template';
+import { RegisterTemplate } from './template/register/register.template';
+import { LoginTemplate } from './template/login/login.template';
+import { C404Template } from './template/c404/c404.template';
+
+import { MainContentTemplate } from './template/main-content/main-content.template';
+/**
+* Components
+*/
 import { NavComponent } from './components/nav/nav.component';
+import { HeaderComponent } from './components/header/header.component';
 import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
-
-import { RegisterComponent} from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { C404Component } from './components/c404/c404.component'; 
-
+import { FooterComponent } from './components/footer/footer.component';
 
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
-
 import { routing, appRoutingProviders } from './app.routing';
-
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginTemplate,
+    RegisterTemplate,
+    C404Template,
+    
+    MainTemplate,
     HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    AccessComponent,
     NavComponent,
-    RegisterComponent,
     MostWantedComponent,
-    LoginComponent,
-    C404Component
+    FooterComponent,
+    MainContentTemplate
   ],
   imports: [
     BrowserModule,

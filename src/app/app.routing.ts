@@ -1,19 +1,19 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
+import { AppComponent } from './app.component';
 
-
-import {HomeComponent} from './components/home/home.component';
-import {LoginComponent} from './login/login.component';
-import {RegisterComponent} from './register/register.component';
-import {C404Component} from './components/c404/c404.component'; 
+import {MainTemplate} from './template/main/main.template';
+import {LoginTemplate} from './template/login/login.template';
+import {RegisterTemplate} from './template/register/register.template';
+import {C404Template} from './template/c404/c404.template'; 
 
 const appRouters: Routes= [
-    {path: '', component:HomeComponent},
-    {path: 'home', component:HomeComponent},
-    {path: 'login', component:LoginComponent},
-    {path: 'register', component:RegisterComponent},
-    {path: '**', component:C404Component}
+    {path: '', component:MainTemplate},
+    // {path: 'main', component:MainTemplate},
+    {path: 'login', component:LoginTemplate},
+    {path: 'register', component:RegisterTemplate},
+    {path: '**', component:C404Template}
     
 ];
 

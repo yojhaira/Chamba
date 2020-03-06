@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccessComponent } from './access.component';
+import { MainTemplate } from './main.template';
 
-describe('AccessComponent', () => {
-  let component: AccessComponent;
-  let fixture: ComponentFixture<AccessComponent>;
+describe('MainTemplate', () => {
+  let component: MainTemplate;
+  let fixture: ComponentFixture<MainTemplate>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccessComponent ]
+      declarations: [ MainTemplate ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AccessComponent);
+    fixture = TestBed.createComponent(MainTemplate);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

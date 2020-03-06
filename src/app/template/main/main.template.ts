@@ -6,13 +6,13 @@ import { fromEvent, Observable, empty } from 'rxjs';
 import { share, auditTime, map } from 'rxjs/operators';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    selector: 'main-template',
+    templateUrl: './main.template.html',
+    styleUrls: ['./main.template.scss']
 })
 
 // @HostListener("window:scroll", ['$event'])
-export class HomeComponent implements OnInit {
+export class MainTemplate implements OnInit {
 
     public scroll: number;
     constructor(
@@ -47,9 +47,6 @@ export class HomeComponent implements OnInit {
             this.scroll = window.scrollY;
         })
     }
-
-
-
 
     ngOnInit() {
         this.fixedHeader();
