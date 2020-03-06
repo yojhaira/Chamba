@@ -104,28 +104,6 @@
   }
 }
 
-.tag-primary {
-  --size-element: 21px;
-  height: var(--size-element);
-  padding: 10px 0;
-  background-color: rgba(103, 20, 143, 1);
-  color: white;
-  border-radius: calc(var(--size-element) / 2);
-
-  font-size: 12px;
-  font-weight: 500;
-
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  span {
-    font-size: inherit;
-    line-height: 1em;
-    padding: 0 10px;
-  }
-}
-
 .primary-button,
 .alternate-button {
   --background-color: var(--color-primary-dark);
@@ -289,5 +267,15 @@
     &>*:first-child {
       font-size: 21px;
     }
+  }
+}
+
+/**
+ * Form Components
+ */
+.form {
+
+  &-input {
+    
   }
 }
