@@ -1,4 +1,6 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
+import { Oficio } from '../../models/oficio';
+import { OficioService } from '../../service/oficio.service';
 // import { WindowScrollService } from 'src/app/services/window-scroll.service';
 
 import { DOCUMENT } from '@angular/common';
@@ -8,16 +10,22 @@ import { share, auditTime, map } from 'rxjs/operators';
 @Component({
     selector: 'main-template',
     templateUrl: './main.template.html',
-    styleUrls: ['./main.template.scss']
+    styleUrls: ['./main.template.scss'],
+    providers: [OficioService]
 })
 
 // @HostListener("window:scroll", ['$event'])
 export class MainTemplate implements OnInit {
-
+    public oficios:Array<Oficio>;
     public scroll: number;
+
     constructor(
-        @Inject(DOCUMENT) private document: any
-    ) { }
+        @Inject(DOCUMENT) private document: any,
+        private sOficio:OficioService
+    ) { 
+        this.oficios = [];
+        this.listarOficios();
+    }
 
     // detectScroll($event: any) {
     //     let scrollOffset = $event.srcElement.children[0].scrollTop;
@@ -50,6 +58,17 @@ export class MainTemplate implements OnInit {
 
     ngOnInit() {
         this.fixedHeader();
+    }
+
+    listarOficios(){
+        this.sOficio.listar().subscribe(
+            result => {
+                this.oficios = result.response;
+            },
+            error => {
+                console.log("ocurrio un error");
+            }
+        )
     }
 
 }

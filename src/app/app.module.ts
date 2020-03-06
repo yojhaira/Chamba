@@ -10,7 +10,7 @@ import { MainTemplate } from './template/main/main.template';
 import { RegisterTemplate } from './template/register/register.template';
 import { LoginTemplate } from './template/login/login.template';
 import { C404Template } from './template/c404/c404.template';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MainContentTemplate } from './template/main-content/main-content.template';
 /**
 * Components
@@ -42,7 +42,8 @@ import { routing, appRoutingProviders } from './app.routing';
     //AppRoutingModule,
     routing,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
