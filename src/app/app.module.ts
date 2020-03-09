@@ -19,6 +19,9 @@ import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LogoComponent } from './components/logo/logo.component';
+// import { InputComponent } from './components/input/input.component';
+import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
 
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
@@ -35,7 +38,10 @@ import { routing, appRoutingProviders } from './app.routing';
     NavComponent,
     MostWantedComponent,
     FooterComponent,
-    MainContentTemplate
+    MainContentTemplate,
+    LogoComponent,
+    GraphicLogin
+    // InputComponent
   ],
   imports: [
     BrowserModule,

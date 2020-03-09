@@ -16,7 +16,7 @@ const appRouters: Routes = [
         component: MainTemplate,
         children: [
             {
-                path: 'main',
+                path: '',
                 component: MainContentTemplate,
                 data: {
                     title: 'Bienvenido'
