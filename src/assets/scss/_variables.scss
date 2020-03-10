@@ -37,12 +37,14 @@
   &.home-primary,
   &.home-alternate,
   &.search-primary,
-  &.gardening-primary,
-  &.gardening-alternate,
+  &.jardineria-primary,
+  &.jardineria-alternate,
   &.plus-primary,
   &.plus-alternative,
   &.comments-primary,
-  &.comments-alternate {
+  &.comments-alternate,
+  &.pintor-primary,
+  &.pintor-alternate {
     &::before {
       content: '';
       position: absolute;
@@ -93,13 +95,13 @@
     }
   }
 
-  &.gardening-primary {
+  &.jardineria-primary {
     &::before {
       background-image: url("assets/svg/planta-primary.svg");
     }
   }
 
-  &.gardening-alternate {
+  &.jardineria-alternate {
     &::before {
       background-image: url("assets/svg/planta-alternative.svg");
     }
@@ -128,6 +130,19 @@
       background-image: url("assets/svg/comments-alternative.svg");
     }
   }
+
+  &.pintor-primary{
+    &::before {
+      background-image: url("assets/svg/brocha-primary.svg");
+    }
+  }
+
+  &.pintor-alternate{
+    &::before {
+      background-image: url("assets/svg/brocha-alternative.svg");
+    }
+  }
+
 }
 
 .background{

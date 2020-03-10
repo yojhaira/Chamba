@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
 import { Oficio } from '../../models/oficio';
-import { OficioService } from '../../service/oficio.service';
+// import { OficioService } from '../../service/oficio.service';
 // import { WindowScrollService } from 'src/app/services/window-scroll.service';
 
 import { DOCUMENT } from '@angular/common';
@@ -11,7 +11,7 @@ import { share, auditTime, map } from 'rxjs/operators';
     selector: 'main-template',
     templateUrl: './main.template.html',
     styleUrls: ['./main.template.scss'],
-    providers: [OficioService]
+    // providers: [OficioService]
 })
 
 @HostListener("scroll", ['$event'])
@@ -21,10 +21,10 @@ export class MainTemplate implements OnInit {
 
     constructor(
         @Inject(DOCUMENT) private document: any,
-        private sOficio:OficioService
+        // private sOficio:OficioService
     ) { 
         this.oficios = [];
-        this.listarOficios();
+        // this.listarOficios();
     }
 
     detectScroll($event: any) {
@@ -66,15 +66,15 @@ export class MainTemplate implements OnInit {
         // this.fixedHeader();
     }
 
-    listarOficios(){
-        this.sOficio.listar().subscribe(
-            result => {
-                this.oficios = result.response;
-            },
-            error => {
-                console.log("ocurrio un error");
-            }
-        )
-    }
+    // listarOficios(){
+    //     this.sOficio.listar().subscribe(
+    //         result => {
+    //             this.oficios = result.response;
+    //         },
+    //         error => {
+    //             console.log("ocurrio un error");
+    //         }
+    //     )
+    // }
 
 }
