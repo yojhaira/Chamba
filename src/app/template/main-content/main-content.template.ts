@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {} from '../../service/oficio.service';
 
 @Component({
     selector: 'main-content',
