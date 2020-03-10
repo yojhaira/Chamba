@@ -1,112 +1,111 @@
-<div class="background">
-    <div class="body">
-        <div class="body-register">
-            <div class="body-register--logo"> <img src="../../assets/svg/logo-primary.svg" alt=""> </div>
+<div class="main-wrapper">
+    <div class="main-wrapper--background">
+        <div class="main-wrapper--background-filter"></div>
+        <img src="assets/images/wrappers/login.jpg" alt="Inicia Sesión">
+    </div>
 
-
-            <p class="body-register--text"> INICIAR SESION </p>
-            <form >
-                <div class="body-register--input">
-                    <div class="input-global" [ngClass]= "[(formLogin.get('user').touched && formLogin.get('user').invalid)?'is-invalid-in':'']">
-                        <div class="input-global--contenedor" >
-                            
-                            <input class="body-register--text-input "  type="text" name="mail"  (blur)="evaluar(formLogin.get('user'))"  formControlName="user"  id=""> <label for="" class="label-input"> E-mail </label>
-    
-                            <div class="menssage-button">
-                                <div class="input-icon input-register">
-                                    <i class="fas fa-user-alt" id="register"></i>
-                                </div>
-    
-                                <div class="ms-icon input-clean" (click)="cleanInput(formLogin.get('user'))">
-                                    <i class="fas fa-times-circle" id="clean"></i>
-                                </div>
-    
-                            </div>
-                        </div>
-    
-                        <div class="input-global--menssage"  *ngIf="formLogin.get('user').touched && formLogin.get('user').invalid">
-                            <span class="menssage-error">  {{getErrorUserName()}}</span>
-    
-                            <span class="menssage-errorInfo"> </span>
-                        </div>
-                    </div>
-
-                    <div class="input-global" [ngClass]= "[(formLogin.get('password').touched && formLogin.get('password').invalid)?'is-invalid-in':'']">
-                        <div class="input-global--contenedor" >
-                            
-                            <input class="body-register--text-input" type="text" name="password" formControlName="password"  id=""  > <label for=""> Password </label>
-    
-                            <div class="menssage-button">
-                                <div class="input-icon input-register">
-                                    <i class="fas fa-user-alt" id="register"></i>
-                                </div>
-    
-                                <div class="ms-icon input-clean" (click)="cleanInput(formLogin.get('password'))">
-                                    <i class="fas fa-times-circle" id="clean"></i>
-                                </div>
-    
-                            </div>
-                        </div>
-    
-                        <div class="input-global--menssage"  *ngIf="formLogin.get('password').touched && formLogin.get('password').invalid">
-                            <span class="menssage-error">  {{getErrorPassword()}}</span>
-    
-                            <span class="menssage-errorInfo"> </span>
-                        </div>
-                    </div>
+    <div class="main-wrapper--container grid-container grid-10">
+        <div class="grid-5">
+            <form class="main-wrapper--container-form" [formGroup]="loginForm">
+                <div class="container-form--logo">
+                    <logo-component></logo-component>
                 </div>
+                <div class="container-form--header">
+                    <span>Iniciar Sesión</span>
+                </div>
+                <div class="container-form--body">
 
-                
+                    <div class="input">
+                        <div class="input-container">
+                            <input type="text" id="emailUser" required formControlName="emailUser">
+                            <div class="input-container--box"></div>
+                            <label for="emainUser">Correo</label>
+                            <div class="input-container--icons">
+                                <div class="default-icon input-container--icons-indicator">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-validation">
+                            <!-- <div class="input-validation--tag">
+                                <span>Requerido</span>
+                            </div>
+                            <div class="input-validation--message">
+                                <span>Este campo debe completarse</span>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="input">
+                        <div class="input-container">
+                            <input type="password" id="passwordUser" required formControlName="passwordUser">
+                            <div class="input-container--box"></div>
+                            <label for="passwordUser">Contraseña</label>
+                            <div class="input-container--icons">
+                                <div class="default-icon input-container--icons-indicator">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-validation">
+                            <!-- <div class="input-validation--tag">
+                                <span>Requerido</span>
+                            </div>
+                            <div class="input-validation--message">
+                                <span>Este campo debe completarse</span>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="container-form--body-links">
+                        <div class="checkbox">
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="" id="recordar-contraseña">
+                                <label for="recordar-contraseña">Recordar contraseña</label>
+                            </div>
+                        </div>
+
+                        <div class="recover">
+                            <div class="recover-container">
+                                <div class="input-icon">
+                                    <i class="fas fa-lock-open"></i>
+                                </div>
+                                <span>Olvide mi contraseña</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-form--body-buttons">
+                        <div class="go-register" routerLink="/register">
+                            <span>¿Aun no tienes cuenta?</span>
+                            <span>Ir a regristrarme</span>
+                        </div>
+                        <button class="primary-button active" routerLink="">
+                            <div class="primary-button--icon">
+                              <div class="md-icon">
+                                <i class="ico register-primary"></i>
+                              </div>
+                            </div>
+                            <div class="primary-button--content">
+                              <span> Iniciar Sesión</span>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
             </form>
-            
-
-            
-            <div class="body-register-cuenta">
-                <div>
-                    <input type="radio" value="cuenta"
-                        tabindex="1">
-                    <span> </span>
-                    <label for="radiobtn_1"> Recordar mi cuenta</label>
-                </div>
-
-                <div>
-                    <i class="fas fa-unlock icono" ></i>
-                    <label for=""> Olvide Contraseña</label>
-                </div>
-
-            </div>
-
-            <div class="body-register--button">
-
-                <div class="link">
-                    <p>¡Aún no tienes cuenta? </p>
-                    <a href="http:// "> Ir a Registrame</a>
-                </div>
-
-                <button class="primary-button active">
-                    <div class="primary-button--icon">
-                        <div class="default-icon md-icon">
-                            <i class="ico register-primary"></i>
-                        </div>
-                    </div>
-                    <div class="primary-button--content">
-                        <span> Iniciar Sesion</span>
-                    </div>
-                </button>
-
-
-            </div>
-
         </div>
-
-        <div class="body-text">
-            <p class="body-text-title"> Encuentra o sé ese profesional</p>
-            <div class="body-text-parrafo">
-                <p> Inicia Sesion, cuentanos lo que necesitas y consigue cotizaciones GRATIS y sin compromisos.
-                    Si eres profesional ofrece tu servicio y genera nuevos ingresos en nuestra comunidad
-                </p>
+        <div class="grid-7">
+            <div class="main-wrapper--container-welcome">
+                <div class="container-welcome--header">
+                    <h2>Encuentra al "chamba" que necesitas</h2>
+                    <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu decides.</p>
+                </div>
+                <div class="container-welcome--image grid-9">
+                    <graphic-login></graphic-login>
+                </div>
             </div>
-            <img src="../../assets/images/register.png" alt="">
         </div>
     </div>
+    
 </div>

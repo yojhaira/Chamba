@@ -14,7 +14,7 @@ import { share, auditTime, map } from 'rxjs/operators';
     providers: [OficioService]
 })
 
-// @HostListener("window:scroll", ['$event'])
+@HostListener("scroll", ['$event'])
 export class MainTemplate implements OnInit {
     public oficios:Array<Oficio>;
     public scroll: number;
@@ -27,37 +27,43 @@ export class MainTemplate implements OnInit {
         this.listarOficios();
     }
 
-    // detectScroll($event: any) {
-    //     let scrollOffset = $event.srcElement.children[0].scrollTop;
-    //     console.log(scrollOffset);
-    // }
-
+    detectScroll($event: any) {
+        // let scrollOffset = $event.srcElement.children[0].scrollTop;
+        console.log('hola');
+    }
+    
     fixedHeader() {
-        let boxHome: any = this.document.querySelector('.home');
-        console.log(boxHome);
-
+        
         // this.scroll$ = fromEvent(boxHome, 'scroll').pipe(
         // 	auditTime(200),
         // 	map(event => {
-        // 		return boxHome.scrollY || boxHome.document.documentElement.scrollTop;
+            // 		return boxHome.scrollY || boxHome.document.documentElement.scrollTop;
         // 	}),
         // 	share()
         // )
-        const scrollElement = fromEvent(window, 'scroll').pipe(
-            map(() => {
-                return window.scrollY || document.documentElement.scrollTop;
-            }),
-            auditTime(200),
-            share()
-        )
+        // const scrollElement = fromEvent(window, 'scroll').pipe(
+            //     map(() => {
+        //         return window.scrollY || document.documentElement.scrollTop;
+        //     }),
+        //     auditTime(200),
+        //     share()
+        // )
 
-        scrollElement.subscribe((event: any) => {
-            this.scroll = window.scrollY;
-        })
+        // scrollElement.subscribe((event: any) => {
+        //     this.scroll = window.scrollY;
+        // })
+    }
+
+    boxHome: any = this.document.querySelector('.main');
+    @HostListener('window:scroll', ['$event'])
+
+    onScrollEvent($event) {
+        console.log(this.boxHome);
+        console.log('hola');
     }
 
     ngOnInit() {
-        this.fixedHeader();
+        // this.fixedHeader();
     }
 
     listarOficios(){

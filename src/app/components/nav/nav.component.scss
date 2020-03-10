@@ -17,16 +17,12 @@
 
   &--logo {
     height: 63px;
-    padding: 0 15px 0 30px;
+    padding: 0 15px;
+    color: white;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    svg {
-      fill: #ffffff;
-      width: 100%;
-    }
   }
 
   &--list {
