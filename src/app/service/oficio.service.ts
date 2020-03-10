@@ -13,6 +13,6 @@ export class OficioService {
   ) { }
 
   listar(): Observable<any>{
-    return this._http.get('http://127.0.0.1:8000/api/oficio');
+    return this._http.get('http://chamba-back.test/api/oficio');
   }
 }
