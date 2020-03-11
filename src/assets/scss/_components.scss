@@ -310,14 +310,12 @@
         box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075), 0 0 0 0.2em rgba(var(--color-focus), .3)
       }
 
+      &.active~label,
+      // &:invalid~label,
+      &:focus~label,
       &:valid~label {
         transform: translateY(-21px);
-        font-size: 10px;
-      }
-
-      &:focus~label {
-        transform: translateY(-21px);
-        font-size: 10px;
+        font-size: 11px;
       }
 
       // &:invalid {
@@ -447,12 +445,106 @@
 
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+
+    & input[type="checkbox"] {
+      margin-top: 2px;
+    }
 
     & input[type="checkbox"],
     & .input-icon {
       margin: 0;
       margin-right: 7px;
     }
+  }
+}
+
+.radio {
+  // padding-left: 16px;
+  padding-left: 6px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover {
+    cursor: pointer;
+    
+    & .radio-circles::before{
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &-circles {
+    --size-circles: 20px;
+    height: calc(var(--size-circles) * 2);
+    width: calc(var(--size-circles) * 2);
+    position: relative;
+    z-index: 1;
+    // margin: 10px;
+
+    &::before,
+    & input,
+    &--outer,
+    &--inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    &::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, .04);
+      z-index: -1;
+      transform: translate(-50%, -50%) scale(.0001);
+      transition: .3s transform ease-in-out;
+    }
+
+    & input {
+      transform: scale(.0001);
+
+      &:checked~.radio-circles--outer {
+        border: 2px solid var(--color-primary-dark);
+      }
+      &:checked~.radio-circles--inner {
+        transform: translate(-50%, -50%) scale(.5);
+      }
+    }
+    
+    &--outer {
+      border: 2px solid rgba(112, 112, 112, 1);
+    }
+
+    &--outer,
+    &--inner {
+      height: var(--size-circles);
+      width: var(--size-circles);
+      border-radius: calc(var(--size-circles) / 2);
+      transition: border .2s ease;
+    }
+    
+    &--inner {
+      height: var(--size-circles);
+      width: var(--size-circles);
+      background-color: var(--color-primary-dark);
+      transform: translate(-50%, -50%) scale(0.0001);
+      transition: transform .2s ease;
+    }
+
+  }
+}
+
+.group-radio {
+  margin-bottom: 6px;
+
+  &--label {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 6px;
   }
 }

@@ -37,11 +37,12 @@
       }
   
       &--container {
+        --size-base-container: 720px;
         border-radius: 14px 35px;
         padding: 0;
         overflow: hidden;
         box-shadow: 0 3px 6px rgba(0, 0, 0, .49);
-        height: 700px;
+        height: var(--size-base-container);
         
         & div[class^="grid"] {
           background: linear-gradient(180deg, var(--color-primary-dark), var(--color-secondary-dark));
@@ -56,6 +57,9 @@
           background-color: white;
           margin: 0 -15px;
           border-radius: 14px 35px;
+
+          height: var(--size-base-container);
+          overflow: hidden;
         }
   
         &-welcome {
@@ -94,6 +98,8 @@
   
       &--body {
         height: calc(100% - 160px);
+        display: flex;
+        flex-direction: column;
   
         &-links,
         &-buttons {
@@ -108,6 +114,7 @@
   
         &-buttons {
           justify-content: flex-end;
+          margin-top: auto;
   
           & .primary-button {
             margin-left: 14px;

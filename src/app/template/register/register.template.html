@@ -1,174 +1,203 @@
-<div class="background">
-    <div class="body">
-        <div class="body-register">
-            <div class="body-register--logo"> <img src="../../assets/svg/logo-primary.svg" alt=""> </div>
-            
-            <p class="body-register--text"> REGISTRATE </p>
-            <form [formGroup]="formRegister">
-
-                
-            </form>
-            <div class="body-register--input">
-                <div class="input-global">
-                    <div class="input-global--contenedor">
-                        <input type="text" name="" id="" placeholder="Nombres">
-
-                        <div class="menssage--button">
-                            <div class="input-icon">
-                                <i class="fas fa-user-alt" id="register"></i>
-                            </div> 
-                            
-                            <div class="ms-icon">
-                                <i class="fas fa-times-circle" id="clean"></i>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="input-global--menssage">
-                        <span class="menssage-error"> Requerido </span>
-
-                        <span class="menssage-errorInfo"> Valores Invalidos  </span>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="body-register--input">
-                <div class="input-global">
-                    <div class="input-global--contenedor">
-                        <input type="text" name="" id="" placeholder="Apellidos">
-
-                        <div class="menssage--button">
-                            <div class="input-icon">
-                                <i class="fas fa-user-alt" id="register"></i>
-                            </div> 
-                            
-                            <div class="ms-icon">
-                                <i class="fas fa-times-circle" id="clean"></i>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="input-global--menssage">
-                        <span class="menssage-error"> Requerido </span>
-
-                        <span class="menssage-errorInfo"> Valores Invalidos  </span>
-                    </div>
-                </div>
-            </div>
-
-               
-            <div class="body-register--input">
-                <div class="input-global">
-                    <div class="input-global--contenedor">
-                        <input type="text" name="" id="" placeholder="Fecha de nacimiento">
-
-                            <div class="md-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                    </div>
-
-                    <div class="input-global--menssage">
-                        <span class="menssage-error"> Requerido </span>
-
-                        <span class="menssage-errorInfo"> Valores Invalidos  </span>
-                    </div>
-                </div>
-            </div>
-
-            <p class="body-register--text-sex">Sexo</p>
-
-            <div class="genero">
-              
-                <div class="checkbox">
-                    <input id="radiobtn_1" class="checkbox-selector" name="genero" type="radio" value="M" tabindex="1" >
-                    <span></span>
-                    <label for="radiobtn_1">Masculino</label>
-                </div>
-
-
-                <div class="checkbox">
-                    <input id="radiobtn_2" class="checkbox-selector" name="genero" type="radio" value="F" tabindex="1">
-                    <span></span>
-                    <label for="radiobtn_2">Femenino</label>
-                </div>
-
-
-                <div class="checkbox">
-                    <input id="radiobtn_3" class="checkbox-selector" name="genero" type="radio" value="SD" tabindex="1" >
-                    <span></span>
-                    <label for="radiobtn_3">Sin definir</label>
-                </div>
-            </div>
-
-
-            <div class="body-register--input">
-                <div class="input-global">
-                    <div class="input-global--contenedor">
-                        <input class="body-register--text-input" type="text" name="" id="" placeholder="E-mail">
-
-                        <div class="menssage--button">
-                            <div class="input-icon">
-                                <i class="fas fa-user-alt" id="register"></i>
-                            </div> 
-                            
-                            <div class="ms-icon">
-                                <i class="fas fa-times-circle" id="clean"></i>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="input-global--menssage">
-                        <span class="menssage-error">  </span>
-
-                        <span class="menssage-errorInfo">  </span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="body-register--input">
-                <div class="input-global">
-                    <div class="input-global--contenedor">
-                        <input class="body-register--text-input" type="password" name="" id="" placeholder="Contraseña">
-
-                        <div class="menssage--button">
-                            <div class="input-icon">
-                                <i class="fas fa-user-alt" id="register"></i>
-                            </div> 
-                            
-                            <div class="ms-icon">
-                                <i class="fas fa-times-circle" id="clean"></i>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="input-global--menssage">
-                        <span class="menssage-error">  </span>
-
-                        <span class="menssage-errorInfo">  </span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="body-register--text-terms">
-                <input type="checkbox" name="" id=""> Al crear su cuenta acepta haber leido y estar de acuerdo con
-                nuestras Politicas de Privacidad y terminos de Uso
-            </div>
-        </div>
-
-        <div class="body-text">
-            <p class="body-text-title"> Encuentra o sé ese profesional</p>
-            <div class="body-text-parrafo">
-                <p> Inicia Sesion, cuentanos lo que necesitas y consigue cotizaciones GRATIS y sin compromisos.
-                    Si eres profesional ofrece tu servicio y genera nuevos ingresos en nuestra comunidad
-                </p>
-            </div>
-            <img src="../../assets/images/register.png" alt="">
-        </div>
+<div class="main-wrapper">
+    <div class="main-wrapper--background">
+        <div class="main-wrapper--background-filter"></div>
+        <img src="assets/images/wrappers/login.jpg" alt="Inicia Sesión">
     </div>
 
+    <div class="main-wrapper--container grid-container grid-10">
+        <div class="grid-5">
+            <form class="main-wrapper--container-form">
+                <div class="container-form--scrollable">
+                    <div class="container-form--logo">
+                        <logo-component></logo-component>
+                    </div>
+                    <div class="container-form--header">
+                        <span>Registrarse</span>
+                    </div>
+                    <div class="container-form--body">
+    
+                        <div class="input">
+                            <div class="input-container">
+                                <input type="text" id="userNames" required>
+                                <div class="input-container--box"></div>
+                                <label for="userNames">Nombres</label>
+                                <div class="input-container--icons">
+                                    <div class="default-icon input-container--icons-indicator">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-validation">
+                                <!-- <div class="input-validation--tag">
+                                    <span>Requerido</span>
+                                </div>
+                                <div class="input-validation--message">
+                                    <span>Este campo debe completarse</span>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="input">
+                            <div class="input-container">
+                                <input type="text" id="userSurnames" required>
+                                <div class="input-container--box"></div>
+                                <label for="userSurnames">Apellidos</label>
+                                <div class="input-container--icons">
+                                    <div class="default-icon input-container--icons-indicator">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-validation">
+                                <!-- <div class="input-validation--tag">
+                                    <span>Requerido</span>
+                                </div>
+                                <div class="input-validation--message">
+                                    <span>Este campo debe completarse</span>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="input">
+                            <div class="input-container">
+                                <input type="date" id="dataBirth" class="active" required>
+                                <div class="input-container--box"></div>
+                                <label for="dataBirth">Fecha de nacimientos</label>
+                                <div class="input-container--icons">
+                                    <div class="default-icon input-container--icons-indicator">
+                                        <i class="far fa-calendar-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-validation">
+                                <!-- <div class="input-validation--tag">
+                                    <span>Requerido</span>
+                                </div>
+                                <div class="input-validation--message">
+                                    <span>Este campo debe completarse</span>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="group-radio">
+                            <span class="group-radio--label">Sexo</span>
+                            <div class="group-radio--container">
+                                <label class="radio">
+                                    <div class="radio-circles">
+                                        <input type="radio" name="userGender" value="M">
+                                        <div class="radio-circles--outer"></div>
+                                        <div class="radio-circles--inner"></div>
+                                    </div>
+                                    <div class="radio-content">
+                                        <span>Masculino</span>
+                                    </div>
+                                </label>
+                                <label class="radio">
+                                    <div class="radio-circles">
+                                        <input type="radio" name="userGender" value="F">
+                                        <div class="radio-circles--outer"></div>
+                                        <div class="radio-circles--inner"></div>
+                                    </div>
+                                    <div class="radio-content">
+                                        <span>Femenino</span>
+                                    </div>
+                                </label>
+                                <label class="radio">
+                                    <div class="radio-circles">
+                                        <input type="radio" name="userGender" value="P">
+                                        <div class="radio-circles--outer"></div>
+                                        <div class="radio-circles--inner"></div>
+                                    </div>
+                                    <div class="radio-content">
+                                        <span>Sin especificar</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="input">
+                            <div class="input-container">
+                                <input type="email" id="userEmail" required>
+                                <div class="input-container--box"></div>
+                                <label for="userEmail">E-mail</label>
+                                <div class="input-container--icons">
+                                    <div class="default-icon input-container--icons-indicator">
+                                        <i class="fas fa-at"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-validation">
+                                <!-- <div class="input-validation--tag">
+                                    <span>Requerido</span>
+                                </div>
+                                <div class="input-validation--message">
+                                    <span>Este campo debe completarse</span>
+                                </div> -->
+                            </div>
+                        </div>
+    
+                        <div class="input">
+                            <div class="input-container">
+                                <input type="password" id="userPassword" required>
+                                <div class="input-container--box"></div>
+                                <label for="userPassword">Contraseña</label>
+                                <div class="input-container--icons">
+                                    <div class="default-icon input-container--icons-indicator">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-validation">
+                                <!-- <div class="input-validation--tag">
+                                    <span>Requerido</span>
+                                </div>
+                                <div class="input-validation--message">
+                                    <span>Este campo debe completarse</span>
+                                </div> -->
+                            </div>
+                        </div>
+    
+                        <div class="container-form--body-links">
+                            <div class="checkbox">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" name="" id="recordar-contraseña">
+                                    <label for="recordar-contraseña">Al crear su Cuenta acepta haber leído y estar de acuerdo con nuestras Políticas de Privacidad y Términos de Uso.</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="container-form--body-buttons">
+                            <div class="go-register" routerLink="/login">
+                                <span>¿Ya tienes cuenta?</span>
+                                <span>Iniciar Sesión</span>
+                            </div>
+                            <button class="primary-button active" routerLink="">
+                                <div class="primary-button--icon">
+                                  <div class="md-icon">
+                                    <i class="ico register-primary"></i>
+                                  </div>
+                                </div>
+                                <div class="primary-button--content">
+                                  <span>Registrarme</span>
+                                </div>
+                            </button>
+                        </div>
+    
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="grid-7">
+            <div class="main-wrapper--container-welcome">
+                <div class="container-welcome--header">
+                    <h2>Encuentra al "chamba" que necesitas</h2>
+                    <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu decides.</p>
+                </div>
+                <div class="container-welcome--image grid-9">
+                    <graphic-login></graphic-login>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </div>
