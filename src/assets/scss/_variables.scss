@@ -46,7 +46,11 @@
   &.pintor-primary,
   &.pintor-alternate,
   &.electricista-primary,
-  &.electricista-alternate {
+  &.electricista-alternate,
+  &.carpinteria-primary,
+  &.carpinteria-alternate,
+  &.constructor-primary,
+  &.constructor-alternate{
     &::before {
       content: '';
       position: absolute;
@@ -156,7 +160,29 @@
       background-image: url("assets/svg/enchufe-alternative.svg");
     }
   }
-  
+
+  &.carpinteria-primary{
+    &::before {
+      background-image: url("assets/svg/carpinteria-primary.svg");
+    }
+  }
+
+  &.carpinteria-alternate{
+    &::before {
+      background-image: url("assets/svg/carpinteria-alternative.svg");
+    }
+  }
+  &.constructor-primary{
+    &::before {
+      background-image: url("assets/svg/constructor-primary.svg");
+    }
+  }
+
+  &.constructor-alternate{
+    &::before {
+      background-image: url("assets/svg/constructor-alternative.svg");
+    }
+  }
 
 }
 
