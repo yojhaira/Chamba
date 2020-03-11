@@ -6,7 +6,7 @@
 
     <div class="main-wrapper--container grid-container grid-10">
         <div class="grid-5">
-            <form class="main-wrapper--container-form" [formGroup]="loginForm">
+            <form class="main-wrapper--container-form" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
                 <div class="container-form--logo">
                     <logo-component></logo-component>
                 </div>
@@ -56,7 +56,9 @@
                             </div> -->
                         </div>
                     </div>
-
+                    <div>
+                        <p *ngIf="showError">{{textError}}</p>   
+                    </div>
                     <div class="container-form--body-links">
                         <div class="checkbox">
                             <div class="checkbox-container">
@@ -80,7 +82,7 @@
                             <span>¿Aun no tienes cuenta?</span>
                             <span>Ir a regristrarme</span>
                         </div>
-                        <button class="primary-button active" routerLink="">
+                        <button class="primary-button active">
                             <div class="primary-button--icon">
                               <div class="md-icon">
                                 <i class="ico register-primary"></i>
