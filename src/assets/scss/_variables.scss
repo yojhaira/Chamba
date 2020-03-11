@@ -44,7 +44,9 @@
   &.comments-primary,
   &.comments-alternate,
   &.pintor-primary,
-  &.pintor-alternate {
+  &.pintor-alternate,
+  &.electricista-primary,
+  &.electricista-alternate {
     &::before {
       content: '';
       position: absolute;
@@ -142,6 +144,19 @@
       background-image: url("assets/svg/brocha-alternative.svg");
     }
   }
+
+  &.electricista-primary{
+    &::before {
+      background-image: url("assets/svg/enchufe-primary.svg");
+    }
+  }
+
+  &.electricista-alternate{
+    &::before {
+      background-image: url("assets/svg/enchufe-alternative.svg");
+    }
+  }
+  
 
 }
 
