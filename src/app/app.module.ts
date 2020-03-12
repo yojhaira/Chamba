@@ -20,11 +20,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { QuoteComponent } from './components/quote/quote.component';
+
 // import { InputComponent } from './components/input/input.component';
 import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
 
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +43,8 @@ import { routing, appRoutingProviders } from './app.routing';
     FooterComponent,
     MainContentTemplate,
     LogoComponent,
-    GraphicLogin
+    GraphicLogin,
+    QuoteComponent
     // InputComponent
   ],
   imports: [

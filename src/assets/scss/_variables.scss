@@ -50,7 +50,9 @@
   &.carpinteria-primary,
   &.carpinteria-alternate,
   &.constructor-primary,
-  &.constructor-alternate{
+  &.constructor-alternate,
+  &.avion-primary,
+  &.avion-alternate{
     &::before {
       content: '';
       position: absolute;
@@ -183,6 +185,19 @@
       background-image: url("assets/svg/constructor-alternative.svg");
     }
   }
+
+  &.avion-primary{
+    &::before {
+      background-image: url("assets/svg/avion-primary.svg");
+    }
+  }
+
+  &.avion-alternate{
+    &::before {
+      background-image: url("assets/svg/avion-alternative.svg");
+    }
+  }
+
 
 }
 

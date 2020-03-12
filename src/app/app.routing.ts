@@ -8,6 +8,8 @@ import { MainContentTemplate } from './template/main-content/main-content.templa
 import { LoginTemplate } from './template/login/login.template';
 import { RegisterTemplate } from './template/register/register.template';
 import { C404Template } from './template/c404/c404.template';
+import {QuoteComponent} from './components/quote/quote.component';
+import { from } from 'rxjs';
 
 
 const appRouters: Routes = [
@@ -31,6 +33,10 @@ const appRouters: Routes = [
     {
         path: 'register',
         component: RegisterTemplate
+    },
+    {
+        path: 'quote',
+        component:QuoteComponent
     },
     {
         path: '**',
