@@ -6,21 +6,21 @@
 
     <div class="main-wrapper--container grid-container grid-10">
         <div class="grid-5">
-            <form class="main-wrapper--container-form" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
+            <form class="main-wrapper--container-form">
                 <div class="container-form--scrollable">
                     <div class="container-form--logo">
                         <logo-component></logo-component>
                     </div>
                     <div class="container-form--header">
-                        <span>Iniciar Sesión</span>
+                        <span>Perfil Usuario</span>
                     </div>
                     <div class="container-form--body">
     
                         <div class="input">
                             <div class="input-container">
-                                <input type="text" id="emailUser" required formControlName="emailUser">
+                                <input type="text" id="emailUser">
                                 <div class="input-container--box"></div>
-                                <label for="emainUser">Correo</label>
+                                <label for="nameUser">Nombres</label>
                                 <div class="input-container--icons">
                                     <div class="default-icon input-container--icons-indicator">
                                         <i class="fas fa-user-circle"></i>
@@ -39,9 +39,9 @@
     
                         <div class="input">
                             <div class="input-container">
-                                <input type="password" id="passwordUser" required formControlName="passwordUser">
+                                <input type="password" id="User">
                                 <div class="input-container--box"></div>
-                                <label for="passwordUser">Contraseña</label>
+                                <label for="passwordUser">Apellidos</label>
                                 <div class="input-container--icons">
                                     <div class="default-icon input-container--icons-indicator">
                                         <i class="fas fa-lock"></i>
@@ -98,15 +98,7 @@
             </form>
         </div>
         <div class="grid-7">
-            <div class="main-wrapper--container-welcome">
-                <div class="container-welcome--header">
-                    <h2>Encuentra al "chamba" que necesitas</h2>
-                    <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu decides.</p>
-                </div>
-                <div class="container-welcome--image grid-9">
-                    <graphic-login></graphic-login>
-                </div>
-            </div>
+           
         </div>
     </div>
     

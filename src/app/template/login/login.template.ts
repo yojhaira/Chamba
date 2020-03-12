@@ -45,6 +45,7 @@ export class LoginTemplate implements OnInit {
 			result => {
 				//console.log(result);
 				if(result.response.length){
+					this._authServive.setUser(user);
 					this._router.navigate(['/']);		
 				}else{
 					this.showError = true;
@@ -57,4 +58,5 @@ export class LoginTemplate implements OnInit {
 		)
 	}
 }
+
 

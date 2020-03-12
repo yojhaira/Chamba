@@ -10,14 +10,14 @@ import {} from '../../service/usuario.service';
 
 export class RegisterTemplate implements OnInit {
     // Properties
-    public formRegister: any;
+    // public formRegister: any;
 
     constructor(
-        private formBuilder: FormBuilder,
-        private formGroup: FormGroup
+        // private formBuilder: FormBuilder,
+        // private formGroup: FormGroup
     ) {}
 
     ngOnInit(): void {
-        this.formRegister = '';
+        // this.formRegister = '';
     }
 }

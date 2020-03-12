@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 * Template
 */
 import { MainTemplate } from './template/main/main.template';
+import { UserProfileTemplate } from './template/main/user-profile/user-profile.template';
 import { RegisterTemplate } from './template/register/register.template';
 import { LoginTemplate } from './template/login/login.template';
 import { C404Template } from './template/c404/c404.template';
@@ -34,6 +35,7 @@ import { routing, appRoutingProviders } from './app.routing';
     C404Template,
     
     MainTemplate,
+    UserProfileTemplate,
     HeaderComponent,
     NavComponent,
     MostWantedComponent,
