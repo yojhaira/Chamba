@@ -48,7 +48,8 @@ export class LoginTemplate implements OnInit {
 					this._router.navigate(['/']);		
 				}else{
 					this.showError = true;
-				}	this.textError = "Upsi falta la tarea"
+					this.textError = "Upsi falta la tarea"
+				}	
 			},
 			error => {
 				//console.log(error);
