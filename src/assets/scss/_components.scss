@@ -273,12 +273,18 @@
 /**
  * Form Components
  */
+
 .input {
   --color-focus: 103, 20, 143;
   --color-container: 255, 255, 255;
   margin-bottom: 16px;
 
+  .textarea{
+    height: 100px;
+  }
+
   &-container {
+
     --size-element: 42px;
     height: var(--size-element);
     width: 100%;
@@ -293,7 +299,41 @@
 
     color: var(--color-primary-dark);
 
-    & input {
+
+
+   & textarea{
+    width: 332px;
+    height: 79px;
+    flex-grow: 1;
+    z-index: 2;
+    background-color: transparent;
+    font-weight: 400;
+    padding: 0;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus~.input-container--box {
+      border: 1px solid var(--color-primary-dark);
+      box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075), 0 0 0 0.2em rgba(var(--color-focus), .3)
+    }
+
+    &:valid~label {
+      transform: translateY(-48px);
+      font-size: 10px;
+    }
+
+    &:focus~label {
+      transform: translateY(-48px);
+      font-size: 10px;
+    }
+    
+  }
+
+
+    & input{
       flex-grow: 1;
       z-index: 2;
       background-color: transparent;
@@ -319,6 +359,7 @@
         transform: translateY(-21px);
         font-size: 10px;
       }
+      
 
       // &:invalid {
       //     color: red;
