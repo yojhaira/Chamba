@@ -36,28 +36,17 @@
       <h3>Chamba te ofrece profesionales en...</h3>
     </div>
     <div class="categories-list">
-<<<<<<< HEAD
-      <div class="categories-list--item">
-        <div class="categories-list--item-content">
-          <div class="b-icon">
-            <div class="ico gardening-primary"></div>
-          </div>
-          <span>Jardinería</span>
-        </div>
-      </div>
-=======
       <ng-container *ngFor="let item of oficios">
         <div class="categories-list--item">
           <div class="categories-list--item-content">
             <div class="b-icon">
               <div class="ico {{filtrar_acentos(item.descripcion)}}-primary"></div>
             </div>
-            <span >{{item.descripcion}}</span>
+            <span>{{item.descripcion}}</span>
           </div>
         </div>
       </ng-container>
-      
->>>>>>> 3ba322fa5a28348075bf557389088e2cc43531ff
+
       <div class="categories-list--item active">
         <div class="categories-list--item-content">
           <div class="b-icon">

@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import {} from '../../service/oficio.service';
-=======
+
 import { OficioService } from '../../service/oficio.service';
     
->>>>>>> 3ba322fa5a28348075bf557389088e2cc43531ff
 
 @Component({
     selector: 'main-content',
