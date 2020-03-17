@@ -37,12 +37,22 @@
   &.home-primary,
   &.home-alternate,
   &.search-primary,
-  &.gardening-primary,
-  &.gardening-alternate,
+  &.jardineria-primary,
+  &.jardineria-alternate,
   &.plus-primary,
   &.plus-alternative,
   &.comments-primary,
-  &.comments-alternate {
+  &.comments-alternate,
+  &.pintor-primary,
+  &.pintor-alternate,
+  &.electricista-primary,
+  &.electricista-alternate,
+  &.carpinteria-primary,
+  &.carpinteria-alternate,
+  &.constructor-primary,
+  &.constructor-alternate,
+  &.avion-primary,
+  &.avion-alternate{
     &::before {
       content: '';
       position: absolute;
@@ -93,13 +103,13 @@
     }
   }
 
-  &.gardening-primary {
+  &.jardineria-primary {
     &::before {
       background-image: url("assets/svg/planta-primary.svg");
     }
   }
 
-  &.gardening-alternate {
+  &.jardineria-alternate {
     &::before {
       background-image: url("assets/svg/planta-alternative.svg");
     }
@@ -128,6 +138,67 @@
       background-image: url("assets/svg/comments-alternative.svg");
     }
   }
+
+  &.pintor-primary{
+    &::before {
+      background-image: url("assets/svg/brocha-primary.svg");
+    }
+  }
+
+  &.pintor-alternate{
+    &::before {
+      background-image: url("assets/svg/brocha-alternative.svg");
+    }
+  }
+
+  &.electricista-primary{
+    &::before {
+      background-image: url("assets/svg/enchufe-primary.svg");
+    }
+  }
+
+  &.electricista-alternate{
+    &::before {
+      background-image: url("assets/svg/enchufe-alternative.svg");
+    }
+  }
+
+  &.carpinteria-primary{
+    &::before {
+      background-image: url("assets/svg/carpinteria-primary.svg");
+    }
+  }
+
+  &.carpinteria-alternate{
+    &::before {
+      background-image: url("assets/svg/carpinteria-alternative.svg");
+    }
+  }
+  &.constructor-primary{
+    &::before {
+      background-image: url("assets/svg/constructor-primary.svg");
+    }
+  }
+
+  &.constructor-alternate{
+    &::before {
+      background-image: url("assets/svg/constructor-alternative.svg");
+    }
+  }
+
+  &.avion-primary{
+    &::before {
+      background-image: url("assets/svg/avion-primary.svg");
+    }
+  }
+
+  &.avion-alternate{
+    &::before {
+      background-image: url("assets/svg/avion-alternative.svg");
+    }
+  }
+
+
 }
 
 .background{

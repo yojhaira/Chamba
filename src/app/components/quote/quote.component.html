@@ -1,0 +1,88 @@
+<div class="grid-5">
+    <div class="text">
+        No esperes más y solicita tu cotizacion
+    </div>
+    <form action="" class="main-wrapper--container-form">
+        <div class="container-form--logo">
+            <logo-component></logo-component>
+            <div class="fondo">
+                <div class="md-icon">
+                    <i class="ico avion-alternate"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="subtitle"> RECIBE AYUDA DE LOS "CHAMBAS"</p>
+        <h2> Solicitar cotización</h2>
+
+        <div class="container-form--body">
+
+            <div class="input">
+                <div class="input-container">
+                    <input type="text" id="emailUser" required formControlName="emailUser">
+                    <div class="input-container--box"></div>
+                    <label> ¿Qué chamba necesitas?</label>
+                    <div class="input-container--icons">
+                        <div class="default-icon input-container--icons-indicator">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-validation">
+                    <!-- <div class="input-validation--tag">
+                            <span>Requerido</span>
+                        </div>
+                        <div class="input-validation--message">
+                            <span>Este campo debe completarse</span>
+                        </div> -->
+                </div>
+            </div>
+
+            <div class="input">
+                <div class="input-container textarea">
+
+                    <textarea type="text" required name="textCoti" id="textCoti" cols="30" rows="10"></textarea>
+                    <div class="input-container--box"></div>
+                    <label> Describe de manera breve </label>
+                    <div class="input-container--icons">
+                        <div class="default-icon input-container--icons-indicator">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-validation">
+                    <!-- <div class="input-validation--tag">
+                            <span>Requerido</span>
+                        </div>
+                        <div class="input-validation--message">
+                            <span>Este campo debe completarse</span>
+                        </div> -->
+                </div>
+            </div>
+
+            <div>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+
+                <span>Solicitar con urgencia</span>
+            </div>
+
+            <div class="position-coti">
+            <button class="primary-button active position-coti" routerLink="">
+                <div class="primary-button--icon">
+                    <div class="md-icon">
+                        <i class="ico register-primary"></i>
+                    </div>
+                </div>
+                <div class="primary-button--content">
+                    <span> Completar Registro</span>
+                </div>
+            </button>
+        </div>
+
+        </div>
+    </form>
+</div>
