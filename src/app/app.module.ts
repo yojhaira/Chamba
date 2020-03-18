@@ -13,6 +13,8 @@ import { LoginTemplate } from './template/login/login.template';
 import { C404Template } from './template/c404/c404.template';
 import { HttpClientModule } from '@angular/common/http';
 import { MainContentTemplate } from './template/main-content/main-content.template';
+import { CategoriesTemplate } from './template/main/categories/categories.template';
+
 /**
 * Components
 */
@@ -25,39 +27,43 @@ import { QuoteComponent } from './components/quote/quote.component';
 
 // import { InputComponent } from './components/input/input.component';
 import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
+import { GraphicLaunch } from './components/graphics/graphic-launch/graphic-launch.component';
 
-import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginTemplate,
-    RegisterTemplate,
-    C404Template,
-    
-    MainTemplate,
-    UserProfileTemplate,
-    HeaderComponent,
-    NavComponent,
-    MostWantedComponent,
-    FooterComponent,
-    MainContentTemplate,
-    LogoComponent,
-    GraphicLogin,
-    QuoteComponent
-    // InputComponent
-  ],
-  imports: [
-    BrowserModule,
-    //AppRoutingModule,
-    routing,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
-  providers: [appRoutingProviders],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LoginTemplate,
+        RegisterTemplate,
+        C404Template,
+
+        MainTemplate,
+        MainContentTemplate,
+        UserProfileTemplate,
+        CategoriesTemplate,
+
+        HeaderComponent,
+        NavComponent,
+        MostWantedComponent,
+        FooterComponent,
+        LogoComponent,
+        GraphicLogin,
+        GraphicLaunch,
+        QuoteComponent
+        // InputComponent
+    ],
+    imports: [
+        BrowserModule,
+        //AppRoutingModule,
+        routing,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
+    providers: [appRoutingProviders],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

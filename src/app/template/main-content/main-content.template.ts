@@ -17,14 +17,14 @@ export class MainContentTemplate implements OnInit {
 
     }
     listarOficios(){
-        this.sOficio.listar().subscribe(
-            result => {
-                this.oficios = result.response;
-            },
-            error => {
-                console.log("ocurrio un error");
-            }
-        )
+        // this.sOficio.listar().subscribe(
+        //     result => {
+        //         this.oficios = result.response;
+        //     },
+        //     error => {
+        //         console.log("ocurrio un error");
+        //     }
+        // )
     }
 
     filtrar_acentos(input: string): string{

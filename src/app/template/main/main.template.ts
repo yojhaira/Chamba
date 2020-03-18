@@ -23,7 +23,7 @@ export class MainTemplate implements OnInit {
         @Inject(DOCUMENT) private document: any,
         // private sOficio:OficioService
     ) { 
-        this.oficios = [];
+        // this.oficios = [];
         // this.listarOficios();
     }
 

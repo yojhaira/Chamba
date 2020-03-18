@@ -12,7 +12,8 @@ export class OficioService {
     public _http:HttpClient
   ) { }
 
-  listar(): Observable<any>{
-    return this._http.get('http://chamba-back.test/api/oficio');
+    listar(): Observable<any>{
+      return
+    // return this._http.get('http://chamba-back.test/api/oficio');
   }
 }
