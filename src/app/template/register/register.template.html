@@ -6,7 +6,7 @@
 
     <div class="main-wrapper--container grid-container grid-10">
         <div class="grid-5">
-            <form class="main-wrapper--container-form">
+            <form class="main-wrapper--container-form" [formGroup]="formRegister" (ngSubmit)="registrar(formRegister)">
                 <div class="container-form--scrollable">
                     <div class="container-form--logo">
                         <logo-component></logo-component>
@@ -15,10 +15,10 @@
                         <span>Registrarse</span>
                     </div>
                     <div class="container-form--body">
-    
+
                         <div class="input">
                             <div class="input-container">
-                                <input type="text" id="userNames" required>
+                                <input type="text" id="userNames" formControlName="nombres" required>
                                 <div class="input-container--box"></div>
                                 <label for="userNames">Nombres</label>
                                 <div class="input-container--icons">
@@ -29,17 +29,17 @@
                             </div>
                             <div class="input-validation">
                                 <!-- <div class="input-validation--tag">
-                                    <span>Requerido</span>
-                                </div>
-                                <div class="input-validation--message">
-                                    <span>Este campo debe completarse</span>
-                                </div> -->
+                                        <span>Requerido</span>
+                                    </div>
+                                    <div class="input-validation--message">
+                                        <span>Este campo debe completarse</span>
+                                    </div> -->
                             </div>
                         </div>
 
                         <div class="input">
                             <div class="input-container">
-                                <input type="text" id="userSurnames" required>
+                                <input type="text" id="userSurnames" formControlName="apellidos" required>
                                 <div class="input-container--box"></div>
                                 <label for="userSurnames">Apellidos</label>
                                 <div class="input-container--icons">
@@ -50,17 +50,17 @@
                             </div>
                             <div class="input-validation">
                                 <!-- <div class="input-validation--tag">
-                                    <span>Requerido</span>
-                                </div>
-                                <div class="input-validation--message">
-                                    <span>Este campo debe completarse</span>
-                                </div> -->
+                                        <span>Requerido</span>
+                                    </div>
+                                    <div class="input-validation--message">
+                                        <span>Este campo debe completarse</span>
+                                    </div> -->
                             </div>
                         </div>
 
                         <div class="input">
                             <div class="input-container">
-                                <input type="date" id="dataBirth" class="active" required>
+                                <input type="date" id="dataBirth" class="active" formControlName="f_nacimiento" required>
                                 <div class="input-container--box"></div>
                                 <label for="dataBirth">Fecha de nacimientos</label>
                                 <div class="input-container--icons">
@@ -71,11 +71,11 @@
                             </div>
                             <div class="input-validation">
                                 <!-- <div class="input-validation--tag">
-                                    <span>Requerido</span>
-                                </div>
-                                <div class="input-validation--message">
-                                    <span>Este campo debe completarse</span>
-                                </div> -->
+                                        <span>Requerido</span>
+                                    </div>
+                                    <div class="input-validation--message">
+                                        <span>Este campo debe completarse</span>
+                                    </div> -->
                             </div>
                         </div>
 
@@ -84,7 +84,7 @@
                             <div class="group-radio--container">
                                 <label class="radio">
                                     <div class="radio-circles">
-                                        <input type="radio" name="userGender" value="M">
+                                        <input type="radio" name="userGender" value="M" formControlName="userGender">
                                         <div class="radio-circles--outer"></div>
                                         <div class="radio-circles--inner"></div>
                                     </div>
@@ -94,7 +94,7 @@
                                 </label>
                                 <label class="radio">
                                     <div class="radio-circles">
-                                        <input type="radio" name="userGender" value="F">
+                                        <input type="radio" name="userGender" value="F" formControlName="userGender">
                                         <div class="radio-circles--outer"></div>
                                         <div class="radio-circles--inner"></div>
                                     </div>
@@ -104,7 +104,7 @@
                                 </label>
                                 <label class="radio">
                                     <div class="radio-circles">
-                                        <input type="radio" name="userGender" value="P">
+                                        <input type="radio" name="userGender" value="P" formControlName="userGender">
                                         <div class="radio-circles--outer"></div>
                                         <div class="radio-circles--inner"></div>
                                     </div>
@@ -117,7 +117,7 @@
 
                         <div class="input">
                             <div class="input-container">
-                                <input type="email" id="userEmail" required>
+                                <input type="email" id="userEmail" formControlName="correo" required>
                                 <div class="input-container--box"></div>
                                 <label for="userEmail">E-mail</label>
                                 <div class="input-container--icons">
@@ -128,17 +128,17 @@
                             </div>
                             <div class="input-validation">
                                 <!-- <div class="input-validation--tag">
-                                    <span>Requerido</span>
-                                </div>
-                                <div class="input-validation--message">
-                                    <span>Este campo debe completarse</span>
-                                </div> -->
+                                        <span>Requerido</span>
+                                    </div>
+                                    <div class="input-validation--message">
+                                        <span>Este campo debe completarse</span>
+                                    </div> -->
                             </div>
                         </div>
-    
+
                         <div class="input">
                             <div class="input-container">
-                                <input type="password" id="userPassword" required>
+                                <input type="password" id="userPassword" formControlName="password" required>
                                 <div class="input-container--box"></div>
                                 <label for="userPassword">Contraseña</label>
                                 <div class="input-container--icons">
@@ -149,40 +149,41 @@
                             </div>
                             <div class="input-validation">
                                 <!-- <div class="input-validation--tag">
-                                    <span>Requerido</span>
-                                </div>
-                                <div class="input-validation--message">
-                                    <span>Este campo debe completarse</span>
-                                </div> -->
+                                        <span>Requerido</span>
+                                    </div>
+                                    <div class="input-validation--message">
+                                        <span>Este campo debe completarse</span>
+                                    </div> -->
                             </div>
                         </div>
-    
+
                         <div class="container-form--body-links">
                             <div class="checkbox">
                                 <div class="checkbox-container">
                                     <input type="checkbox" name="" id="recordar-contraseña">
-                                    <label for="recordar-contraseña">Al crear su Cuenta acepta haber leído y estar de acuerdo con nuestras Políticas de Privacidad y Términos de Uso.</label>
+                                    <label for="recordar-contraseña">Al crear su Cuenta acepta haber leído y estar de
+                                        acuerdo con nuestras Políticas de Privacidad y Términos de Uso.</label>
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="container-form--body-buttons">
                             <div class="go-register" routerLink="/login">
                                 <span>¿Ya tienes cuenta?</span>
                                 <span>Iniciar Sesión</span>
                             </div>
-                            <button class="primary-button active" routerLink="">
+                            <button class="primary-button active">
                                 <div class="primary-button--icon">
-                                  <div class="md-icon">
-                                    <i class="ico register-primary"></i>
-                                  </div>
+                                    <div class="md-icon">
+                                        <i class="ico register-primary"></i>
+                                    </div>
                                 </div>
                                 <div class="primary-button--content">
-                                  <span>Registrarme</span>
+                                    <span>Registrarme</span>
                                 </div>
                             </button>
                         </div>
-    
+
                     </div>
                 </div>
             </form>
@@ -191,7 +192,8 @@
             <div class="main-wrapper--container-welcome">
                 <div class="container-welcome--header">
                     <h2>Encuentra al "chamba" que necesitas</h2>
-                    <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu decides.</p>
+                    <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu
+                        decides.</p>
                 </div>
                 <div class="container-welcome--image grid-9">
                     <graphic-login></graphic-login>
@@ -199,5 +201,4 @@
             </div>
         </div>
     </div>
-    
 </div>
