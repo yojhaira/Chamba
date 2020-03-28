@@ -12,19 +12,19 @@ import { OficioService } from '../../service/oficio.service';
 
 export class MainContentTemplate implements OnInit {
     public oficios: Array <any>;
-    // public acentos:Array <any>
+    public acentos:Array <any>
     constructor(private sOficio:OficioService){
 
     }
     listarOficios(){
-        // this.sOficio.listar().subscribe(
-        //     result => {
-        //         this.oficios = result.response;
-        //     },
-        //     error => {
-        //         console.log("ocurrio un error");
-        //     }
-        // )
+        this.sOficio.listar().subscribe(
+            result => {
+                this.oficios = result.response;
+            },
+            error => {
+                console.log("ocurrio un error");
+            }
+        )
     }
 
     filtrar_acentos(input: string): string{

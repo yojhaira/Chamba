@@ -14,7 +14,7 @@ import { C404Template } from './template/c404/c404.template';
 import { HttpClientModule } from '@angular/common/http';
 import { MainContentTemplate } from './template/main-content/main-content.template';
 import { CategoriesTemplate } from './template/main/categories/categories.template';
-
+import { SearchComponent } from './template/search/search.template';
 /**
 * Components
 */
@@ -33,12 +33,18 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
 
 
+
+
+
+
 @NgModule({
     declarations: [
         AppComponent,
         LoginTemplate,
         RegisterTemplate,
         C404Template,
+        SearchComponent,
+        
 
         MainTemplate,
         MainContentTemplate,
@@ -52,7 +58,11 @@ import { routing, appRoutingProviders } from './app.routing';
         LogoComponent,
         GraphicLogin,
         GraphicLaunch,
-        QuoteComponent
+        QuoteComponent,
+        
+        
+        
+        
         // InputComponent
     ],
     imports: [

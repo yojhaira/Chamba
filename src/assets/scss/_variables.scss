@@ -52,7 +52,20 @@
   &.constructor-primary,
   &.constructor-alternate,
   &.avion-primary,
-  &.avion-alternate{
+  &.avion-alternate,
+  &.bell,
+  &.cartaNoti-primary,
+  &.galeryList,
+  &.galeryView,
+  &.check,
+  &.face,
+  &.instagram,
+  &.wpp,
+  &.google,
+  &.in,
+  &.msg,
+  &.pinterest,
+  &.point{
     &::before {
       content: '';
       position: absolute;
@@ -198,7 +211,84 @@
     }
   }
 
+  &.bell{
+    &::before {
+      background-image: url("assets/svg/bell.svg");
+    }
+  }
 
+  &.cartaNoti-primary{
+    &::before {
+      background-image: url("assets/svg/cartaNoti-primary.svg");
+    }
+  }
+
+  &.galeryList{
+    &::before {
+      background-image: url("assets/svg/galeryList.svg");
+    }
+  }
+
+  &.galeryView{
+    &::before {
+      background-image: url("assets/svg/galeryView.svg");
+    }
+  }
+
+  &.check{
+    &::before {
+      background-image: url("assets/svg/check.svg");
+    }
+  }
+
+  &.face{
+    &::before {
+      background-image: url("assets/svg/face.svg");
+    }
+  }
+
+  &.instagram{
+    &::before {
+      background-image: url("assets/svg/instagram.svg");
+    }
+  }
+
+  &.wpp{
+    &::before {
+      background-image: url("assets/svg/wpp.svg");
+    }
+  }
+
+  &.pinterest{
+    &::before {
+      background-image: url("assets/svg/pinterest.svg");
+    }
+  }
+
+  &.google{
+    &::before {
+      background-image: url("assets/svg/google.svg");
+    }
+  }
+
+  &.in{
+    &::before {
+      background-image: url("assets/svg/in.svg");
+    }
+  }
+
+  &.msg{
+    &::before {
+      background-image: url("assets/svg/msg.svg");
+    }
+  }
+
+  &.point{
+    &::before {
+      background-image: url("assets/svg/points.svg");
+    }
+  }
+ 
 }
 
 .background{

@@ -13,7 +13,7 @@ export class OficioService {
   ) { }
 
     listar(): Observable<any>{
-      return
-    // return this._http.get('http://chamba-back.test/api/oficio');
+      //return
+      return this._http.get('http://chamba-back.test/api/oficio');
   }
 }
