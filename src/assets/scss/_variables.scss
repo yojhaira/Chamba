@@ -23,6 +23,10 @@
 
   --oppsite-color: rgb(255, 255, 255);
   --index-main: 10;
+
+  // Shadow
+  --shadow-primary: 0 0 2px rgba(0, 0, 0, .12),
+  0 2px 2px rgba(0, 0, 0, .24);
 }
 
 .ico {
@@ -65,7 +69,10 @@
   &.in,
   &.msg,
   &.pinterest,
-  &.point{
+  &.point,
+  &.bag-work,
+  &.valuation-default,
+  &.quote {
     &::before {
       content: '';
       position: absolute;
@@ -77,6 +84,7 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
     }
   }
 
@@ -152,147 +160,166 @@
     }
   }
 
-  &.pintor-primary{
+  &.pintor-primary {
     &::before {
       background-image: url("assets/svg/brocha-primary.svg");
     }
   }
 
-  &.pintor-alternate{
+  &.pintor-alternate {
     &::before {
       background-image: url("assets/svg/brocha-alternative.svg");
     }
   }
 
-  &.electricista-primary{
+  &.electricista-primary {
     &::before {
       background-image: url("assets/svg/enchufe-primary.svg");
     }
   }
 
-  &.electricista-alternate{
+  &.electricista-alternate {
     &::before {
       background-image: url("assets/svg/enchufe-alternative.svg");
     }
   }
 
-  &.carpinteria-primary{
+  &.carpinteria-primary {
     &::before {
       background-image: url("assets/svg/carpinteria-primary.svg");
     }
   }
 
-  &.carpinteria-alternate{
+  &.carpinteria-alternate {
     &::before {
       background-image: url("assets/svg/carpinteria-alternative.svg");
     }
   }
-  &.constructor-primary{
+
+  &.constructor-primary {
     &::before {
       background-image: url("assets/svg/constructor-primary.svg");
     }
   }
 
-  &.constructor-alternate{
+  &.constructor-alternate {
     &::before {
       background-image: url("assets/svg/constructor-alternative.svg");
     }
   }
 
-  &.avion-primary{
+  &.avion-primary {
     &::before {
       background-image: url("assets/svg/avion-primary.svg");
     }
   }
 
-  &.avion-alternate{
+  &.avion-alternate {
     &::before {
       background-image: url("assets/svg/avion-alternative.svg");
     }
   }
 
-  &.bell{
+  &.bell {
     &::before {
       background-image: url("assets/svg/bell.svg");
     }
   }
 
-  &.cartaNoti-primary{
+  &.cartaNoti-primary {
     &::before {
       background-image: url("assets/svg/cartaNoti-primary.svg");
     }
   }
 
-  &.galeryList{
+  &.galeryList {
     &::before {
       background-image: url("assets/svg/galeryList.svg");
     }
   }
 
-  &.galeryView{
+  &.galeryView {
     &::before {
       background-image: url("assets/svg/galeryView.svg");
     }
   }
 
-  &.check{
+  &.check {
     &::before {
       background-image: url("assets/svg/check.svg");
     }
   }
 
-  &.face{
+  &.face {
     &::before {
       background-image: url("assets/svg/face.svg");
     }
   }
 
-  &.instagram{
+  &.instagram {
     &::before {
       background-image: url("assets/svg/instagram.svg");
     }
   }
 
-  &.wpp{
+  &.wpp {
     &::before {
       background-image: url("assets/svg/wpp.svg");
     }
   }
 
-  &.pinterest{
+  &.pinterest {
     &::before {
       background-image: url("assets/svg/pinterest.svg");
     }
   }
 
-  &.google{
+  &.google {
     &::before {
       background-image: url("assets/svg/google.svg");
     }
   }
 
-  &.in{
+  &.in {
     &::before {
       background-image: url("assets/svg/in.svg");
     }
   }
 
-  &.msg{
+  &.msg {
     &::before {
       background-image: url("assets/svg/msg.svg");
     }
   }
 
-  &.point{
+  &.point {
     &::before {
       background-image: url("assets/svg/points.svg");
     }
   }
- 
+
+  &.bag-work {
+    &::before {
+      background-image: url("assets/svg/bag-work.svg");
+    }
+  }
+
+  &.valuation-default {
+    &::before {
+      background-image: url("assets/svg/valuation-default.svg");
+    }
+  }
+
+  &.quote {
+    &::before {
+      background-image: url("assets/svg/quote.svg");
+    }
+  }
+
 }
 
-.background{
+.background {
   margin: 0;
   padding: 0;
-  background-image: url('assets/images/fondo.jpg') ;
+  background-image: url('assets/images/fondo.jpg');
 }

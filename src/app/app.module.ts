@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainContentTemplate } from './template/main-content/main-content.template';
 import { CategoriesTemplate } from './template/main/categories/categories.template';
 import { SearchComponent } from './template/search/search.template';
+
 /**
 * Components
 */
@@ -25,16 +26,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { QuoteComponent } from './components/quote/quote.component';
 
+import { ActionProfessionalComponent } from './components/action-professional/action-professional.component';
+
 // import { InputComponent } from './components/input/input.component';
 import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
 import { GraphicLaunch } from './components/graphics/graphic-launch/graphic-launch.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
-
-
-
-
 
 
 @NgModule({
@@ -44,12 +43,13 @@ import { routing, appRoutingProviders } from './app.routing';
         RegisterTemplate,
         C404Template,
         SearchComponent,
-        
+
 
         MainTemplate,
         MainContentTemplate,
         UserProfileTemplate,
         CategoriesTemplate,
+
 
         HeaderComponent,
         NavComponent,
@@ -59,10 +59,8 @@ import { routing, appRoutingProviders } from './app.routing';
         GraphicLogin,
         GraphicLaunch,
         QuoteComponent,
-        
-        
-        
-        
+        ActionProfessionalComponent
+
         // InputComponent
     ],
     imports: [

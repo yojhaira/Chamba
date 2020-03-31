@@ -28,7 +28,7 @@
   &--list {
     position: relative;
     z-index: 1;
-    perspective-origin: top left;
+    // perspective-origin: top left;
     perspective: 1000px;
 
     &-item {
@@ -37,12 +37,18 @@
       align-items: center;
       color: white;
       text-transform: uppercase;
-      font-weight: 500;
       min-height: 126px;
       position: relative;
+      transform-origin: top left;
+      transform: rotateY(0deg);
       border-bottom-left-radius: calc(var(--size-list-item) / 2);
-      transition: transform .3s ease, box-shadow .3s ease-in-out;
+      transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
       overflow: hidden;
+
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.35px;
+      text-decoration: none;
 
       flex-direction: column;
 
@@ -80,8 +86,7 @@
       }
 
       &:hover {
-        transform-origin: top left;
-        transform: skewY(3deg);
+        transform: rotateY(-7deg);
         box-shadow: 0 3px 5px rgba(0, 0, 0, .21);
         cursor: pointer;
       }
