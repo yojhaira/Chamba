@@ -41,6 +41,7 @@ export class LoginTemplate implements OnInit {
 			correo:form.value.emailUser,
 			password:form.value.passwordUser
 		}
+		
 		this._authServive.authUser(user).subscribe(
 			result => {
 				//console.log(result);
