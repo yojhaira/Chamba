@@ -16,16 +16,16 @@ export class MainContentTemplate implements OnInit {
     constructor(private sOficio:OficioService){
 
     }
-    // listarOficios(){
-    //     this.sOficio.listar().subscribe(
-    //         result => {
-    //             this.oficios = result.response;
-    //         },
-    //         error => {
-    //             console.log("ocurrio un error");
-    //         }
-    //     )
-    // }
+    listarOficios(){
+        this.sOficio.listar().subscribe(
+            result => {
+                this.oficios = result.response;
+            },
+            error => {
+                console.log("ocurrio un error");
+            }
+        )
+    }
 
     filtrar_acentos(input: string): string{
 
@@ -39,7 +39,7 @@ export class MainContentTemplate implements OnInit {
    }
 
     ngOnInit() {
-        // this.listarOficios();
+        this.listarOficios();
     }
 
 

@@ -79,11 +79,8 @@
       <div class="filters-category--content">
         <div class="filters-category--content-selection">
           <label for="selectionFilters">Ordenar por</label>
-          <select name="selectionFilters" id="selectionFilters">
-            <option value="">Más buscados</option>
-            <option value="">Otra opción</option>
-            <option value="">Otra opción</option>
-            <option value="">Otra opción</option>
+          <select name="selectionFilters" id="selectionFilters" [(ngModel)]="optionSelected" (change)="capturar()">
+            <option *ngFor="let item of oficios" [value]="item.id">{{item.descripcion}}</option>
           </select>
         </div>
         <div class="filters-category--content-buttons">
@@ -103,7 +100,7 @@
 
     <div class="grid-12">
       <div class="professionals">
-        <ng-container *ngFor="let item of [1, 2, 3, 4, 5, 6, 1, 2]">
+        <ng-container *ngFor="let item of workers">
 
           <div class="card-professional">
             <div class="card-professional--content">
@@ -120,7 +117,7 @@
                   <div class="professional-data--top">
 
                     <div class="professional-data--top-name">
-                      <span>samuel lee</span>
+                      <span>{{ item.nombres }}</span>
                     </div>
 
                     <div class="professional-data--top-check default-check">
@@ -131,7 +128,7 @@
 
                   </div>
                   <div class="professional-data--bottom">
-                    <span>Jardinería</span>
+                    <span>{{ item.descripcion }}</span>
                   </div>
 
                 </div>
