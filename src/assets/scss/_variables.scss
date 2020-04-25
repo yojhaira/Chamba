@@ -17,6 +17,7 @@
   // Fonts
   --font-display: 'Quicksand', sans-serif;
   --font-source: 'Source Sans Pro', sans-serif;
+  --font-semi: 'Semi Bold', sans-serif;
 
   // error
   --color-error: rgb(204, 16, 16);
@@ -72,7 +73,7 @@
   &.point,
   &.bag-work,
   &.valuation-default,
-  &.quote {
+  &.quote{
     &::before {
       content: '';
       position: absolute;
@@ -315,6 +316,7 @@
       background-image: url("assets/svg/quote.svg");
     }
   }
+
 
 }
 
