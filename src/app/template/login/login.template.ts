@@ -44,7 +44,9 @@ export class LoginTemplate implements OnInit {
 		
 		this._authServive.authUser(user).subscribe(
 			result => {
-				//console.log(result);
+				console.log(result);
+				
+				
 				if(result.response.length){
 					this._authServive.setUser(user);
 					this._router.navigate(['/']);		
@@ -52,6 +54,7 @@ export class LoginTemplate implements OnInit {
 					this.showError = true;
 					this.textError = "Upsi falta la tarea"
 				}	
+				
 			},
 			error => {
 				//console.log(error);
