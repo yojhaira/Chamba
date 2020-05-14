@@ -37,10 +37,13 @@ export class LoginTemplate implements OnInit {
 	}
 	onLogin(form){
 		//console.log(form.value);
+
 		let user:usuarioI = {
 			correo:form.value.emailUser,
 			password:form.value.passwordUser
 		}
+
+		console.log(user);
 		
 		this._authServive.authUser(user).subscribe(
 			result => {
