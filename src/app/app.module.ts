@@ -7,20 +7,20 @@ import { AppComponent } from './app.component';
 * Template
 */
 import { MainTemplate } from './template/main/main.template';
-import { UserProfileTemplate } from './template/main/user-profile/user-profile.template';
+import { UserProfileTemplate } from './template/user-profile/user-profile.template';
 import { RegisterTemplate } from './template/register/register.template';
 import { LoginTemplate } from './template/login/login.template';
 import { C404Template } from './template/c404/c404.template';
 import { HttpClientModule } from '@angular/common/http';
-import { MainContentTemplate } from './template/main-content/main-content.template';
-import { CategoriesTemplate } from './template/main/categories/categories.template';
+import { MainContentTemplate } from './template/main/main-content/main-content.template';
+import { CategoriesTemplate } from './template/categories/categories.template';
 import { SearchComponent } from './template/search/search.template';
 
 /**
 * Components
 */
 import { NavComponent } from './components/nav/nav.component';
-import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
@@ -34,7 +34,8 @@ import { GraphicLaunch } from './components/graphics/graphic-launch/graphic-laun
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
-
+import { CardProfessionalComponent } from './components/card-professional/card-profesional.component';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
     declarations: [
@@ -51,26 +52,22 @@ import { routing, appRoutingProviders } from './app.routing';
         CategoriesTemplate,
 
 
-        HeaderComponent,
+        NavbarComponent,
         NavComponent,
         MostWantedComponent,
         FooterComponent,
-        LogoComponent,
-        GraphicLogin,
-        GraphicLaunch,
-        QuoteComponent,
-        ActionProfessionalComponent
-
-        // InputComponent
+        GraphicLogin
     ],
     imports: [
         BrowserModule,
-        //AppRoutingModule,
         routing,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+
+        ComponentsModule
     ],
+    exports: [],
     providers: [appRoutingProviders],
     bootstrap: [AppComponent]
 })

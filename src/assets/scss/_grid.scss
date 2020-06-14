@@ -3,94 +3,87 @@
 */
 
 .grid-container {
-  --size-base: 100%;
-  --alignment: center;
+    --size-base: 100%;
+    --alignment: center;
 
-  display: flex;
-  justify-content: var(--alignment);
-  flex-wrap: wrap;
-  padding: 0 15px;
-
+    padding: 0 15px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .grid-row {
-  --size-base: 1170px;
-  width: 100%;
-  margin: 0 auto;
-  max-width: var(--size-base);
-  flex: 0 0 var(--size-base);
+    margin: 0 -15px;
 
-  display: flex;
-  justify-content: var(--alignment);
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: var(--alignment);
+    flex-wrap: wrap;
+    position: relative;
 }
 
 /**
     * Se genera un for que ira de 1 a 12 usando una regla de 3 simples para iterar el tamaño de cada cuadricula
     */
 @for $i from 1 through 12 {
-  .grid-#{$i} {
-    --size-grid: calc((100% * #{$i}) / 12);
-    flex: 0 0 var(--size-grid);
-    padding: 0 15px;
-    width: var(--size-grid);
-    // background: linear-gradient(90deg, tomato, green);
-  }
+    .grid-#{$i} {
+        --size-grid: calc((100% * #{$i}) / 12);
+        flex: 0 0 var(--size-grid);
+        padding: 0 15px;
+        width: var(--size-grid);
+    }
 }
 
 .left-alignment {
-  --alignment: flex-start;
+    --alignment: flex-start;
 }
 
 .right-alignment {
-  --alignment: flex-end;
+    --alignment: flex-end;
 }
 
 @media screen and (max-width: 1367px) {
-  .grid-row {
-    --size-base: 1170px;
-  }
+    .grid-row {
+        --size-base: 1170px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
-  .grid-row {
-    --size-base: calc(1170px - 30px);
-    margin: 0;
-  }
+    .grid-row {
+        --size-base: calc(1170px - 30px);
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 1171px) {
-  .grid-row {
-    --size-base: calc(970px - 30px);
-  }
+    .grid-row {
+        --size-base: calc(970px - 30px);
+    }
 }
 
 @media screen and (max-width: 992px) {
-  @for $i from 1 through 12 {
-    .grid-m-#{$i} {
-      --size-grid: calc((var(--size-base) * #{$i}) / 12);
-      flex: 0 0 var(--size-grid);
-      padding: 0 15px;
-      // background: linear-gradient(90deg, tomato, blue);
+    @for $i from 1 through 12 {
+        .grid-m-#{$i} {
+            --size-grid: calc((var(--size-base) * #{$i}) / 12);
+            flex: 0 0 var(--size-grid);
+            padding: 0 15px;
+        }
     }
-  }
 
-  .grid-row {
-    --size-base: 750px;
-  }
+    .grid-row {
+        --size-base: 750px;
+    }
 }
 
 @media screen and (max-width: 769px) {
-  @for $i from 1 through 12 {
-    .grid-xs-#{$i} {
-      --size-grid: calc((var(--size-base) * #{$i}) / 12);
-      flex: 0 0 var(--size-grid);
-      padding: 0 15px;
-      // background: linear-gradient(90deg, tomato, skyblue);
+    @for $i from 1 through 12 {
+        .grid-xs-#{$i} {
+            --size-grid: calc((var(--size-base) * #{$i}) / 12);
+            flex: 0 0 var(--size-grid);
+            padding: 0 15px;
+        }
     }
-  }
 
-  .grid-row {
-    --size-base: 100%;
-  }
+    .grid-row {
+        --size-base: 100%;
+    }
 }

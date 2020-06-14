@@ -2,7 +2,7 @@
 //     border-radius: calc($size-base / 2);
 //   }
 
-.header-main {
+.navbar-main {
     --size-header: 63px;
     min-height: var(--size-header);
     border-bottom: 1px solid var(--color-support-light);
@@ -21,7 +21,7 @@
     background-color: var(--oppsite-color);
     z-index: var(--index-main);
 
-    &>*:not(:last-child) {
+    & > *:not(:last-child) {
         margin-right: 14px;
     }
 
@@ -43,7 +43,7 @@
             margin: -2px;
             color: var(--color-primary-dark);
         }
-        
+
         &-input {
             height: var(--size-input);
             margin-left: calc((var(--size-input) - (var(--size-input) * 2)) + 2px);
@@ -52,13 +52,13 @@
             border-radius: calc(var(--size-input) / 2);
             overflow: hidden;
             width: 100%;
-            
+
             & input {
                 padding-left: calc(var(--size-input) + 10px);
                 height: 100%;
                 border: none;
                 width: 100%;
-                transition: .2s background-color ease-in-out;
+                transition: 0.2s background-color ease-in-out;
                 font-weight: 500;
 
                 &:hover {
@@ -78,12 +78,11 @@
     }
 
     &--button {
-
         &-login {
             transform-origin: right;
             min-width: initial;
             width: 36px;
-            transition: .3s width ease;
+            transition: 0.3s width ease;
 
             &:hover {
                 width: 152px;

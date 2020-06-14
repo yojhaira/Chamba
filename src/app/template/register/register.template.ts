@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { UsuarioService} from '../../service/usuario.service';
+import { UsuarioService } from '../../services/usuario.service';
 import { DOCUMENT } from '@angular/common';
 import { usuarioI } from 'src/app/models/usuario';
-import { Router} from '@angular/router'
+import { Router } from '@angular/router'
 import { Observable } from 'rxjs';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
@@ -17,14 +17,14 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 export class RegisterTemplate implements OnInit {
     // Properties
     public formRegister: any;
-    public showError:boolean;
-    public userGender:string;
-    
+    public showError: boolean;
+    public userGender: string;
+
     constructor(
-        private sUsuario:UsuarioService,
+        private sUsuario: UsuarioService,
         private formBuilder: FormBuilder,
     ) {
-        
+
     }
 
     ngOnInit(): void {
@@ -39,9 +39,9 @@ export class RegisterTemplate implements OnInit {
         })
     }
 
-    registrar(form){
+    registrar(form) {
         let usuario: usuarioI = {
-            nombres:form.value.nombres,
+            nombres: form.value.nombres,
             apellidos: form.value.apellidos,
             f_nacimiento: form.value.f_nacimiento,
             correo: form.value.correo,
