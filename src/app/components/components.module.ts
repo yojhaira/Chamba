@@ -8,6 +8,7 @@ import { HeaderUserComponent } from './header-user/header-user.component';
 import { QuoteComponent } from './quote/quote.component';
 import { GraphicLaunch } from './graphics/graphic-launch/graphic-launch.component';
 import { LogoComponent } from './logo/logo.component';
+import { WorkerPostComponent } from './worker-post/worker-post.component';
 
 @NgModule({
     imports: [
@@ -21,7 +22,8 @@ import { LogoComponent } from './logo/logo.component';
         HeaderUserComponent,
         QuoteComponent,
         GraphicLaunch,
-        LogoComponent
+        LogoComponent,
+        WorkerPostComponent
     ],
     exports: [
         HeaderPageComponent,
@@ -30,7 +32,8 @@ import { LogoComponent } from './logo/logo.component';
         HeaderUserComponent,
         QuoteComponent,
         GraphicLaunch,
-        LogoComponent
+        LogoComponent,
+        WorkerPostComponent
     ],
     providers: []
 })

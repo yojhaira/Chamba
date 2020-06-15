@@ -79,7 +79,8 @@
     &-4,
     &-5,
     &-6 {
-        font-size: var(--font-display);
+        --font-family: var(--font-display);
+        font-family: var(--font-family);
         letter-spacing: 1px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
@@ -87,11 +88,33 @@
     }
 
     &-1 {
-        font-size: 2.65rem;
+        // font: 42px
+        font-size: 2.62rem;
     }
 
     &-2 {
+        // font: 32px
         font-size: 2rem;
+    }
+
+    &-3 {
+        // font: 28px
+        font-size: 1.75rem;
+    }
+
+    &-4 {
+        // font: 24px
+        font-size: 1.5rem;
+    }
+
+    &-5 {
+        // font: 21px
+        font-size: 1.31rem;
+    }
+
+    &-6 {
+        // font: 18px
+        font-size: 1.12rem;
     }
 }
 
@@ -865,4 +888,40 @@ app-footer {
         }
     }
 }
+
 /*=====  End of Header Rail  ======*/
+
+/*=============================================
+=            User Photo            =
+=============================================*/
+
+.user-photo {
+    --size-photo: 98px;
+    --size-border: 4px;
+    height: var(--size-photo);
+    width: var(--size-photo);
+    border-radius: calc(var(--size-photo) / 2);
+    overflow: hidden;
+    border: var(--size-border) solid white;
+
+    & img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*=====  End of User Photo  ======*/
+
+/*=============================================
+=            Sticky-element            =
+=============================================*/
+
+.sticky-element {
+    --position-x: 0;
+    --position-y: 0;
+    position: sticky;
+    top: var(--position-y);
+    left: var(--position-x);
+}
+
+/*=====  End of Sticky-element  ======*/

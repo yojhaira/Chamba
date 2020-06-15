@@ -68,18 +68,8 @@
 
     &-identity {
         &--photo {
-            height: var(--size-photo);
-            width: var(--size-photo);
-            border-radius: calc(var(--size-photo) / 2);
-            padding: 4px;
-            background-color: white;
+            --size-photo: 100px;
             margin-right: 14px;
-
-            & img {
-                object-fit: cover;
-                height: 100%;
-                border-radius: 50%;
-            }
         }
         &--data {
             color: white;

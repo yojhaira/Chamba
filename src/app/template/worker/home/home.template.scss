@@ -1,9 +1,25 @@
 .worker-home {
+    & .sticky-element {
+        --position-y: 67px;
+    }
+
     &--main {
         & .rail-section {
+            &:not(:last-child) {
+                margin-bottom: 28px;
+            }
+
             &--header {
                 font-size: 15px;
                 color: var(--color-font-high-emphasis);
+            }
+        }
+    }
+
+    &--user {
+        &-presentation {
+            & .rail-section--body {
+                font-size: 13px;
             }
         }
     }
@@ -58,4 +74,8 @@
             }
         }
     }
+}
+
+quote-component {
+    display: block;
 }
