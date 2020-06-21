@@ -1,0 +1,10 @@
+.worker-done {
+    &--main {
+        & .rail-section {
+            &--header {
+                font-size: 15px;
+                color: var(--color-font-high-emphasis);
+            }
+        }
+    }
+}

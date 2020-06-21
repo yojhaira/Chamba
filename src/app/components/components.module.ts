@@ -9,6 +9,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { GraphicLaunch } from './graphics/graphic-launch/graphic-launch.component';
 import { LogoComponent } from './logo/logo.component';
 import { WorkerPostComponent } from './worker-post/worker-post.component';
+import { UserCommentComponent } from './user-comment/user-comment.component';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import { WorkerPostComponent } from './worker-post/worker-post.component';
         QuoteComponent,
         GraphicLaunch,
         LogoComponent,
-        WorkerPostComponent
+        WorkerPostComponent,
+        UserCommentComponent
     ],
     exports: [
         HeaderPageComponent,
@@ -33,7 +35,8 @@ import { WorkerPostComponent } from './worker-post/worker-post.component';
         QuoteComponent,
         GraphicLaunch,
         LogoComponent,
-        WorkerPostComponent
+        WorkerPostComponent,
+        UserCommentComponent
     ],
     providers: []
 })

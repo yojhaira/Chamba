@@ -1,8 +1,4 @@
 .worker-home {
-    & .sticky-element {
-        --position-y: 67px;
-    }
-
     &--main {
         & .rail-section {
             &:not(:last-child) {
@@ -23,59 +19,4 @@
             }
         }
     }
-}
-
-.user-info {
-    &--list {
-        &-item {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-
-            margin-bottom: 14px;
-
-            & > .default-icon {
-                --size-base: 18px;
-                --size-child: 18px;
-                margin-right: 14px;
-                color: var(--color-support-dark);
-            }
-        }
-    }
-}
-
-.list-item {
-    &--data {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        text-align: left;
-
-        &-prefix {
-            font-size: 12px;
-            line-height: 1.25em;
-            margin-bottom: 3px;
-        }
-
-        &-info {
-            font-size: 15px;
-            line-height: 1.25em;
-            font-weight: 700;
-        }
-
-        &-buttons {
-            display: flex;
-            margin-top: 10px;
-
-            & button {
-                &:not(:last-child) {
-                    margin-right: 14px;
-                }
-            }
-        }
-    }
-}
-
-quote-component {
-    display: block;
 }

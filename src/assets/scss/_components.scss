@@ -72,6 +72,26 @@
     --size-child: 42px;
 }
 
+.icon-valuation {
+    --size-base: 14px;
+    --size-child: 14px;
+
+    svg {
+        .cls-1 {
+            fill: transparent;
+            transition: 0.3s fill ease;
+        }
+    }
+
+    &.active {
+        svg {
+            .cls-1 {
+                fill: yellow;
+            }
+        }
+    }
+}
+
 .heading-lvl {
     &-1,
     &-2,
@@ -81,7 +101,7 @@
     &-6 {
         --font-family: var(--font-display);
         font-family: var(--font-family);
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         font-weight: 600;
@@ -118,26 +138,6 @@
     }
 }
 
-.icon-valuation {
-    --size-base: 14px;
-    --size-child: 14px;
-
-    svg {
-        .cls-1 {
-            fill: transparent;
-            transition: 0.3s fill ease;
-        }
-    }
-
-    &.active {
-        svg {
-            .cls-1 {
-                fill: yellow;
-            }
-        }
-    }
-}
-
 .badge-info {
     --size: 22px;
     font-size: 11px;
@@ -159,7 +159,8 @@
 }
 
 .primary-button,
-.alternate-button {
+.alternate-button,
+.primary-button--alternate {
     --background-color: var(--color-primary-dark);
     --color-text-content: white;
     --background-color-icon: white;
@@ -173,6 +174,7 @@
     border: none;
     font-family: var(--font-display);
     transition: 0.3s all ease;
+    width: fit-content;
 
     &:not(div) {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.24);
@@ -194,6 +196,10 @@
         background-color: var(--background-color-icon);
         color: var(--color-icon);
         border-radius: calc(var(--size-element) / 2);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         svg {
             fill: currentColor;
@@ -222,7 +228,7 @@
 
     &:hover,
     &.active {
-        min-width: 152px;
+        // min-width: 152px;
         cursor: pointer;
 
         .primary-button,
@@ -239,6 +245,13 @@
         & > *:first-child {
             order: 1;
         }
+    }
+
+    &--alternate {
+        --background-color: white;
+        --color-text-content: var(--color-primary-dark);
+        --background-color-icon: var(--color-primary-dark);
+        --color-icon: white;
     }
 }
 
@@ -262,8 +275,9 @@
     text-align: center;
     overflow: hidden;
     position: relative;
+    width: fit-content;
 
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 
@@ -846,6 +860,10 @@
     --background-color: var(--color-whatsapp);
 }
 
+.twitter {
+    --background-color: var(--color-twitter);
+}
+
 /*=====  End of buttons  ======*/
 
 /*=============================================
@@ -886,6 +904,14 @@ app-footer {
         &--body {
             padding: 21px 14px 35px;
         }
+
+        &--footer {
+            padding: 12px;
+            text-align: center;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-support-dark);
+            font-weight: 500;
+        }
     }
 }
 
@@ -903,6 +929,7 @@ app-footer {
     border-radius: calc(var(--size-photo) / 2);
     overflow: hidden;
     border: var(--size-border) solid white;
+    box-shadow: 0 3px 6px rgb(103, 20, 143, 0.16);
 
     & img {
         height: 100%;
@@ -925,3 +952,40 @@ app-footer {
 }
 
 /*=====  End of Sticky-element  ======*/
+
+/*=============================================
+=            Valuation            =
+=============================================*/
+
+.assessment {
+    display: flex;
+
+    & .icon-valuation {
+        --size-base: 18px;
+        --size-child: 18px;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+}
+
+/*=====  End of Valuation  ======*/
+
+/*=============================================
+=            Date            =
+=============================================*/
+
+.date-element {
+    display: flex;
+    align-items: center;
+    color: var(--color-support-dark);
+    font-size: 11px;
+    font-weight: 500;
+
+    & .input-icon {
+        margin-right: 3px;
+    }
+}
+
+/*=====  End of Date  ======*/

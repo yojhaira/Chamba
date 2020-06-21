@@ -8,10 +8,18 @@ const routes: Routes = [
         component: WorkerTemplate,
         children: [
             {
-                path: 'home/:workerID',
+                path: 'home',
                 loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+            },
+            {
+                path: 'work-done',
+                loadChildren: () => import('./work-done/work-done.module').then(m => m.WorkDoneModule)
             }
         ]
+    },
+    {
+        path: 'work-detail/:postID',
+        loadChildren: () => import('./work-detail/work-detail.module').then(m => m.WorkDetailModule)
     }
 ]
 

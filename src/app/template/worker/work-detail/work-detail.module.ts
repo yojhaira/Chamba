@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { WorkerTemplate } from './worker.template';
-import { WorkerRoutingModule } from './worker.template.routing';
+import { WorkDetailTemplate } from './work-detail.template';
+import { WorkDetailRoutingModule } from './work-detail.routing';
+
 import { ComponentsModule } from 'src/app/components/components.module';
+import { WorkDoneRoutingModule } from '../work-done/work-done.routing';
 
 @NgModule({
     declarations: [
-        WorkerTemplate
+        WorkDetailTemplate
     ],
     imports: [
         CommonModule,
+        WorkDetailRoutingModule,
 
-        WorkerRoutingModule,
         ComponentsModule
     ],
     exports: [],
     providers: []
 })
 
-export class WorkerModule { }
+export class WorkDetailModule { }

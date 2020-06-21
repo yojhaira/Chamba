@@ -38,7 +38,7 @@ const appRouters: Routes = [
                 loadChildren: () => import('./template/single-category/single-category.module').then(m => m.SingleCategoryModule)
             },
             {
-                path: 'worker',
+                path: 'worker/:userID',
                 loadChildren: () => import('./template/worker/worker.module').then(m => m.WorkerModule)
             }
         ]

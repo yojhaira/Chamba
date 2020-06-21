@@ -24,7 +24,6 @@
         &-photo {
             --size-photo: 40px;
             --size-border: 2px;
-            box-shadow: 0 3px 6px rgb(103, 20, 143, 0.16);
             margin-right: 7px;
             margin-left: -44px;
         }
@@ -37,17 +36,6 @@
 
         &-date {
             margin-left: auto;
-            font-size: 11px;
-            font-weight: 500;
-
-            & .input-icon,
-            & span {
-                color: var(--color-support-dark);
-            }
-
-            & .input-icon {
-                margin-right: 3px;
-            }
         }
     }
 
