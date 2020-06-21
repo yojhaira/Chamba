@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeTemplate } from './home.template';
+
+import { GeneralDataTemplate } from './general-data.template';
 
 const routes: Routes = [
     {
         path: '',
-        component: HomeTemplate
+        component: GeneralDataTemplate
     }
-];
+]
 
 @NgModule({
     imports: [
@@ -18,4 +19,4 @@ const routes: Routes = [
     ]
 })
 
-export class HomeRoutingModule { }
+export class GeneralDataRouting { }

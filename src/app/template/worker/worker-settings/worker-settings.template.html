@@ -1,0 +1,39 @@
+<div class="worker-settings">
+    <header-user-component></header-user-component>
+
+    <div class="grid-container">
+        <div class="grid-row">
+            <div class="grid-3">
+                <div class="rail-section">
+                    <div class="rail-section--header">
+                        <span>Mi Perfil</span>
+                    </div>
+                    <div class="rail-section--list">
+                        <div class="rail-section--list-item" routerLink="general-data">
+                            <span>Datos generales</span>
+                        </div>
+                        <div class="rail-section--list-item">
+                            <span>Datos de Chamba</span>
+                        </div>
+                    </div>
+                    <div class="rail-section--header">
+                        <span>Configuración</span>
+                    </div>
+                    <div class="rail-section--list">
+                        <div class="rail-section--list-item">
+                            <span>Notificaciones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-5">
+                <router-outlet></router-outlet>
+            </div>
+            <div class="grid-4">
+                <quote-component></quote-component>
+            </div>
+        </div>
+    </div>
+
+    <action-professional></action-professional>
+</div>

@@ -342,6 +342,21 @@
     --size-element: 42px;
     margin-bottom: 16px;
 
+    &.active {
+        & .input-container--box,
+        & .textarea-container--box {
+            border: 1px solid var(--color-primary-dark);
+            box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em rgba(var(--color-focus), 0.3);
+        }
+
+        & .input-container--box ~ label,
+        & .textarea-container--box ~ label {
+            transform: translateY(-19px);
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+
     &-container {
         height: var(--size-element);
         width: 100%;
@@ -503,6 +518,25 @@
 .textarea {
     --size-element: 77px;
 }
+
+.group-buttons {
+    width: 100%;
+    display: flex;
+
+    & button {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    &--right {
+        justify-content: flex-end;
+    }
+}
+
+/**
+ * Form Components End
+ */
 
 .translate-element {
     transform: translateX(-100%);
@@ -899,10 +933,40 @@ app-footer {
             & span {
                 line-height: 1.25em;
             }
+
+            &:not(:first-child) {
+                border-top: 1px solid var(--color-border);
+            }
+
+            &.greater-emphasis-text {
+                font-size: 15px;
+                color: var(--color-font-high-emphasis);
+            }
         }
 
         &--body {
             padding: 21px 14px 35px;
+        }
+
+        &--list {
+            padding: 14px 7px 35px;
+
+            &-item {
+                font-size: 14px;
+                padding: 7px;
+                color: var(--color-support-dark);
+                font-weight: 400;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: 0.2s background-color ease-in-out, 0.2s color ease-in-out, 0.2s padding-left ease-in-out;
+
+                &:hover {
+                    background-color: var(--color-support-light);
+                    color: var(--color-font-high-emphasis);
+                    font-weight: 700;
+                    padding-left: 14px;
+                }
+            }
         }
 
         &--footer {

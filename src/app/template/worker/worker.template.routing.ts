@@ -20,6 +20,10 @@ const routes: Routes = [
     {
         path: 'work-detail/:postID',
         loadChildren: () => import('./work-detail/work-detail.module').then(m => m.WorkDetailModule)
+    },
+    {
+        path: 'worker-settings',
+        loadChildren: () => import('./worker-settings/worker-settings.module').then(m => m.WorkerSettingsModule)
     }
 ]
 

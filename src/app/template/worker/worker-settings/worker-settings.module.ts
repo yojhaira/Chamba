@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeTemplate } from './home.template';
-import { HomeRoutingModule } from './home.routing';
+
+import { WorkerSettingsTemplate } from './worker-settings.template';
+import { WorkerSettingsRouting } from './worker-settings.routing';
+
 import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
     declarations: [
-        HomeTemplate
+        WorkerSettingsTemplate
     ],
     imports: [
         CommonModule,
-        HomeRoutingModule,
+        WorkerSettingsRouting,
 
         ComponentsModule
     ],
@@ -18,4 +20,4 @@ import { ComponentsModule } from 'src/app/components/components.module';
     providers: []
 })
 
-export class HomeModule { }
+export class WorkerSettingsModule { }
