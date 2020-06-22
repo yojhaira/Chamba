@@ -337,6 +337,7 @@
 
 .input,
 .textarea {
+    --border-radius: calc(var(--size-element) / 2);
     --color-focus: 103, 20, 143;
     --color-container: 255, 255, 255;
     --size-element: 42px;
@@ -372,7 +373,8 @@
         color: var(--color-primary-dark);
 
         & input,
-        & textarea {
+        & textarea,
+        & select {
             flex-grow: 1;
             z-index: 2;
             background-color: transparent;
@@ -402,12 +404,6 @@
                 transform: translateY(-19px);
                 font-size: 12px;
                 font-weight: 600;
-            }
-        }
-
-        & input {
-            & ~ .input-container--box {
-                --border-radius: calc(var(--size-element) / 2);
             }
         }
 
@@ -521,6 +517,9 @@
 
 .group-buttons {
     width: 100%;
+    margin-bottom: 35px;
+    padding: 0 14px;
+
     display: flex;
 
     & button {
@@ -531,6 +530,18 @@
 
     &--right {
         justify-content: flex-end;
+    }
+}
+
+.indication {
+    display: flex;
+
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 24px;
+
+    & .input-icon {
+        margin-right: 8px;
     }
 }
 
@@ -659,6 +670,7 @@
     margin-bottom: 16px;
 
     & label {
+        width: 100%;
         display: inline-flex;
         justify-content: flex-start;
         align-items: center;
@@ -669,6 +681,20 @@
 
             & .toggle-container--dot:before {
                 --size-element: 40px;
+            }
+        }
+
+        & .toggle-text {
+            &:first-child {
+                font-weight: 500;
+                font-size: 14px;
+                color: var(--color-support-dark);
+            }
+        }
+
+        & .toggle-container {
+            &:nth-child(2) {
+                margin-left: auto;
             }
         }
     }
@@ -717,7 +743,7 @@
             width: var(--size-dot);
             background-color: var(--background-dot);
             border-radius: calc(var(--size-dot) / 2);
-            transition: 0.3s left ease-in-out;
+            transition: 0.2s left ease-in-out;
             z-index: 1;
 
             &:before,
@@ -1053,3 +1079,38 @@ app-footer {
 }
 
 /*=====  End of Date  ======*/
+
+/*=============================================
+=            information-card            =
+=============================================*/
+
+.information-card {
+    padding: 21px 14px 35px;
+    border-radius: 7px 21px;
+    border: 1px solid var(--color-border);
+    background-color: white;
+    margin-bottom: 28px;
+
+    display: flex;
+
+    &--icon {
+        margin-right: 8px;
+        color: var(--color-primary-dark);
+    }
+
+    &--content {
+        & span {
+            display: block;
+            line-height: 30px;
+            margin-bottom: 2px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        & p {
+            font-weight: 500;
+        }
+    }
+}
+
+/*=====  End of information-card  ======*/

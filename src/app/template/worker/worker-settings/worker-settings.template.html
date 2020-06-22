@@ -4,7 +4,7 @@
     <div class="grid-container">
         <div class="grid-row">
             <div class="grid-3">
-                <div class="rail-section">
+                <div class="rail-section sticky-element">
                     <div class="rail-section--header">
                         <span>Mi Perfil</span>
                     </div>
@@ -12,7 +12,7 @@
                         <div class="rail-section--list-item" routerLink="general-data">
                             <span>Datos generales</span>
                         </div>
-                        <div class="rail-section--list-item">
+                        <div class="rail-section--list-item" routerLink="worker-data">
                             <span>Datos de Chamba</span>
                         </div>
                     </div>
@@ -30,7 +30,29 @@
                 <router-outlet></router-outlet>
             </div>
             <div class="grid-4">
-                <quote-component></quote-component>
+                <div class="information-card sticky-element">
+                    <div class="information-card--icon md-icon">
+                        <i class="far fa-lightbulb"></i>
+                    </div>
+                    <div class="information-card--content">
+                        <span>Es muy importante...</span>
+                        <p>Completar tus datos ayudará a otras personas a conocerte y confiar en los comentarios que
+                            realices de los "chambas" y
+                            estos podrán ayudarte más rápido generando confianza entre todos. Completa tus datos y
+                            solicita cotizaciones ¡Gratis!</p>
+                    </div>
+                </div>
+                <div class="information-card sticky-element">
+                    <div class="information-card--icon md-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="information-card--content">
+                        <span>A tener en cuenta...</span>
+                        <p>Tus datos no son compartidos con otras personas ni lo usaremos para enviarte spam. Estos soló
+                            serán usados para
+                            contactarte con otro usuario("chamba") y mostrados solo si lo deseas.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

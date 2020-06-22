@@ -10,6 +10,10 @@ const routes: Routes = [
             {
                 path: 'general-data',
                 loadChildren: () => import('./general-data/general-data.module').then(m => m.GeneralDataModule)
+            },
+            {
+                path: 'worker-data',
+                loadChildren: () => import('./worker-data/worker-data.module').then(m => m.WorkerDataModule)
             }
         ]
     }
