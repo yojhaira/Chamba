@@ -14,6 +14,10 @@ const routes: Routes = [
             {
                 path: 'worker-data',
                 loadChildren: () => import('./worker-data/worker-data.module').then(m => m.WorkerDataModule)
+            },
+            {
+                path: 'notifications-settings',
+                loadChildren: () => import('./notifications-settings/notifications-settings.module').then(m => m.NotificationsSettingsModule)
             }
         ]
     }

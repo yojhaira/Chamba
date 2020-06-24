@@ -784,7 +784,8 @@
 /**
  * Form Main
  */
-.form-main {
+.form-main,
+.card-action {
     padding: 21px 21px 35px;
     background-color: white;
     border-radius: 7px 21px;
@@ -793,6 +794,9 @@
     overflow: hidden;
     z-index: 1;
     margin-bottom: 35px;
+
+    &--wrapper {
+    }
 
     &--header {
         margin-bottom: 49px;
@@ -874,7 +878,39 @@
 }
 
 /*=============================================
-=            Buttons            =
+=            Card Action Main            =
+=============================================*/
+
+.card-action {
+    min-height: 420px;
+
+    display: flex;
+
+    &--wrapper {
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--header {
+        margin-bottom: 56px;
+    }
+
+    &--body {
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        & button {
+            margin-top: auto;
+        }
+    }
+}
+
+/*=============================================
+=            Card Action End            =
 =============================================*/
 
 .button {

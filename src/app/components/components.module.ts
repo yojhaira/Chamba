@@ -10,6 +10,7 @@ import { GraphicLaunch } from './graphics/graphic-launch/graphic-launch.componen
 import { LogoComponent } from './logo/logo.component';
 import { WorkerPostComponent } from './worker-post/worker-post.component';
 import { UserCommentComponent } from './user-comment/user-comment.component';
+import { CardActionComponent } from './card-action/card-action.component';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { UserCommentComponent } from './user-comment/user-comment.component';
         GraphicLaunch,
         LogoComponent,
         WorkerPostComponent,
-        UserCommentComponent
+        UserCommentComponent,
+        CardActionComponent
     ],
     exports: [
         HeaderPageComponent,
@@ -36,7 +38,8 @@ import { UserCommentComponent } from './user-comment/user-comment.component';
         GraphicLaunch,
         LogoComponent,
         WorkerPostComponent,
-        UserCommentComponent
+        UserCommentComponent,
+        CardActionComponent
     ],
     providers: []
 })

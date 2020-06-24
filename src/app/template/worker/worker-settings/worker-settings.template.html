@@ -20,7 +20,7 @@
                         <span>Configuración</span>
                     </div>
                     <div class="rail-section--list">
-                        <div class="rail-section--list-item">
+                        <div class="rail-section--list-item" routerLink="notifications-settings">
                             <span>Notificaciones</span>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                 <router-outlet></router-outlet>
             </div>
             <div class="grid-4">
-                <div class="information-card sticky-element">
+                <div class="information-card">
                     <div class="information-card--icon md-icon">
                         <i class="far fa-lightbulb"></i>
                     </div>
@@ -42,7 +42,7 @@
                             solicita cotizaciones ¡Gratis!</p>
                     </div>
                 </div>
-                <div class="information-card sticky-element">
+                <div class="information-card">
                     <div class="information-card--icon md-icon">
                         <i class="fas fa-info-circle"></i>
                     </div>
@@ -53,6 +53,8 @@
                             contactarte con otro usuario("chamba") y mostrados solo si lo deseas.</p>
                     </div>
                 </div>
+
+                <card-action-component></card-action-component>
             </div>
         </div>
     </div>
