@@ -1,5 +1,4 @@
 * {
-
     &,
     &::before,
     &::after {
@@ -12,21 +11,28 @@ body {
     padding: 0;
     background-color: var(--color-primary-dark);
     font-family: var(--font-source);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     color: var(--color-secondary-light);
     user-select: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
+    font-family: var(--font-display);
 }
 
 p {
     margin: 0 0 10px 0;
 }
 
-input, textarea {
+input,
+textarea {
     font-family: var(--font-source);
     font-size: 1rem;
     font-weight: 300;
@@ -40,4 +46,10 @@ img {
 
 figure {
     margin: 0;
+}
+
+button {
+    &:focus {
+        outline: none;
+    }
 }

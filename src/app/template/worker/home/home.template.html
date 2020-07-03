@@ -1,0 +1,29 @@
+<div class="worker-home">
+    <div class="worker-home--main">
+        <div class="worker-home--user-presentation rail-section">
+            <div class="rail-section--header">
+                <span>Sobre <strong>Allan Ellis</strong></span>
+                <span>Jardinería en Trujillo</span>
+            </div>
+            <div class="rail-section--body">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quisquam ratione voluptate
+                    officiis, similique inventore temporibus totam eius expedita suscipit veritatis
+                    blanditiis
+                    sequi excepturi consequuntur incidunt alias eum officia. Excepturi.</p>
+            </div>
+        </div>
+        <div class="worker-home--user-works rail-section">
+            <div class="rail-section--header">
+                <span>Últimos trabajos realizados</span>
+            </div>
+            <div class="rail-section--body">
+                <ng-container *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]; let i = index">
+                    <worker-post-component></worker-post-component>
+                </ng-container>
+            </div>
+            <div class="rail-section--footer">
+                <span>Ver más trabajos</span>
+            </div>
+        </div>
+    </div>
+</div>

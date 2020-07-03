@@ -1,0 +1,272 @@
+<div class="main-content--wrapper">
+
+    <div class="banner-main">
+        <div class="banner-main--content">
+            <div class="banner-main--content-image">
+                <div class="content-image--fillter"></div>
+                <img src="../../../assets/images/work-quote.jpg" alt="">
+            </div>
+            <div class="banner-main--content-quote">
+                <div class="content-quote--header">
+                    <h2 class="content-quote--header-title">¿Buscas profesionales de confianza?</h2>
+                    <p class="content-quote--header-subtitle">Encuentra "chambas" cerca y deja que te ayuden con ese
+                        pendiente
+                    </p>
+                </div>
+                <div class="content-quote--form">
+                    <div class="content-quote--form-inputs">
+                        <input type="tel" name="" id="" placeholder="Ingresar categoría">
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">1</option>
+                            <option value="">1</option>
+                            <option value="">1</option>
+                        </select>
+                        <button><span>Cotiza tu chamba</span></button>
+                    </div>
+                    <span>Busca y encuentra especialistas en carpintería, construcción, jardineriía y mucho más.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <most-wanted></most-wanted>
+
+    <div class="categories grid-container">
+        <div class="grid-row">
+            <div class="header-section--fourth">
+                <h3>Chamba te ofrece profesionales en...</h3>
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="categories-list">
+                <ng-container *ngFor="let item of jobService.collectionCategories">
+                    <div class="categories-list--item">
+                        <div class="categories-list--item-content">
+                            <div class="b-icon">
+                                <div class="ico {{ jobService.cleanCharacters(item.name)}}-primary"></div>
+                            </div>
+                            <span>{{item.name}}</span>
+                        </div>
+                    </div>
+                </ng-container>
+
+                <div class="categories-list--item active">
+                    <div class="categories-list--item-content">
+                        <div class="b-icon">
+                            <div class="ico plus-primary"></div>
+                        </div>
+                        <span>Descubrir</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <div class="header-section--third">
+            <h3>Nuestros usuarios comentan</h3>
+        </div>
+        <div class="testimonials-list grid-container">
+            <div class="grid-row">
+                <ng-container *ngFor="let item of [1, 2, 3, 4]">
+                    <div class="testimonials-card">
+                        <div class="testimonials-card--description">
+                            <p>Chamba me ayudo a contactar con el profesional para el pintado de mi casa. Me brindaron
+                                un
+                                buen
+                                servicio
+                            </p>
+                        </div>
+                        <div class="testimonials-card--professional">
+                            <div class="testimonials-card--professional-image">
+                                <img src="../../../assets/images/user.jpeg" alt="">
+                            </div>
+                            <div class="testimonials-card--professional-data">
+                                <div class="professional-data--name">
+                                    <span>Nombre de servicio o profesional</span>
+                                </div>
+                                <div class="professional-data--category">
+                                    <span>Categoría o rubro</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials-card--user">
+                            <div class="testimonials-card--user-name">
+                                <span>Luis Reyes</span>
+                            </div>
+                            <div class="testimonials-card--user-valuation">
+                                <div class="icon-valuation active">
+                                    <div class="valuation">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.26 67.9">
+                                            <path class="cls-1"
+                                                d="M5.86,10.53H72.61a2.55,2.55,0,0,1,2.55,2.55V63.41A2.55,2.55,0,0,1,72.61,66h-68A2.55,2.55,0,0,1,2.1,63.41V14.29a3.76,3.76,0,0,1,3.76-3.76Z" />
+                                            <path
+                                                d="M75,9.05H54.47V6.79A6.8,6.8,0,0,0,47.68,0H29.57a6.8,6.8,0,0,0-6.79,6.79V9.05H2.26A2.27,2.27,0,0,0,0,11.32V61.11A6.8,6.8,0,0,0,6.79,67.9H70.47a6.8,6.8,0,0,0,6.79-6.79V11.36h0A2.21,2.21,0,0,0,75,9.05ZM27.31,6.79a2.26,2.26,0,0,1,2.26-2.26H47.68A2.27,2.27,0,0,1,50,6.79V9.05H27.31Zm44.54,6.79-7,21.09a2.25,2.25,0,0,1-2.14,1.54H50V34a2.27,2.27,0,0,0-2.27-2.26H29.57A2.26,2.26,0,0,0,27.31,34v2.26H14.58a2.26,2.26,0,0,1-2.15-1.54l-7-21.09ZM45.42,36.21v4.53H31.84V36.21Zm27.31,24.9a2.26,2.26,0,0,1-2.26,2.26H6.79a2.26,2.26,0,0,1-2.26-2.26V25.26L8.14,36.1a6.77,6.77,0,0,0,6.44,4.64H27.31V43a2.27,2.27,0,0,0,2.26,2.27H47.68A2.27,2.27,0,0,0,50,43V40.74H62.68a6.78,6.78,0,0,0,6.44-4.64l3.61-10.84Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="icon-valuation active">
+                                    <div class="valuation">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.26 67.9">
+                                            <path class="cls-1"
+                                                d="M5.86,10.53H72.61a2.55,2.55,0,0,1,2.55,2.55V63.41A2.55,2.55,0,0,1,72.61,66h-68A2.55,2.55,0,0,1,2.1,63.41V14.29a3.76,3.76,0,0,1,3.76-3.76Z" />
+                                            <path
+                                                d="M75,9.05H54.47V6.79A6.8,6.8,0,0,0,47.68,0H29.57a6.8,6.8,0,0,0-6.79,6.79V9.05H2.26A2.27,2.27,0,0,0,0,11.32V61.11A6.8,6.8,0,0,0,6.79,67.9H70.47a6.8,6.8,0,0,0,6.79-6.79V11.36h0A2.21,2.21,0,0,0,75,9.05ZM27.31,6.79a2.26,2.26,0,0,1,2.26-2.26H47.68A2.27,2.27,0,0,1,50,6.79V9.05H27.31Zm44.54,6.79-7,21.09a2.25,2.25,0,0,1-2.14,1.54H50V34a2.27,2.27,0,0,0-2.27-2.26H29.57A2.26,2.26,0,0,0,27.31,34v2.26H14.58a2.26,2.26,0,0,1-2.15-1.54l-7-21.09ZM45.42,36.21v4.53H31.84V36.21Zm27.31,24.9a2.26,2.26,0,0,1-2.26,2.26H6.79a2.26,2.26,0,0,1-2.26-2.26V25.26L8.14,36.1a6.77,6.77,0,0,0,6.44,4.64H27.31V43a2.27,2.27,0,0,0,2.26,2.27H47.68A2.27,2.27,0,0,0,50,43V40.74H62.68a6.78,6.78,0,0,0,6.44-4.64l3.61-10.84Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="icon-valuation active">
+                                    <div class="valuation">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.26 67.9">
+                                            <path class="cls-1"
+                                                d="M5.86,10.53H72.61a2.55,2.55,0,0,1,2.55,2.55V63.41A2.55,2.55,0,0,1,72.61,66h-68A2.55,2.55,0,0,1,2.1,63.41V14.29a3.76,3.76,0,0,1,3.76-3.76Z" />
+                                            <path
+                                                d="M75,9.05H54.47V6.79A6.8,6.8,0,0,0,47.68,0H29.57a6.8,6.8,0,0,0-6.79,6.79V9.05H2.26A2.27,2.27,0,0,0,0,11.32V61.11A6.8,6.8,0,0,0,6.79,67.9H70.47a6.8,6.8,0,0,0,6.79-6.79V11.36h0A2.21,2.21,0,0,0,75,9.05ZM27.31,6.79a2.26,2.26,0,0,1,2.26-2.26H47.68A2.27,2.27,0,0,1,50,6.79V9.05H27.31Zm44.54,6.79-7,21.09a2.25,2.25,0,0,1-2.14,1.54H50V34a2.27,2.27,0,0,0-2.27-2.26H29.57A2.26,2.26,0,0,0,27.31,34v2.26H14.58a2.26,2.26,0,0,1-2.15-1.54l-7-21.09ZM45.42,36.21v4.53H31.84V36.21Zm27.31,24.9a2.26,2.26,0,0,1-2.26,2.26H6.79a2.26,2.26,0,0,1-2.26-2.26V25.26L8.14,36.1a6.77,6.77,0,0,0,6.44,4.64H27.31V43a2.27,2.27,0,0,0,2.26,2.27H47.68A2.27,2.27,0,0,0,50,43V40.74H62.68a6.78,6.78,0,0,0,6.44-4.64l3.61-10.84Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="icon-valuation">
+                                    <div class="valuation">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.26 67.9">
+                                            <path class="cls-1"
+                                                d="M5.86,10.53H72.61a2.55,2.55,0,0,1,2.55,2.55V63.41A2.55,2.55,0,0,1,72.61,66h-68A2.55,2.55,0,0,1,2.1,63.41V14.29a3.76,3.76,0,0,1,3.76-3.76Z" />
+                                            <path
+                                                d="M75,9.05H54.47V6.79A6.8,6.8,0,0,0,47.68,0H29.57a6.8,6.8,0,0,0-6.79,6.79V9.05H2.26A2.27,2.27,0,0,0,0,11.32V61.11A6.8,6.8,0,0,0,6.79,67.9H70.47a6.8,6.8,0,0,0,6.79-6.79V11.36h0A2.21,2.21,0,0,0,75,9.05ZM27.31,6.79a2.26,2.26,0,0,1,2.26-2.26H47.68A2.27,2.27,0,0,1,50,6.79V9.05H27.31Zm44.54,6.79-7,21.09a2.25,2.25,0,0,1-2.14,1.54H50V34a2.27,2.27,0,0,0-2.27-2.26H29.57A2.26,2.26,0,0,0,27.31,34v2.26H14.58a2.26,2.26,0,0,1-2.15-1.54l-7-21.09ZM45.42,36.21v4.53H31.84V36.21Zm27.31,24.9a2.26,2.26,0,0,1-2.26,2.26H6.79a2.26,2.26,0,0,1-2.26-2.26V25.26L8.14,36.1a6.77,6.77,0,0,0,6.44,4.64H27.31V43a2.27,2.27,0,0,0,2.26,2.27H47.68A2.27,2.27,0,0,0,50,43V40.74H62.68a6.78,6.78,0,0,0,6.44-4.64l3.61-10.84Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="icon-valuation">
+                                    <div class="valuation">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.26 67.9">
+                                            <path class="cls-1"
+                                                d="M5.86,10.53H72.61a2.55,2.55,0,0,1,2.55,2.55V63.41A2.55,2.55,0,0,1,72.61,66h-68A2.55,2.55,0,0,1,2.1,63.41V14.29a3.76,3.76,0,0,1,3.76-3.76Z" />
+                                            <path
+                                                d="M75,9.05H54.47V6.79A6.8,6.8,0,0,0,47.68,0H29.57a6.8,6.8,0,0,0-6.79,6.79V9.05H2.26A2.27,2.27,0,0,0,0,11.32V61.11A6.8,6.8,0,0,0,6.79,67.9H70.47a6.8,6.8,0,0,0,6.79-6.79V11.36h0A2.21,2.21,0,0,0,75,9.05ZM27.31,6.79a2.26,2.26,0,0,1,2.26-2.26H47.68A2.27,2.27,0,0,1,50,6.79V9.05H27.31Zm44.54,6.79-7,21.09a2.25,2.25,0,0,1-2.14,1.54H50V34a2.27,2.27,0,0,0-2.27-2.26H29.57A2.26,2.26,0,0,0,27.31,34v2.26H14.58a2.26,2.26,0,0,1-2.15-1.54l-7-21.09ZM45.42,36.21v4.53H31.84V36.21Zm27.31,24.9a2.26,2.26,0,0,1-2.26,2.26H6.79a2.26,2.26,0,0,1-2.26-2.26V25.26L8.14,36.1a6.77,6.77,0,0,0,6.44,4.64H27.31V43a2.27,2.27,0,0,0,2.26,2.27H47.68A2.27,2.27,0,0,0,50,43V40.74H62.68a6.78,6.78,0,0,0,6.44-4.64l3.61-10.84Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonials-card--user-date">
+                                <span>mié, 29 ene de 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="testimonials-action grid-row">
+                <button class="primary-button active">
+                    <div class="primary-button--icon">
+                        <div class="md-icon">
+                            <i class="ico comments-primary"></i>
+                        </div>
+                    </div>
+                    <div class="primary-button--content">
+                        <span>Ver comentarios</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="action">
+        <div class="action-squares">
+            <div class="action-squares--item"></div>
+            <div class="action-squares--item"></div>
+            <div class="action-squares--item"></div>
+            <div class="action-squares--item"></div>
+            <div class="action-squares--item"></div>
+        </div>
+        <div class="action-wrapper">
+            <div class="header-section--second">
+                <h2>Te ayudamos a solucionar este pendiente</h2>
+            </div>
+
+            <div class="action-wrapper--group">
+                <div class="action-wrapper--group-image">
+                    <img src="../../../assets/svg/action-comments.svg" alt="">
+                </div>
+                <div class="action-wrapper--group-content">
+                    <div class="group-content--text">
+                        <h3>Comentarios que ayudan</h3>
+                        <p>Si buscas un profesional revisa la calificación y recomendación de otros usuarios para
+                            ayudarte a
+                            decidir.
+                        </p>
+                        <p>Las valoraciones ayudan a los usuarios a decidirse y que tan buen trabajo se realizo.</p>
+                    </div>
+                    <button class="primary-button active o-right">
+                        <div class="primary-button--icon">
+                            <div class="md-icon">
+                                <div class="ico comments-primary"></div>
+                            </div>
+                        </div>
+                        <div class="primary-button--content">
+                            <span>ir a comentarios</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="action-wrapper--group">
+                <div class="action-wrapper--group-image">
+                    <img src="../../../assets/svg/action-quote.svg" alt="">
+                </div>
+                <div class="action-wrapper--group-content">
+                    <div class="group-content--text">
+                        <h3>Recibe cotizaciones gratuitas</h3>
+                        <p>Solicita cotizaciones completamente gratis, compara y decide a quien contratar sin mayores
+                            compromisos.
+                        </p>
+                        <p>Si ofreces un servicio, las cotizaciones que realices ayudarán a los usuarios a comparar
+                            precios y
+                            escoger
+                            la mejor propuesta.</p>
+                    </div>
+                    <button class="primary-button active">
+                        <div class="primary-button--icon">
+                            <div class="md-icon">
+                                <div class="ico comments-primary"></div>
+                            </div>
+                        </div>
+                        <div class="primary-button--content">
+                            <span>ir a comentarios</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="action-wrapper--group">
+                <div class="action-wrapper--group-image">
+                    <img src="../../../assets/svg/action-proposals.svg" alt="">
+                </div>
+                <div class="action-wrapper--group-content">
+                    <div class="group-content--text">
+                        <h3>Mejores propuestas</h3>
+                        <p>Si ofreces algún servicio, registrate gratis, atiende los pedidos de cotizaciones de los
+                            usuarios y
+                            podrán
+                            llegar a un acuerdo beneficioso para ambos.</p>
+                        <p>Pública el trabajo realizado, recibe una valoración y obtén una mejor reputación ante nuevos
+                            contratos.
+                        </p>
+                    </div>
+                    <button class="primary-button active o-right">
+                        <div class="primary-button--icon">
+                            <div class="md-icon">
+                                <div class="ico comments-primary"></div>
+                            </div>
+                        </div>
+                        <div class="primary-button--content">
+                            <span>ir a comentarios</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <action-professional></action-professional>
+
+</div>

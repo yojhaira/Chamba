@@ -1,21 +1,22 @@
 .main {
-  display: flex;
-  overflow: hidden;
-
-  &-nav {
-    flex: 0 0 126px;
-  }
-
-  &-content {
-    flex-grow: 1;
-    border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
+    display: flex;
     overflow: hidden;
-    background-color: white;
-    max-height: 100vh;
-    overflow-y: auto;
-    margin-right: -17px;
-    z-index: 1;
-    box-shadow: -3px 0 6px rgba(0, 0, 0, .16);
-  }
+    min-height: 100vh;
+
+    &-nav {
+        flex: 0 0 126px;
+    }
+
+    &-content {
+        flex-grow: 1;
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+        overflow: hidden;
+        background-color: var(--color-wrapper);
+        max-height: 100vh;
+        overflow-y: auto;
+        margin-right: -17px;
+        z-index: 1;
+        box-shadow: -3px 0 6px rgba(0, 0, 0, 0.16);
+    }
 }

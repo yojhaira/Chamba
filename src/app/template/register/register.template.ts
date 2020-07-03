@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { UsuarioService} from '../../service/usuario.service';
+import { UsuarioService } from '../../services/usuario.service';
 import { DOCUMENT } from '@angular/common';
 import { usuarioI } from 'src/app/models/usuario';
-import { Router} from '@angular/router'
+import { Router } from '@angular/router'
 import { Observable } from 'rxjs';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { AuthService} from '../../service/auth.service'
@@ -21,12 +21,12 @@ export class RegisterTemplate implements OnInit {
     public showError:boolean;
     
     constructor(
-        private sUsuario:UsuarioService,
+        private sUsuario: UsuarioService,
         private formBuilder: FormBuilder,
         private _router: Router,
         private _authServive:AuthService,
     ) {
-        
+
     }
 
     
@@ -42,9 +42,9 @@ export class RegisterTemplate implements OnInit {
         })
     }
 
-    registrar(form){
+    registrar(form) {
         let usuario: usuarioI = {
-            nombres:form.value.nombres,
+            nombres: form.value.nombres,
             apellidos: form.value.apellidos,
             f_nacimiento: form.value.f_nacimiento,
             correo: form.value.correo,

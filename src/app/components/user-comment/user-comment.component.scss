@@ -1,0 +1,154 @@
+.user-comment {
+    --line-one: calc(21px + 16px);
+    --line-two: calc(100% - var(--line-one));
+    padding-left: 32px;
+    padding-right: 21px;
+    padding-bottom: 28px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 1px;
+        background-color: var(--color-border);
+
+        position: absolute;
+        left: 5px;
+    }
+
+    &::before {
+        height: var(--line-one);
+    }
+
+    &::after {
+        height: var(--line-two);
+        bottom: 0;
+    }
+
+    &--header {
+        display: flex;
+        align-items: center;
+
+        padding-top: 21px;
+        margin-bottom: 14px;
+    }
+
+    &--photo {
+        --size-photo: 41px;
+        --size-border: 2px;
+
+        margin-right: 7px;
+    }
+
+    &--name {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    &--assessment {
+        display: flex;
+        align-items: center;
+
+        margin-left: auto;
+
+        & > span {
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 7px;
+        }
+    }
+
+    &--footer {
+        display: flex;
+        justify-content: flex-end;
+
+        margin-top: 28px;
+    }
+
+    &--useful {
+        display: flex;
+        align-items: center;
+
+        & > span {
+            color: var(--color-support-dark);
+            margin-right: 8px;
+            font-weight: 500;
+        }
+
+        & button {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+
+        & .primary-button,
+        & .primary-button--alternate {
+            padding: 0 10px;
+
+            & .primary-button--icon {
+                --size-element: 30px;
+                background-color: rgba(255, 255, 255, 0);
+            }
+            & .primary-button--content {
+                --size: 30px;
+                height: var(--size);
+                width: var(--size);
+                padding: 0;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        & .primary-button {
+            & .primary-button--icon {
+                color: white;
+            }
+        }
+
+        & .primary-button--alternate {
+            & .primary-button--icon {
+                color: var(--color-primary-dark);
+            }
+        }
+    }
+
+    &--line {
+        height: 1px;
+        background-color: var(--color-border);
+        width: calc(100% - 5px);
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.circular-detail {
+    --size: 11px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: calc(var(--size) / 2);
+    z-index: 1;
+
+    position: absolute;
+    top: calc(21px + 14.5px);
+    left: 0;
+
+    background-color: var(--color-primary-light);
+
+    &::before {
+        --size: 7px;
+        content: "";
+        height: var(--size);
+        width: var(--size);
+        border-radius: calc(var(--size) / 2);
+        background-color: white;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

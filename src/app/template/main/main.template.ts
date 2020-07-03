@@ -16,33 +16,32 @@ import { share, auditTime, map } from 'rxjs/operators';
 
 @HostListener("scroll", ['$event'])
 export class MainTemplate implements OnInit {
-    public oficios:Array<Oficio>;
+    public oficios: Array<Oficio>;
     public scroll: number;
 
     constructor(
         @Inject(DOCUMENT) private document: any,
         // private sOficio:OficioService
-    ) { 
+    ) {
         // this.oficios = [];
         // this.listarOficios();
     }
 
     detectScroll($event: any) {
         // let scrollOffset = $event.srcElement.children[0].scrollTop;
-        console.log('hola');
     }
-    
+
     fixedHeader() {
-        
+
         // this.scroll$ = fromEvent(boxHome, 'scroll').pipe(
         // 	auditTime(200),
         // 	map(event => {
-            // 		return boxHome.scrollY || boxHome.document.documentElement.scrollTop;
+        // 		return boxHome.scrollY || boxHome.document.documentElement.scrollTop;
         // 	}),
         // 	share()
         // )
         // const scrollElement = fromEvent(window, 'scroll').pipe(
-            //     map(() => {
+        //     map(() => {
         //         return window.scrollY || document.documentElement.scrollTop;
         //     }),
         //     auditTime(200),
@@ -59,7 +58,6 @@ export class MainTemplate implements OnInit {
 
     onScrollEvent($event) {
         console.log(this.boxHome);
-        console.log('hola');
     }
 
     ngOnInit() {

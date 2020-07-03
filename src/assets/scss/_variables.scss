@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
   --color-primary: rgb(149, 80, 182);
   // --color-primary-dark: rgb(49, 39, 88);
   --color-primary-dark: rgb(103, 20, 143);
@@ -128,200 +129,349 @@
   &.jardineria-primary {
     &::before {
       background-image: url("assets/svg/planta-primary.svg");
+=======
+    --color-primary: rgb(149, 80, 182);
+    // --color-primary-dark: rgb(49, 39, 88);
+    --color-primary-dark: rgb(103, 20, 143);
+    --color-primary-light: rgb(212, 142, 245);
+
+    // Secondary
+    --color-secondary: rgb(25, 25, 39);
+    --color-secondary-dark: rgb(12, 12, 18);
+    --color-secondary-light: rgb(61, 61, 71);
+
+    // Gray
+    --color-support: rgb(189, 189, 189);
+    --color-support-dark: rgb(166, 166, 166);
+    --color-support-light: rgb(240, 240, 240);
+
+    --color-wrapper: rgba(237, 242, 246);
+    --color-border: rgba(229, 236, 244, 1);
+
+    // color-font
+    --color-font-high-emphasis: rgba(25, 25, 25, 1);
+
+    // Fonts
+    --font-display: "Quicksand", sans-serif;
+    --font-source: "Source Sans Pro", sans-serif;
+
+    // error
+    --color-error: rgb(204, 16, 16);
+
+    --oppsite-color: rgb(255, 255, 255);
+    --index-main: 10;
+
+    // Shadow
+    --shadow-primary: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
+
+    // colors
+    // facebook
+    --color-facebook: rgba(66, 103, 178, 1);
+    // messenger
+    --color-messenger: linear-gradient(180deg, rgba(0, 178, 253, 1), rgba(2, 127, 255, 1));
+    // whatsapp
+    --color-whatsapp: rgba(0, 230, 118, 1);
+    // twitter
+    --color-twitter: rgba(29, 161, 242, 1);
+}
+
+.ico {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &.register-primary,
+    &.register-alternate,
+    &.save-primary,
+    &.save-alternate,
+    &.home-primary,
+    &.home-alternate,
+    &.search-primary,
+    &.jardineria-primary,
+    &.jardineria-alternate,
+    &.plus-primary,
+    &.plus-alternative,
+    &.comments-primary,
+    &.comments-alternate,
+    &.pintores-primary,
+    &.pintores-alternate,
+    &.electricistas-primary,
+    &.electricistas-alternate,
+    &.carpinteria-primary,
+    &.carpinteria-alternate,
+    &.construccion-primary,
+    &.constructor-alternate,
+    &.avion-primary,
+    &.avion-alternate,
+    &.bell,
+    &.cartaNoti-primary,
+    &.galeryList,
+    &.galeryView,
+    &.check,
+    &.face,
+    &.instagram,
+    &.wpp,
+    &.google,
+    &.in,
+    &.msg,
+    &.pinterest,
+    &.point,
+    &.bag-work,
+    &.valuation-default,
+    &.quote {
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            background-position: center;
+            background-size: contain;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-repeat: no-repeat;
+        }
     }
+
+    &.register-primary {
+        &::before {
+            background-image: url("assets/svg/register-primary.svg");
+        }
+    }
+
+    &.register-alternate {
+        &::before {
+            background-image: url("assets/svg/register-alternate.svg");
+        }
+    }
+
+    &.save-primary {
+        &::before {
+            background-image: url("assets/svg/save-primary.svg");
+        }
+    }
+
+    &.save-alternate {
+        &::before {
+            background-image: url("assets/svg/save-alternate.svg");
+        }
+    }
+
+    &.home-alternate {
+        &::before {
+            background-image: url("assets/svg/home-alternate.svg");
+        }
+    }
+
+    &.search-primary {
+        &::before {
+            background-image: url("assets/svg/save-primary.svg");
+        }
+    }
+
+    &.jardineria-primary {
+        &::before {
+            background-image: url("assets/svg/planta-primary.svg");
+        }
+>>>>>>> 18edca9c9ba95707fa5f407608c15ec627a9fbaf
+    }
+
+    &.jardineria-alternate {
+        &::before {
+            background-image: url("assets/svg/planta-alternative.svg");
+        }
+    }
+
+    &.plus-primary {
+        &::before {
+            background-image: url("assets/svg/plus-primary.svg");
+        }
+    }
+
+    &.plus-alternate {
+        &::before {
+            background-image: url("assets/svg/plus-alternative.svg");
+        }
+    }
+
+    &.comments-primary {
+        &::before {
+            background-image: url("assets/svg/comments-primary.svg");
+        }
+    }
+
+    &.comments-alternate {
+        &::before {
+            background-image: url("assets/svg/comments-alternative.svg");
+        }
+    }
+
+    &.pintores-primary {
+        &::before {
+            background-image: url("assets/svg/brocha-primary.svg");
+        }
+    }
+
+    &.pintores-alternate {
+        &::before {
+            background-image: url("assets/svg/brocha-alternative.svg");
+        }
+    }
+
+    &.electricistas-primary {
+        &::before {
+            background-image: url("assets/svg/enchufe-primary.svg");
+        }
+    }
+
+    &.electricistas-alternate {
+        &::before {
+            background-image: url("assets/svg/enchufe-alternative.svg");
+        }
+    }
+
+    &.carpinteria-primary {
+        &::before {
+            background-image: url("assets/svg/carpinteria-primary.svg");
+        }
+    }
+
+    &.carpinteria-alternate {
+        &::before {
+            background-image: url("assets/svg/carpinteria-alternative.svg");
+        }
+    }
+
+    &.construccion-primary {
+        &::before {
+            background-image: url("assets/svg/constructor-primary.svg");
+        }
+    }
+
+    &.construccion-alternate {
+        &::before {
+            background-image: url("assets/svg/constructor-alternative.svg");
+        }
+    }
+
+    &.avion-primary {
+        &::before {
+            background-image: url("assets/svg/avion-primary.svg");
+        }
+    }
+
+    &.avion-alternate {
+        &::before {
+            background-image: url("assets/svg/avion-alternative.svg");
+        }
+    }
+
+    &.bell {
+        &::before {
+            background-image: url("assets/svg/bell.svg");
+        }
+    }
+
+    &.cartaNoti-primary {
+        &::before {
+            background-image: url("assets/svg/cartaNoti-primary.svg");
+        }
+    }
+
+    &.galeryList {
+        &::before {
+            background-image: url("assets/svg/galeryList.svg");
+        }
+    }
+
+    &.galeryView {
+        &::before {
+            background-image: url("assets/svg/galeryView.svg");
+        }
+    }
+
+    &.check {
+        &::before {
+            background-image: url("assets/svg/check.svg");
+        }
+    }
+
+    &.face {
+        &::before {
+            background-image: url("assets/svg/face.svg");
+        }
+    }
+
+    &.instagram {
+        &::before {
+            background-image: url("assets/svg/instagram.svg");
+        }
+    }
+
+    &.wpp {
+        &::before {
+            background-image: url("assets/svg/wpp.svg");
+        }
+    }
+
+    &.pinterest {
+        &::before {
+            background-image: url("assets/svg/pinterest.svg");
+        }
+    }
+
+    &.google {
+        &::before {
+            background-image: url("assets/svg/google.svg");
+        }
+    }
+
+    &.in {
+        &::before {
+            background-image: url("assets/svg/in.svg");
+        }
+    }
+
+    &.msg {
+        &::before {
+            background-image: url("assets/svg/msg.svg");
+        }
+    }
+
+    &.point {
+        &::before {
+            background-image: url("assets/svg/points.svg");
+        }
+    }
+
+    &.bag-work {
+        &::before {
+            background-image: url("assets/svg/bag-work.svg");
+        }
+    }
+
+    &.valuation-default {
+        &::before {
+            background-image: url("assets/svg/valuation-default.svg");
+        }
+    }
+
+    &.quote {
+        &::before {
+            background-image: url("assets/svg/quote.svg");
+        }
+    }
+<<<<<<< HEAD
   }
 
-  &.jardineria-alternate {
-    &::before {
-      background-image: url("assets/svg/planta-alternative.svg");
-    }
-  }
 
-  &.plus-primary {
-    &::before {
-      background-image: url("assets/svg/plus-primary.svg");
-    }
-  }
-
-  &.plus-alternate {
-    &::before {
-      background-image: url("assets/svg/plus-alternative.svg");
-    }
-  }
-
-  &.comments-primary {
-    &::before {
-      background-image: url("assets/svg/comments-primary.svg");
-    }
-  }
-
-  &.comments-alternate {
-    &::before {
-      background-image: url("assets/svg/comments-alternative.svg");
-    }
-  }
-
-  &.pintor-primary {
-    &::before {
-      background-image: url("assets/svg/brocha-primary.svg");
-    }
-  }
-
-  &.pintor-alternate {
-    &::before {
-      background-image: url("assets/svg/brocha-alternative.svg");
-    }
-  }
-
-  &.electricista-primary {
-    &::before {
-      background-image: url("assets/svg/enchufe-primary.svg");
-    }
-  }
-
-  &.electricista-alternate {
-    &::before {
-      background-image: url("assets/svg/enchufe-alternative.svg");
-    }
-  }
-
-  &.carpinteria-primary {
-    &::before {
-      background-image: url("assets/svg/carpinteria-primary.svg");
-    }
-  }
-
-  &.carpinteria-alternate {
-    &::before {
-      background-image: url("assets/svg/carpinteria-alternative.svg");
-    }
-  }
-
-  &.constructor-primary {
-    &::before {
-      background-image: url("assets/svg/constructor-primary.svg");
-    }
-  }
-
-  &.constructor-alternate {
-    &::before {
-      background-image: url("assets/svg/constructor-alternative.svg");
-    }
-  }
-
-  &.avion-primary {
-    &::before {
-      background-image: url("assets/svg/avion-primary.svg");
-    }
-  }
-
-  &.avion-alternate {
-    &::before {
-      background-image: url("assets/svg/avion-alternative.svg");
-    }
-  }
-
-  &.bell {
-    &::before {
-      background-image: url("assets/svg/bell.svg");
-    }
-  }
-
-  &.cartaNoti-primary {
-    &::before {
-      background-image: url("assets/svg/cartaNoti-primary.svg");
-    }
-  }
-
-  &.galeryList {
-    &::before {
-      background-image: url("assets/svg/galeryList.svg");
-    }
-  }
-
-  &.galeryView {
-    &::before {
-      background-image: url("assets/svg/galeryView.svg");
-    }
-  }
-
-  &.check {
-    &::before {
-      background-image: url("assets/svg/check.svg");
-    }
-  }
-
-  &.face {
-    &::before {
-      background-image: url("assets/svg/face.svg");
-    }
-  }
-
-  &.instagram {
-    &::before {
-      background-image: url("assets/svg/instagram.svg");
-    }
-  }
-
-  &.wpp {
-    &::before {
-      background-image: url("assets/svg/wpp.svg");
-    }
-  }
-
-  &.pinterest {
-    &::before {
-      background-image: url("assets/svg/pinterest.svg");
-    }
-  }
-
-  &.google {
-    &::before {
-      background-image: url("assets/svg/google.svg");
-    }
-  }
-
-  &.in {
-    &::before {
-      background-image: url("assets/svg/in.svg");
-    }
-  }
-
-  &.msg {
-    &::before {
-      background-image: url("assets/svg/msg.svg");
-    }
-  }
-
-  &.point {
-    &::before {
-      background-image: url("assets/svg/points.svg");
-    }
-  }
-
-  &.bag-work {
-    &::before {
-      background-image: url("assets/svg/bag-work.svg");
-    }
-  }
-
-  &.valuation-default {
-    &::before {
-      background-image: url("assets/svg/valuation-default.svg");
-    }
-  }
-
-  &.quote {
-    &::before {
-      background-image: url("assets/svg/quote.svg");
-    }
-  }
-
-
+=======
+>>>>>>> 18edca9c9ba95707fa5f407608c15ec627a9fbaf
 }
 
 .background {
-  margin: 0;
-  padding: 0;
-  background-image: url('assets/images/fondo.jpg');
+    margin: 0;
+    padding: 0;
+    background-image: url("assets/images/fondo.jpg");
 }
