@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders} from '@angular/common/http';
 import { Observable} from 'rxjs';
-import { usuarioI } from '../models/usuario'
-import { isNullOrUndefined } from 'util'
+import { usuarioI } from '../models/usuario';
+import { isNullOrUndefined } from 'util';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class AuthService {
   });
 
   authUser(data:usuarioI): Observable<any>{
-    return this._http.post('http://chamba-back.test/api/usuario/login',JSON.stringify(data),{headers:this.headers});
+    return this._http.post(environment.apiUrl+'usuario/login',JSON.stringify(data),{headers:this.headers});
   }
 
   getCurrentUser(){

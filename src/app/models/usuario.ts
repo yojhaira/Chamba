@@ -7,5 +7,8 @@ export interface usuarioI{
      password:string,
      genero?:string,
      telefono?:string,
-     img?:string
+     img?:string,
+     id_estado?:number,
+     id_distrito?:number,
+     id_rol?:number
 }

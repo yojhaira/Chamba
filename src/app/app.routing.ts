@@ -27,7 +27,7 @@ const appRouters: Routes = [
             {
                 path: 'user-profile',
                 component: UserProfileTemplate,
-                canActivate: [AuthGuard]
+                //canActivate : [AuthGuard]
             },
             {
                 path: 'categories',
