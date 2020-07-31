@@ -6,7 +6,7 @@ import { usuarioI } from 'src/app/models/usuario';
 import { Router } from '@angular/router'
 import { Observable } from 'rxjs';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { AuthService} from '../../service/auth.service'
+import { AuthService} from '../../services/auth.service'
 
 @Component({
     selector: 'register-template',
