@@ -1,150 +1,4 @@
 :root {
-<<<<<<< HEAD
-    --color-primary: rgb(149, 80, 182);
-    // --color-primary-dark: rgb(49, 39, 88);
-    --color-primary-dark: rgb(103, 20, 143);
-    --color-primary-light: rgb(212, 142, 245);
-
-    // Secondary
-    --color-secondary: rgb(25, 25, 39);
-    --color-secondary-dark: rgb(12, 12, 18);
-    --color-secondary-light: rgb(61, 61, 71);
-
-    // Gray
-    --color-support: rgb(189, 189, 189);
-    --color-support-dark: rgb(166, 166, 166);
-    --color-support-light: rgb(240, 240, 240);
-
-    --color-wrapper: rgba(237, 242, 246);
-    --color-border: rgba(229, 236, 244, 1);
-
-    // color-font
-    --color-font-high-emphasis: rgba(25, 25, 25, 1);
-
-    // Fonts
-    --font-display: "Quicksand", sans-serif;
-    --font-source: "Source Sans Pro", sans-serif;
-
-    // error
-    --color-error: rgb(204, 16, 16);
-
-    --oppsite-color: rgb(255, 255, 255);
-    --index-main: 10;
-
-    // Shadow
-    --shadow-primary: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
-
-    // colors
-    // facebook
-    --color-facebook: rgba(66, 103, 178, 1);
-    // messenger
-    --color-messenger: linear-gradient(180deg, rgba(0, 178, 253, 1), rgba(2, 127, 255, 1));
-    // whatsapp
-    --color-whatsapp: rgba(0, 230, 118, 1);
-    // twitter
-    --color-twitter: rgba(29, 161, 242, 1);
-}
-
-.ico {
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-    &.register-primary,
-    &.register-alternate,
-    &.save-primary,
-    &.save-alternate,
-    &.home-primary,
-    &.home-alternate,
-    &.search-primary,
-    &.jardineria-primary,
-    &.jardineria-alternate,
-    &.plus-primary,
-    &.plus-alternative,
-    &.comments-primary,
-    &.comments-alternate,
-    &.pintores-primary,
-    &.pintores-alternate,
-    &.electricistas-primary,
-    &.electricistas-alternate,
-    &.carpinteria-primary,
-    &.carpinteria-alternate,
-    &.construccion-primary,
-    &.constructor-alternate,
-    &.avion-primary,
-    &.avion-alternate,
-    &.bell,
-    &.cartaNoti-primary,
-    &.galeryList,
-    &.galeryView,
-    &.check,
-    &.face,
-    &.instagram,
-    &.wpp,
-    &.google,
-    &.in,
-    &.msg,
-    &.pinterest,
-    &.point,
-    &.bag-work,
-    &.valuation-default,
-    &.quote {
-        &::before {
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            object-fit: contain;
-            background-position: center;
-            background-size: contain;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-repeat: no-repeat;
-        }
-    }
-
-    &.register-primary {
-        &::before {
-            background-image: url("assets/svg/register-primary.svg");
-        }
-    }
-
-    &.register-alternate {
-        &::before {
-            background-image: url("assets/svg/register-alternate.svg");
-        }
-    }
-
-    &.save-primary {
-        &::before {
-            background-image: url("assets/svg/save-primary.svg");
-        }
-    }
-
-    &.save-alternate {
-        &::before {
-            background-image: url("assets/svg/save-alternate.svg");
-        }
-    }
-
-    &.home-alternate {
-        &::before {
-            background-image: url("assets/svg/home-alternate.svg");
-        }
-    }
-
-    &.search-primary {
-        &::before {
-            background-image: url("assets/svg/save-primary.svg");
-        }
-    }
-
-    &.jardineria-primary {
-        &::before {
-            background-image: url("assets/svg/planta-primary.svg");
-        }
-=======
   --color-primary: rgb(149, 80, 182);
   // --color-primary-dark: rgb(49, 39, 88);
   --color-primary-dark: rgb(103, 20, 143);
@@ -274,7 +128,6 @@
   &.jardineria-primary {
     &::before {
       background-image: url("assets/svg/planta-primary.svg");
->>>>>>> 6bb9bea69ab5ae65db9264262f73fd3fc0ca651c
     }
 
     &.jardineria-alternate {
@@ -462,12 +315,9 @@
             background-image: url("assets/svg/quote.svg");
         }
     }
-<<<<<<< HEAD
-=======
   }
 
 
->>>>>>> 6bb9bea69ab5ae65db9264262f73fd3fc0ca651c
 }
 
 .background {
