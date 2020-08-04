@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { JobService } from '../../../services/job-categories/job-categories.service';
+import { CTALoginComponent } from 'src/app/components/cta-login/cta-login.component';
+import { CTALoginService } from 'src/app/components/cta-login/cta-login.service';
 
 
 @Component({
@@ -13,8 +15,23 @@ import { JobService } from '../../../services/job-categories/job-categories.serv
 export class MainContentTemplate implements OnInit {
 
     public oficios: Array<any>;
+    public arrayCategories: Array<any>;
+    public orientationCTA: string;
 
-    constructor(public jobService: JobService) { }
+    constructor(
+        public _jobService: JobService,
+        public _ctaLoginService: CTALoginService
+    ) { }
+
+    ngOnInit() {
+        // this.listarOficios()
+        this.listCategories();
+        this.orientationCTA = "left";
+    }
+
+    public listCategories(): void {
+        this.arrayCategories = this._jobService.listCategoriesWorkers();
+    }
     // listarOficios(){
     //     this.sOficio.listar().subscribe(
     //         result => {
@@ -26,9 +43,8 @@ export class MainContentTemplate implements OnInit {
     //     )
     // }
 
-    ngOnInit() {
-        // this.listarOficios()
+    public quoteWork(): void {
+        this._ctaLoginService.open();
     }
-
 
 }

@@ -160,7 +160,8 @@
 
 .primary-button,
 .alternate-button,
-.primary-button--alternate {
+.primary-button--alternate,
+.primary-button--outline {
     --background-color: var(--color-primary-dark);
     --color-text-content: white;
     --background-color-icon: white;
@@ -176,13 +177,30 @@
     transition: 0.3s all ease;
     width: fit-content;
 
-    &:not(div) {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.24);
-    }
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    &:disabled {
+        background-color: var(--color-support);
+
+        & .primary-button {
+            &--icon {
+                color: var(--color-support);
+            }
+            &--content {
+                color: var(--color-support-light);
+            }
+        }
+
+        &:hover {
+            transform: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.24);
+        }
+    }
+
+    &:not(div) {
+    }
 
     &:first-letter {
         text-transform: capitalize;
@@ -211,8 +229,8 @@
         color: var(--color-text-content);
         width: 0px;
         overflow: hidden;
-        font-weight: 500;
-        font-size: 16px;
+        font-weight: 600;
+        font-size: 14px;
 
         will-change: transform;
 
@@ -221,9 +239,16 @@
         }
     }
 
-    &:not(div):hover {
-        transform: translateY(-3px);
-        box-shadow: 0 0 0px rgba(0, 0, 0, 0.21), 0 7px 12px rgba(0, 0, 0, 0.34);
+    &:not(div) {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.24);
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.21), 0 7px 12px rgba(0, 0, 0, 0.34);
+        }
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.24);
+        }
     }
 
     &:hover,
@@ -252,6 +277,26 @@
         --color-text-content: var(--color-primary-dark);
         --background-color-icon: var(--color-primary-dark);
         --color-icon: white;
+
+        & .primary-button--content {
+            margin: 0 auto;
+        }
+    }
+
+    &--outline {
+        --background-color: white;
+        --color-text-content: var(--color-primary-dark);
+        border: 1px solid var(--color-primary-dark);
+
+        &:not(div) {
+            box-shadow: none;
+        }
+
+        &.outline-alternate {
+            --background-color: transparent;
+            --color-text-content: white;
+            border: 1px solid white;
+        }
     }
 }
 
@@ -355,6 +400,22 @@
             transform: translateY(-19px);
             font-size: 12px;
             font-weight: 600;
+        }
+    }
+
+    &.invalid {
+        & .input-container--box,
+        & .textarea-container--box {
+            --color-focus: 204, 16, 16;
+            border: 1px solid var(--color-error);
+            box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em rgba(var(--color-focus), 0.3);
+        }
+
+        & .input-container {
+            color: var(--color-error);
+            & label {
+                color: var(--color-error);
+            }
         }
     }
 
@@ -678,25 +739,34 @@
 
         &:hover {
             cursor: pointer;
+        }
+    }
 
-            & .toggle-container--dot:before {
-                --size-element: 40px;
-            }
+    & input {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        opacity: 0;
+
+        &:checked ~ .toggle-text {
+            color: var(--color-font-high-emphasis);
         }
 
-        & .toggle-text {
-            &:first-child {
-                font-weight: 500;
-                font-size: 14px;
-                color: var(--color-support-dark);
-            }
+        &:checked ~ .toggle-container .toggle-container--trail {
+            --background-toggle: var(--color-primary-dark);
         }
 
-        & .toggle-container {
-            &:nth-child(2) {
-                margin-left: auto;
-            }
+        &:checked ~ .toggle-container .toggle-container--dot {
+            --background-toggle: var(--color-primary-dark);
+            --background-pseudoelement: rgba(120, 20, 143, 0.18);
+            left: calc(100% - var(--size-dot));
         }
+    }
+
+    &-text {
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--color-support-dark);
     }
 
     &-container {
@@ -707,21 +777,11 @@
         --background-pseudoelement: rgba(0, 0, 0, 0.07);
         position: relative;
         margin-right: 8px;
+        margin-left: auto;
 
-        & input {
-            position: absolute;
-            height: 1px;
-            width: 1px;
-            opacity: 0;
-
-            &:checked ~ .toggle-container--trail {
-                --background-toggle: var(--color-primary-dark);
-            }
-
-            &:checked ~ .toggle-container--dot {
-                --background-toggle: var(--color-primary-dark);
-                --background-pseudoelement: rgba(120, 20, 143, 0.18);
-                left: calc(100% - var(--size-dot));
+        &:hover {
+            & .toggle-container--dot:before {
+                --size-element: 40px;
             }
         }
 
@@ -731,7 +791,7 @@
             border-radius: calc(var(--size-toggle) / 2);
             background-color: var(--background-toggle);
 
-            transition: 0.3s background-color ease-in-out;
+            transition: 0.2s background-color ease-in-out;
         }
 
         &--dot {
@@ -762,7 +822,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: -1;
-                transition: 0.3s all ease-in-out;
+                transition: 0.2s all ease-in-out;
             }
 
             &:after {
@@ -773,11 +833,6 @@
                 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 1px rgba(0, 0, 0, 0.2);
             }
         }
-    }
-
-    &-text {
-        font-size: 14px;
-        font-weight: 500;
     }
 }
 
@@ -1150,3 +1205,20 @@ app-footer {
 }
 
 /*=====  End of information-card  ======*/
+
+/*=============================================
+=            CTA Login            =
+=============================================*/
+
+cta-login-component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 10;
+    // background-color: tomato;
+}
+
+/*=====  End of CTA Login  ======*/

@@ -1,0 +1,81 @@
+<div class="quotes-template">
+    <header-user-component></header-user-component>
+
+    <div class="quotes-template--wrapper grid-container">
+        <div class="grid-row">
+            <div class="grid-2">
+                <div class="quotes-template--menu rail-section sticky-element">
+                    <div class="rail-section--header">
+                        <span>Cotizaciones</span>
+                    </div>
+                    <div class="rail-section--list">
+                        <div class="rail-section--list-item">
+                            <span>Todas</span>
+                        </div>
+                        <div class="rail-section--list-item">
+                            <span>Recientes</span>
+                        </div>
+                        <div class="rail-section--list-item">
+                            <span>Destacados</span>
+                        </div>
+                        <div class="rail-section--list-item">
+                            <span>Respondidas</span>
+                        </div>
+                        <div class="rail-section--list-item">
+                            <span>Solicitadas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-4">
+                <div class="mailbox-rail rail-section">
+                    <div class="rail-section--header greater-emphasis-text">
+                        <span>Cotizaciones Recibidas</span>
+                    </div>
+                    <div class="mailbox-rail--search">
+                        <input type="search" placeholder="Buscar en buzón">
+                        <div class="sm-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="mailbox-rail--buttons">
+                        <button class="mailbox-rail--button-single">
+                            <div class="sm-icon">
+                                <i class="far fa-bookmark"></i>
+                            </div>
+                        </button>
+                        <button class="mailbox-rail--button-single">
+                            <div class="sm-icon">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                        </button>
+                        <button class="mailbox-rail--button-single">
+                            <div class="sm-icon">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="mailbox-rail--list">
+                        <ng-container *ngFor="let item of listMessage; let i = index">
+                            <mailbox-message-component [dataMessage]="item"></mailbox-message-component>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-6">
+                <div class="message-reader rail-section sticky-element">
+                    <div *ngIf="!_readerMessageService.readingIndicator" class="message-reader--empty">
+                        <h5 class="heading-lvl-5">Es momento de impulsar tu trabajo</h5>
+                        <p>Resuelve las dudas de los usuarios y logra contactar con ellos para realizar esa chamba.</p>
+                        <span>Haz click en los mensajes para visualizarlos</span>
+                        <div class="message-reader--empty-graphic">
+                            <img src="../../../../assets/images/graphics/reader-message.svg" alt="reader-message">
+                        </div>
+                    </div>
+                    <message-reader-component *ngIf="_readerMessageService.readingIndicator">
+                    </message-reader-component>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+.quotes {
+    &-template {
+        margin-bottom: 80px;
+        &--menu {
+            top: 70px;
+        }
+    }
+}
+
+.mailbox-rail {
+    &--search,
+    &--buttons {
+        border-bottom: 1px solid var(--color-border);
+        height: 36px;
+        padding: 0 16px;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        & [class*="-icon"] {
+            color: var(--color-support);
+            transition: 0.2s color ease-in-out;
+        }
+    }
+
+    &--search {
+        & input {
+            flex-grow: 1;
+            height: 100%;
+            border: none;
+
+            &::placeholder {
+                font-weight: 500;
+                color: var(--color-support-dark);
+            }
+
+            &:focus {
+                outline: none;
+
+                & ~ [class*="-icon"] {
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+
+    &--buttons {
+        justify-content: flex-end;
+
+        & button {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background-color: rgba($color: #000000, $alpha: 0);
+            border-radius: 4px;
+            transition: 0.2s background-color ease-in-out, 0.2s color ease-in-out;
+
+            &:not(:first-of-type) {
+                margin-left: 8px;
+            }
+
+            &:hover {
+                background-color: var(--color-support);
+                cursor: pointer;
+
+                & [class*="-icon"] {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &--list {
+        perspective: 1000px;
+    }
+}
+
+.message-reader {
+    min-height: 500px;
+    top: 70px;
+
+    &--empty {
+        height: 100%;
+        text-align: center;
+        padding: 48px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & h5 {
+            font-weight: 700;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        & p {
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        & span {
+            font-weight: 300;
+            font-size: 13px;
+            margin-bottom: 28px;
+        }
+    }
+}

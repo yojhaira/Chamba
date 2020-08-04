@@ -23,19 +23,14 @@ import { NavComponent } from './components/nav/nav.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LogoComponent } from './components/logo/logo.component';
-import { QuoteComponent } from './components/quote/quote.component';
-
-import { ActionProfessionalComponent } from './components/action-professional/action-professional.component';
 
 // import { InputComponent } from './components/input/input.component';
 import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
-import { GraphicLaunch } from './components/graphics/graphic-launch/graphic-launch.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
-import { CardProfessionalComponent } from './components/card-professional/card-profesional.component';
 import { ComponentsModule } from './components/components.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -65,7 +60,8 @@ import { ComponentsModule } from './components/components.module';
         ReactiveFormsModule,
         HttpClientModule,
 
-        ComponentsModule
+        ComponentsModule,
+        BrowserAnimationsModule
     ],
     exports: [],
     providers: [appRoutingProviders],

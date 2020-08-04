@@ -12,7 +12,9 @@ export class JobService {
 
     constructor(
         public _http: HttpClient
-    ) { }
+    ) {
+        this.collectionCategories = [];
+    }
 
     public listCategoriesWorkers() {
         return this.collectionCategories = [

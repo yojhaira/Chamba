@@ -1,0 +1,29 @@
+<div class="cta-login" *ngIf="showDialog">
+    <div class="cta-login--wrapper">
+        <div class="cta-login--modal" [@dialog]>
+            <div class="cta-login--modal-close" (click)="showDialog = !showDialog">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="cta-login--modal-body">
+                <div class="modal-body--figure">
+                    <img src="../../assets/images/graphics/cta-login.svg" alt="">
+                </div>
+                <div class="modal-body--description">
+                    <p>Aún no has iniciado sesión</p>
+                </div>
+            </div>
+            <div class="cta-login--modal-footer">
+                <button class="primary-button--outline outline-alternate active" [routerLink]="'/register'">
+                    <div class="primary-button--content">
+                        <span>Registrarse</span>
+                    </div>
+                </button>
+                <button class="primary-button--alternate active" [routerLink]="'/login'">
+                    <div class="primary-button--content">
+                        <span>Ingresar</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
