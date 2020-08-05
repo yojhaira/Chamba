@@ -43,6 +43,7 @@
             overflow: hidden;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.49);
             height: var(--size-base-container);
+            display: flex;
 
             & div[class^="grid"] {
                 background: linear-gradient(180deg, var(--color-primary-dark), var(--color-secondary-dark));

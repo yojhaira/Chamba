@@ -11,11 +11,17 @@ import { LogoComponent } from './logo/logo.component';
 import { WorkerPostComponent } from './worker-post/worker-post.component';
 import { UserCommentComponent } from './user-comment/user-comment.component';
 import { CardActionComponent } from './card-action/card-action.component';
+import { MailboxMessageComponent } from './mailbox-message/mailbox-message.component';
+import { MessageReaderComponent } from './message-reader/message-reader.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CTALoginComponent } from './cta-login/cta-login.component';
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     declarations: [
         HeaderPageComponent,
@@ -27,7 +33,10 @@ import { CardActionComponent } from './card-action/card-action.component';
         LogoComponent,
         WorkerPostComponent,
         UserCommentComponent,
-        CardActionComponent
+        CardActionComponent,
+        MailboxMessageComponent,
+        MessageReaderComponent,
+        CTALoginComponent
     ],
     exports: [
         HeaderPageComponent,
@@ -39,7 +48,10 @@ import { CardActionComponent } from './card-action/card-action.component';
         LogoComponent,
         WorkerPostComponent,
         UserCommentComponent,
-        CardActionComponent
+        CardActionComponent,
+        MailboxMessageComponent,
+        MessageReaderComponent,
+        CTALoginComponent
     ],
     providers: []
 })

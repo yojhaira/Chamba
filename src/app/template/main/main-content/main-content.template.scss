@@ -124,10 +124,16 @@
                         @include absolute-pseudoelement();
                         transition: 0.3s background-color ease;
                         opacity: 0.07;
+                        background-color: white;
+                        transition: 0.3s opacity ease-in-out;
                     }
 
                     &:hover {
                         cursor: pointer;
+
+                        &::before {
+                            opacity: 0.21;
+                        }
                     }
                 }
             }
