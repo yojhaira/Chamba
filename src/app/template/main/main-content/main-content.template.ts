@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { JobService } from '../../../services/job-categories/job-categories.service';
 import { CTALoginComponent } from 'src/app/components/cta-login/cta-login.component';
 import { CTALoginService } from 'src/app/components/cta-login/cta-login.service';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -12,11 +13,12 @@ import { CTALoginService } from 'src/app/components/cta-login/cta-login.service'
     providers: [JobService]
 })
 
-export class MainContentTemplate implements OnInit {
+export class MainContentTemplate implements OnInit, OnDestroy {
 
     public oficios: Array<any>;
-    public arrayCategories: Array<any>;
+    public arrayCategoriesMain: Array<any>;
     public orientationCTA: string;
+    public categoriesSubcription: Subscription;
 
     constructor(
         public _jobService: JobService,
@@ -24,24 +26,24 @@ export class MainContentTemplate implements OnInit {
     ) { }
 
     ngOnInit() {
-        // this.listarOficios()
-        this.listCategories();
+
         this.orientationCTA = "left";
+        this.showCategoriesMain();
     }
 
-    public listCategories(): void {
-        this.arrayCategories = this._jobService.listCategoriesWorkers();
+    public ngOnDestroy(): void {
+        if(this.categoriesSubcription) {
+            this.categoriesSubcription.unsubscribe();
+        }
     }
-    // listarOficios(){
-    //     this.sOficio.listar().subscribe(
-    //         result => {
-    //             this.oficios = result.response;
-    //         },
-    //         error => {
-    //             console.log("ocurrio un error");
-    //         }
-    //     )
-    // }
+    
+    public showCategoriesMain() {
+        this.categoriesSubcription = this._jobService.listCategoriesWorkers().subscribe(res => {
+            const dataResponse = JSON.parse(JSON.stringify(res));
+            this.arrayCategoriesMain = dataResponse.response;
+        });
+
+    }
 
     public quoteWork(): void {
         this._ctaLoginService.open();

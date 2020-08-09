@@ -40,15 +40,17 @@
         </div>
         <div class="grid-row">
             <div class="categories-list">
-                <ng-container *ngFor="let item of arrayCategories">
-                    <div class="categories-list--item">
-                        <div class="categories-list--item-content">
-                            <div class="b-icon">
-                                <div class="ico {{ _jobService.cleanCharacters(item.categoryIconName) }}-primary"></div>
+                <ng-container *ngFor="let item of arrayCategoriesMain; let i = index">
+                    <ng-container *ngIf="i < 11">
+                        <div class="categories-list--item">
+                            <div class="categories-list--item-content">
+                                <div class="b-icon">
+                                    <div class="ico {{ _jobService.cleanCharacters(item.descripcion) }}-primary"></div>
+                                </div>
+                                <span>{{item.descripcion}}</span>
                             </div>
-                            <span>{{item.categoryName}}</span>
                         </div>
-                    </div>
+                    </ng-container>
                 </ng-container>
 
                 <div class="categories-list--item active">
