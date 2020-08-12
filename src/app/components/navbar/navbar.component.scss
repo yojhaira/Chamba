@@ -9,10 +9,8 @@
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    // position: relative;
 
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 
     position: sticky;
@@ -29,12 +27,8 @@
         --size-input: 32px;
         position: relative;
         z-index: 1;
-        margin: 0 auto;
+        // margin: 0 auto;
         min-width: 400px;
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        transform: translateY(-50%);
 
         &-icon {
             background-color: white;
@@ -78,19 +72,28 @@
     }
 
     &--button {
-        &-login {
-            transform-origin: right;
-            min-width: initial;
-            width: 36px;
-            transition: 0.3s width ease;
+        &-menu {
+            --size: 36px;
+            height: var(--size);
+            width: var(--size);
+            background-color: var(--color-primary);
+            color: white;
+            border-radius: 14px 7px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: 0.2s transform ease-in-out;
 
             &:hover {
-                width: 152px;
+                transform: scale(1.1);
+                cursor: pointer;
             }
+        }
 
-            .primary-button--content {
-                width: 100%;
-            }
+        &-login {
+            margin-left: auto;
         }
     }
 }

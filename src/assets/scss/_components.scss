@@ -27,10 +27,7 @@
         margin: 0;
         color: currentColor;
         width: 100%;
-
-        & * {
-            color: currentColor;
-        }
+        display: inline-block;
     }
 }
 
@@ -44,6 +41,8 @@
 
     & > *:first-child {
         fill: currentColor;
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -197,9 +196,6 @@
             transform: none;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.24);
         }
-    }
-
-    &:not(div) {
     }
 
     &:first-letter {
@@ -849,9 +845,6 @@
     overflow: hidden;
     z-index: 1;
     margin-bottom: 35px;
-
-    &--wrapper {
-    }
 
     &--header {
         margin-bottom: 49px;

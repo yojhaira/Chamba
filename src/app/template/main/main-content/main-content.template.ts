@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { JobService } from '../../../services/job-categories/job-categories.service';
-import { CTALoginComponent } from 'src/app/components/cta-login/cta-login.component';
 import { CTALoginService } from 'src/app/components/cta-login/cta-login.service';
+
+declare const require;
 
 
 @Component({
@@ -24,7 +25,6 @@ export class MainContentTemplate implements OnInit {
     ) { }
 
     ngOnInit() {
-        // this.listarOficios()
         this.listCategories();
         this.orientationCTA = "left";
     }
@@ -32,16 +32,6 @@ export class MainContentTemplate implements OnInit {
     public listCategories(): void {
         this.arrayCategories = this._jobService.listCategoriesWorkers();
     }
-    // listarOficios(){
-    //     this.sOficio.listar().subscribe(
-    //         result => {
-    //             this.oficios = result.response;
-    //         },
-    //         error => {
-    //             console.log("ocurrio un error");
-    //         }
-    //     )
-    // }
 
     public quoteWork(): void {
         this._ctaLoginService.open();

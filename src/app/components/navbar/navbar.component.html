@@ -1,4 +1,13 @@
 <div class="navbar-main">
+
+    <div class="navbar-main--button-menu">
+        <div class="md-icon">
+            <svg class="icon">
+                <use xlink:href="/assets/images/icons.svg#icon-menu"></use>
+            </svg>
+        </div>
+    </div>
+
     <div class="primary-button active navbar-main--search">
         <div class="navbar-main--search-icon">
             <div class="md-icon">
@@ -9,24 +18,29 @@
             <input type="text" placeholder="Ingresar">
         </div>
     </div>
-    <button class="primary-button navbar-main--button-login" routerLink="/login" *ngIf="!_authService.getCurrentUser()">
+    <button class="primary-button--alternate active navbar-main--button-login" routerLink="/login"
+        *ngIf="!_authService.getCurrentUser()">
         <div class="primary-button--icon">
             <div class="md-icon">
-                <i class="ico register-primary"></i>
+                <svg class="icon">
+                    <use xlink:href="/assets/images/icons.svg#icon-login"></use>
+                </svg>
             </div>
         </div>
         <div class="primary-button--content">
-            <span> ingresar</span>
+            <span>ingresar</span>
         </div>
     </button>
     <button class="primary-button active" routerLink="/register" *ngIf="!_authService.getCurrentUser()">
         <div class="primary-button--icon">
             <div class="md-icon">
-                <i class="ico register-primary"></i>
+                <svg class="icon">
+                    <use xlink:href="/assets/images/icons.svg#icon-register"></use>
+                </svg>
             </div>
         </div>
         <div class="primary-button--content">
-            <span> registarse</span>
+            <span>registarse</span>
         </div>
     </button>
     <button class="primary-button active" (click)="onLogout()" *ngIf="_authService.getCurrentUser()">
