@@ -48,14 +48,14 @@ export class LoginTemplate implements OnInit {
 		this._authServive.authUser(user).subscribe(
 			result => {
 				console.log(result);
-				
-				
-				if(result.response.length){
+				if(result.status == "200"){
 					this._authServive.setUser(user);
-					this._router.navigate(['/']);		
-				}else{
+					this._router.navigate(['/']);	
+				}
+				else{
 					this.showError = true;
-					this.textError = "Upsi falta la tarea"
+					console.log("credenciales incorrectas");
+					this.textError = "credenciales incorrectas";
 				}	
 				
 			},

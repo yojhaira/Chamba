@@ -57,6 +57,7 @@ export class RegisterTemplate implements OnInit {
             id_rol: 1
         }
 
+        if(!this.validar(usuario)) return;
         
 
         console.log(usuario);
@@ -75,5 +76,14 @@ export class RegisterTemplate implements OnInit {
                 console.log(error);
             }
         )
+    }
+
+    validar(usuario:usuarioI){
+        if(usuario.nombres == ""){
+            console.log("Especificar Nombres");
+            return false;
+        }
+
+        return true;
     }
 }
