@@ -53,6 +53,8 @@
     &.register-alternate,
     &.save-primary,
     &.save-alternate,
+    &.mecanica-primary,
+    &.mecanica-alternate,
     &.home-primary,
     &.home-alternate,
     &.search-primary,
@@ -112,6 +114,18 @@
     &.register-alternate {
         &::before {
             background-image: url("assets/svg/register-alternate.svg");
+        }
+    }
+
+    &.mecanica-primary {
+        &::before {
+            background-image: url("assets/svg/herramientas-primary.svg");
+        }
+    }
+
+    &.mecanica-alternate {
+        &::before {
+            background-image: url("assets/svg/herramientas-alternative.svg");
         }
     }
 

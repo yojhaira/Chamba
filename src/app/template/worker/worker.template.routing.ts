@@ -24,6 +24,10 @@ const routes: Routes = [
     {
         path: 'worker-settings',
         loadChildren: () => import('./worker-settings/worker-settings.module').then(m => m.WorkerSettingsModule)
+    },
+    {
+        path: 'quotes',
+        loadChildren: () => import('./quotes/quotes.module').then(m => m.QuotesModule)
     }
 ]
 
