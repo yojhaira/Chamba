@@ -14,58 +14,6 @@ import { Router } from '@angular/router'
 
 export class LoginTemplate implements OnInit {
 
-<<<<<<< HEAD
-	public loginForm: any;
-	public showError:boolean;
-	public textError:string;
-	constructor(
-		@Inject(DOCUMENT) private document: any,
-		private formBuilder: FormBuilder,
-		private _authServive:AuthService,
-		private _router:Router
-	) {
-		this.showError = false;
-	}
-	
-	
-	ngOnInit(): void {
-		
-		this.loginForm = this.formBuilder.group({
-			emailUser :  ['', Validators.required],
-			passwordUser :  ['', Validators.required]
-		})
-
-	}
-	onLogin(form){
-		//console.log(form.value);
-
-		let user:usuarioI = {
-			correo:form.value.emailUser,
-			password:form.value.passwordUser
-		}
-
-		console.log(user);
-		
-		this._authServive.authUser(user).subscribe(
-			result => {
-				console.log(result);
-				
-				
-				if(result.response.length){
-					this._authServive.setUser(user);
-					this._router.navigate(['/']);		
-				}else{
-					this.showError = true;
-					this.textError = "Upsi falta la tarea"
-				}	
-				
-			},
-			error => {
-				//console.log(error);
-			}
-		)
-	}
-=======
     public loginForm: any;
     public showError: boolean;
     public textError: string;
@@ -147,7 +95,6 @@ export class LoginTemplate implements OnInit {
         //     }
         // )
     }
->>>>>>> eb1d9b2a0e7232c6db6f2efc1de8b27c9bbcc21e
 }
 
 
