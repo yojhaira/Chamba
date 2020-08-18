@@ -33,6 +33,7 @@ export class LoginTemplate implements OnInit {
             emailUser: ['', [Validators.required, Validators.email]],
             passwordUser: ['', Validators.required]
         })
+        //
 
     }
 
@@ -55,7 +56,7 @@ export class LoginTemplate implements OnInit {
             }
 
             if (error.email) {
-                message = `Debe ingresar un email valido`
+                message = `Debe ingresar un e-mail valido`
             }
         }
 
