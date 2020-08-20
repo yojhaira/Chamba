@@ -35,6 +35,7 @@ export class LoginTemplate implements OnInit {
 		})
 
 	}
+
 	onLogin(form){
 		//console.log(form.value);
 
@@ -63,6 +64,10 @@ export class LoginTemplate implements OnInit {
 				//console.log(error);
 			}
 		)
+	}
+
+	getError(valor:String){
+		console.log(valor);
 	}
 }
 
