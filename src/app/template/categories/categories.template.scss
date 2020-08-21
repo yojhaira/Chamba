@@ -1,0 +1,22 @@
+/**
+ * 
+ * SE REUTILIZA CSS CODIGO 
+ */
+@mixin absolute-element {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+@mixin absolute-pseudoelement {
+    content: "";
+    @include absolute-element();
+}
+
+.categories {
+    &-wrapper {
+        background-color: var(--color-wrapper);
+    }
+}

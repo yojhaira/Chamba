@@ -15,8 +15,8 @@
                         <span>Iniciar Sesión</span>
                     </div>
                     <div class="container-form--body">
-    
-                        <div class="input">
+
+                        <div class="input" [ngClass]="{'invalid': getError('emailUser')}">
                             <div class="input-container">
                                 <input type="text" id="emailUser" required formControlName="emailUser">
                                 <div class="input-container--box"></div>
@@ -30,14 +30,14 @@
                             <div class="input-validation">
                                 <!-- <div class="input-validation--tag">
                                     <span>Requerido</span>
-                                </div>
-                                <div class="input-validation--message">
-                                    <span>Este campo debe completarse</span>
                                 </div> -->
+                                <div class="input-validation--message">
+                                    <span>{{ getError('emailUser') }}</span>
+                                </div>
                             </div>
                         </div>
-    
-                        <div class="input">
+
+                        <div class="input" [ngClass]="{'invalid': getError('passwordUser')}">
                             <div class="input-container">
                                 <input type="password" id="passwordUser" required formControlName="passwordUser">
                                 <div class="input-container--box"></div>
@@ -51,13 +51,13 @@
                             <div class="input-validation">
                                 <!-- <div class="input-validation--tag">
                                     <span>Requerido</span>
-                                </div>
-                                <div class="input-validation--message">
-                                    <span>Este campo debe completarse</span>
                                 </div> -->
+                                <div class="input-validation--message">
+                                    <span>{{ getError('passwordUser') }}</span>
+                                </div>
                             </div>
                         </div>
-    
+
                         <div class="container-form--body-links">
                             <div class="checkbox">
                                 <div class="checkbox-container">
@@ -65,7 +65,7 @@
                                     <label for="recordar-contraseña">Recordar contraseña</label>
                                 </div>
                             </div>
-    
+
                             <div class="recover">
                                 <div class="recover-container">
                                     <div class="input-icon">
@@ -75,24 +75,24 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="container-form--body-buttons">
                             <div class="go-register" routerLink="/register">
                                 <span>¿Aun no tienes cuenta?</span>
                                 <span>Ir a regristrarme</span>
                             </div>
-                            <button class="primary-button active">
+                            <button class="primary-button active" [disabled]="loginForm.invalid">
                                 <div class="primary-button--icon">
-                                  <div class="md-icon">
-                                    <i class="ico register-primary"></i>
-                                  </div>
+                                    <div class="md-icon">
+                                        <i class="ico register-primary"></i>
+                                    </div>
                                 </div>
                                 <div class="primary-button--content">
-                                  <span> Iniciar Sesión</span>
+                                    <span> Iniciar Sesión</span>
                                 </div>
                             </button>
                         </div>
-    
+
                     </div>
                 </div>
             </form>
@@ -101,7 +101,8 @@
             <div class="main-wrapper--container-welcome">
                 <div class="container-welcome--header">
                     <h2>Encuentra al "chamba" que necesitas</h2>
-                    <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu decides.</p>
+                    <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu
+                        decides.</p>
                 </div>
                 <div class="container-welcome--image grid-9">
                     <graphic-login></graphic-login>
@@ -109,5 +110,5 @@
             </div>
         </div>
     </div>
-    
+
 </div>

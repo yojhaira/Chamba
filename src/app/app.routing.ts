@@ -2,9 +2,9 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MainTemplate } from './template/main/main.template';
-import { MainContentTemplate } from './template/main-content/main-content.template';
-import { UserProfileTemplate} from './template/main/user-profile/user-profile.template';
-import { CategoriesTemplate } from './template/main/categories/categories.template';
+import { MainContentTemplate } from './template/main/main-content/main-content.template';
+import { UserProfileTemplate } from './template/user-profile/user-profile.template';
+import { CategoriesTemplate } from './template/categories/categories.template';
 
 import { LoginTemplate } from './template/login/login.template';
 import { RegisterTemplate } from './template/register/register.template';
@@ -27,11 +27,19 @@ const appRouters: Routes = [
             {
                 path: 'user-profile',
                 component: UserProfileTemplate,
-                canActivate : [AuthGuard]
+                //canActivate : [AuthGuard]
             },
             {
                 path: 'categories',
                 component: CategoriesTemplate
+            },
+            {
+                path: 'single-category/:categoryID/:categoryName/:categoryImage',
+                loadChildren: () => import('./template/single-category/single-category.module').then(m => m.SingleCategoryModule)
+            },
+            {
+                path: 'worker/:userID',
+                loadChildren: () => import('./template/worker/worker.module').then(m => m.WorkerModule)
             }
         ]
     },

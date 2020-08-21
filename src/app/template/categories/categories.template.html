@@ -1,0 +1,23 @@
+<div class="categories-wrapper" #wrapperMain>
+
+    <header-page [title]="titlePage" [image]="nameImage"></header-page>
+
+    <section class="grid-container">
+        <div class="categories-list">
+            <ng-container *ngFor="let item of arrayCategories">
+                <div class="categories-list--item"
+                    routerLink="/single-category/{{ item.id }}/{{ item.descripcion }}/{{ item.descripcion }}">
+                    <div class="categories-list--item-content">
+                        <div class="b-icon">
+                            <div class="ico {{ jobService.cleanCharacters(item.descripcion) }}-primary"></div>
+                        </div>
+                        <span>{{item.descripcion}}</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </section>
+
+    <action-professional [contentType]="2"></action-professional>
+
+</div>

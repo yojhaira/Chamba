@@ -1,29 +1,18 @@
 .quote {
-
-  &-wrapper {
-
     &--tag {
-      --size-tag: 21px;
-      font-size: 14px;
-      color: white;
-      height: var(--size-tag);
-      border-radius: 3px 7px;
-      padding: 0 7px;
+        --size-tag: 21px;
+        font-size: 14px;
+        color: white;
+        height: var(--size-tag);
+        padding: 0 14px 0 7px;
 
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-bottom: 14px;
-      position: relative;
-      z-index: 1;
-      
-    .mensaje{
-      background-color: var(--color-primary-dark);
-      padding: 2px 17px 2px 5px;
-      border-radius: 9px;
-
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 14px;
+        position: relative;
+        background-color: var(--color-primary-dark);
+        z-index: 1;
+        border-radius: 3px 7px;
     }
-   
-    }
-  }
 }

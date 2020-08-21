@@ -1,0 +1,44 @@
+<div class="single-category">
+    <div class="single-category--wrapper">
+        <header-page [title]="data.titlePage" [image]="'categories/' + data.imagePage"></header-page>
+
+        <div class="grid-container">
+            <div class="filters-category">
+                <div class="filters-category--content">
+                    <div class="filters-category--content-selection">
+                        <label for="selectionFilters">Ordenar por</label>
+                        <select name="selectionFilters" id="selectionFilters">
+                            <option value="">Más buscados</option>
+                            <option value="">Otra opción</option>
+                            <option value="">Otra opción</option>
+                            <option value="">Otra opción</option>
+                        </select>
+                    </div>
+                    <div class="filters-category--content-buttons">
+                        <button class="content-buttons--item">
+                            <div class="input-icon">
+                                <i class="fas fa-th"></i>
+                            </div>
+                        </button>
+                        <button class="content-buttons--item">
+                            <div class="input-icon">
+                                <i class="fas fa-th-list"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="single-category--list grid-container">
+            <div class="grid-row">
+                <ng-container
+                    *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], let in = index">
+                    <card-professional routerLink="/worker/{{ in }}/home"></card-professional>
+                </ng-container>
+            </div>
+        </div>
+
+        <action-professional></action-professional>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.worker-data {
+    &--social {
+        display: flex;
+        align-items: flex-start;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        &-group {
+            display: flex;
+            align-items: center;
+
+            margin-top: 4px;
+            margin-right: 8px;
+        }
+
+        & button {
+            &:first-child {
+                margin-right: 8px;
+            }
+        }
+
+        & .input {
+            flex-grow: 1;
+        }
+    }
+}

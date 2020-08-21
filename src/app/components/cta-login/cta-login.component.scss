@@ -1,0 +1,91 @@
+.cta-login {
+    height: 100%;
+    width: 100%;
+
+    &--wrapper {
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        pointer-events: all;
+
+        perspective: 1000px;
+    }
+
+    &--modal {
+        background-color: var(--color-primary-light);
+        min-width: 259px;
+        margin: auto;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 7px 21px;
+        position: relative;
+
+        // transform: rotateX(0deg);
+        transform-origin: bottom;
+
+        &-close {
+            --size: 30px;
+            height: var(--size);
+            width: var(--size);
+            font-size: 14px;
+            border-radius: 50%;
+            background-color: var(--color-error);
+
+            position: absolute;
+            top: calc((var(--size) - (var(--size) * 2)) / 2);
+            right: calc((var(--size) - (var(--size) * 2)) / 2);
+
+            display: flex;
+            color: white;
+
+            transition: 0.2s transform ease-in-out;
+
+            & svg {
+                margin: auto;
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.15);
+            }
+        }
+
+        &-body {
+            text-align: center;
+            padding: 21px 21px 14px;
+        }
+
+        &-footer {
+            padding: 10px 14px;
+
+            display: flex;
+
+            & button {
+                min-width: 114px;
+
+                &:first-child {
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    &-body {
+        &--figure {
+            width: 142px;
+            padding: 7px 14px;
+            margin: 0 auto 7px;
+        }
+
+        &--description {
+            color: white;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
