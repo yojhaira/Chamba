@@ -31,11 +31,11 @@ export class RegisterTemplate implements OnInit {
     
     ngOnInit(): void {
         this.formRegister = this.formBuilder.group({
-            nombres: ['', Validators.required],
-            apellidos: ['', Validators.required],
+            nombres: ['', [Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+            apellidos: ['', [Validators.required,Validators.pattern('[a-zA-Z ]*')]],
             f_nacimiento: ['', Validators.required],
-            correo: ['', Validators.required],
-            password: ['', Validators.required],
+            correo: ['', [Validators.required,Validators.email]],
+            password: ['', [Validators.required,Validators.minLength(5)]],
             genero: ['', Validators.required],
             telefono: ['', Validators.required],
         })
@@ -85,4 +85,25 @@ export class RegisterTemplate implements OnInit {
 
         return true;
     }
+
+    getErrorsNombres(){
+        return this.formRegister.get('nombres').hasError('required')? 'Se requiere nombres':
+               this.formRegister.get('nombres').hasError('pattern')? 'No se admiten números':'';
+    }
+    getErrorsApellidos(){
+        return this.formRegister.get('apellidos').hasError('required')? 'Se requiere apellidos':
+               this.formRegister.get('apellidos').hasError('pattern')? 'No se admiten números':'';
+    }
+    getErrorsNacimiento(){
+        return this.formRegister.get('f_nacimiento').hasError('required')? 'Se requiere fecha de nacimiento':'';
+    }
+    getErrorsEmail(){
+		return this.formRegister.get('correo').hasError('required')? 'Se requiere correo':
+			   this.formRegister.get('correo').hasError('email')? 'Formato de correo incorrecto':'';
+	  }
+	getErrorsPassword(){
+		return this.formRegister.get('password').hasError('required')? 'Contraseña obligatoria':
+		       this.formRegister.get('password').hasError('minlength')? 'Ingrese mas de 5 caracteres':'';
+    }
+
 }

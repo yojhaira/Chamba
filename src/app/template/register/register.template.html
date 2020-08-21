@@ -27,13 +27,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-validation">
-                                <!-- <div class="input-validation--tag">
+                            <div class="input-validation" *ngIf="formRegister.get('nombres').invalid && formRegister.get('nombres').touched">
+                                <div class="input-validation--tag">
                                         <span>Requerido</span>
                                     </div>
-                                    <div class="input-validation--message">
-                                        <span>Este campo debe completarse</span>
-                                    </div> -->
+                                <div class="input-validation--message">
+                                    <span>{{ getErrorsNombres() }}</span>
+                                </div>
                             </div>
                         </div>
 
@@ -48,13 +48,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-validation">
-                                <!-- <div class="input-validation--tag">
+                            <div class="input-validation" *ngIf="formRegister.get('apellidos').invalid && formRegister.get('apellidos').touched">
+                                <div class="input-validation--tag">
                                         <span>Requerido</span>
-                                    </div>
-                                    <div class="input-validation--message">
-                                        <span>Este campo debe completarse</span>
-                                    </div> -->
+                                </div>
+                                <div class="input-validation--message">
+                                        <span>{{ getErrorsApellidos() }}</span>
+                                </div>
                             </div>
                         </div>
 
@@ -69,13 +69,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-validation">
-                                <!-- <div class="input-validation--tag">
+                            <div class="input-validation" *ngIf="formRegister.get('f_nacimiento').invalid && formRegister.get('f_nacimiento').touched">
+                                <div class="input-validation--tag">
                                         <span>Requerido</span>
                                     </div>
                                     <div class="input-validation--message">
-                                        <span>Este campo debe completarse</span>
-                                    </div> -->
+                                        <span>{{ getErrorsNacimiento() }}</span>
+                                    </div>
                             </div>
                         </div>
 
@@ -126,13 +126,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-validation">
-                                <!-- <div class="input-validation--tag">
+                            <div class="input-validation" *ngIf="formRegister.get('correo').invalid && formRegister.get('correo').touched">
+                                <div class="input-validation--tag">
                                         <span>Requerido</span>
                                     </div>
                                     <div class="input-validation--message">
-                                        <span>Este campo debe completarse</span>
-                                    </div> -->
+                                        <span>{{ getErrorsEmail() }}</span>
+                                    </div>
                             </div>
                         </div>
 
@@ -147,13 +147,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-validation">
-                                <!-- <div class="input-validation--tag">
+                            <div class="input-validation" *ngIf="formRegister.get('password').invalid && formRegister.get('password').touched">
+                                <div class="input-validation--tag">
                                         <span>Requerido</span>
                                     </div>
                                     <div class="input-validation--message">
-                                        <span>Este campo debe completarse</span>
-                                    </div> -->
+                                        <span>{{ getErrorsPassword() }}</span>
+                                    </div>
                             </div>
                         </div>
 

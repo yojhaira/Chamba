@@ -27,12 +27,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-validation">
+                            <div class="input-validation" *ngIf="loginForm.get('emailUser').invalid && loginForm.get('emailUser').touched">
                                 <!-- <div class="input-validation--tag">
                                     <span>Requerido</span>
                                 </div> -->
                                 <div class="input-validation--message">
-                                    <span>{{ getError('emailUser') }}</span>
+                                    <span>{{ getErrorsEmail() }}</span>
                                 </div>
                             </div>
                         </div>
@@ -48,12 +48,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-validation">
+                            <div class="input-validation" *ngIf="loginForm.get('passwordUser').invalid && loginForm.get('passwordUser').touched">
                                 <!-- <div class="input-validation--tag">
                                     <span>Requerido</span>
                                 </div> -->
                                 <div class="input-validation--message">
-                                    <span>{{ getError('passwordUser') }}</span>
+                                    <span>{{ getErrorsPassword() }}</span>
                                 </div>
                             </div>
                         </div>
