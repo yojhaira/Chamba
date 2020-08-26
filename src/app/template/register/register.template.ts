@@ -23,6 +23,7 @@ export class RegisterTemplate implements OnInit {
     constructor(
         private sUsuario: UsuarioService,
         private formBuilder: FormBuilder,
+        private _router: Router
        
     ) {
 
@@ -61,20 +62,19 @@ export class RegisterTemplate implements OnInit {
 
         console.log(usuario);
 
-        // this.sUsuario.saveUser(usuario).subscribe(
-        //     result => {
-        //         if(result.status == 200){
-        //             this._authServive.setUser(usuario);
-        //             this._router.navigate(['/']);
-        //         }
-        //         else{
-        //             alert(result.mensaje)
-        //         }
-        //     },
-        //     error => {
-        //         console.log(error);
-        //     }
-        // )
+        this.sUsuario.saveUser(usuario).subscribe(
+            result => {
+                if(result.status == 200){
+                    this._router.navigate(['/login']);
+                }
+                else{
+                    alert(result.mensaje)
+                }
+            },
+            error => {
+                console.log(error);
+            }
+        )
     }
 
     validar(usuario:usuarioI){
