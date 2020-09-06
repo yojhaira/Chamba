@@ -19,18 +19,16 @@ import { SearchComponent } from './template/search/search.template';
 /**
 * Components
 */
-import { NavComponent } from './components/nav/nav.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-// import { InputComponent } from './components/input/input.component';
 import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropdownDirective } from './directives/dropdown/dropdown.directive';
 
 @NgModule({
     declarations: [
@@ -40,18 +38,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         C404Template,
         SearchComponent,
 
-
         MainTemplate,
         MainContentTemplate,
         UserProfileTemplate,
         CategoriesTemplate,
 
-
-        NavbarComponent,
-        NavComponent,
         MostWantedComponent,
         FooterComponent,
-        GraphicLogin
+        GraphicLogin,
+        DropdownDirective
     ],
     imports: [
         BrowserModule,

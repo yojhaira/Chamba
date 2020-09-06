@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, HostListener } from '@angular/core';
+import { Component, OnInit, Inject, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { Oficio } from '../../models/oficio';
 // import { OficioService } from '../../service/oficio.service';
 // import { WindowScrollService } from 'src/app/services/window-scroll.service';
@@ -15,16 +15,30 @@ import { share, auditTime, map } from 'rxjs/operators';
 })
 
 @HostListener("scroll", ['$event'])
+
 export class MainTemplate implements OnInit {
+
+    @ViewChild('sidenavComponent') sidenavComponent: ElementRef;
+    @ViewChild('mainContent') mainContent: ElementRef;
+    public toggleSidenav: boolean;
+
     public oficios: Array<Oficio>;
     public scroll: number;
 
     constructor(
         @Inject(DOCUMENT) private document: any,
+        private _renderer: Renderer2
         // private sOficio:OficioService
     ) {
         // this.oficios = [];
         // this.listarOficios();
+    }
+
+    public receivedStateSidenav($event) {
+        this.toggleSidenav = $event;
+        console.log('esto deberia activar el menu', this.toggleSidenav);
+
+        this.stateTemplate($event);
     }
 
     detectScroll($event: any) {
@@ -60,8 +74,19 @@ export class MainTemplate implements OnInit {
         console.log(this.boxHome);
     }
 
+    public stateTemplate(state: boolean): void {
+        if (state) {
+            this._renderer.removeClass(this.sidenavComponent.nativeElement, 'closed');
+            this._renderer.removeClass(this.mainContent.nativeElement, 'extended');
+        } else {
+            this._renderer.addClass(this.sidenavComponent.nativeElement, 'closed');
+            this._renderer.addClass(this.mainContent.nativeElement, 'extended');
+        }
+    }
+
     ngOnInit() {
         // this.fixedHeader();
+        this.toggleSidenav = true;
     }
 
     // listarOficios(){

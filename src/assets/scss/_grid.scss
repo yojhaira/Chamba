@@ -2,7 +2,8 @@
 * Grid System
 */
 
-.grid-container {
+.grid-container,
+.grid-container-fluid {
     --size-base: 100%;
     --alignment: center;
 
@@ -10,6 +11,10 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+}
+
+.grid-container-fluid {
+    max-width: 100%;
 }
 
 .grid-row {

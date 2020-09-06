@@ -1,7 +1,7 @@
 <div class="cta-login" *ngIf="showDialog">
     <div class="cta-login--wrapper">
         <div class="cta-login--modal" [@dialog]>
-            <div class="cta-login--modal-close" (click)="showDialog = !showDialog">
+            <div class="cta-login--modal-close dialog-button--close" (click)="showDialog = !showDialog">
                 <i class="fas fa-times"></i>
             </div>
             <div class="cta-login--modal-body">

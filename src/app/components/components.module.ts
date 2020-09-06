@@ -15,6 +15,10 @@ import { MailboxMessageComponent } from './mailbox-message/mailbox-message.compo
 import { MessageReaderComponent } from './message-reader/message-reader.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CTALoginComponent } from './cta-login/cta-login.component';
+import { NotificationAlertComponent } from './notification-alert/notification-alert.component';
+import { ToolbarComponent } from './tootlbar/toolbar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { QuoteDialogComponent } from './quote-dialog/quote-dialog.component';
 
 @NgModule({
     imports: [
@@ -36,7 +40,11 @@ import { CTALoginComponent } from './cta-login/cta-login.component';
         CardActionComponent,
         MailboxMessageComponent,
         MessageReaderComponent,
-        CTALoginComponent
+        CTALoginComponent,
+        NotificationAlertComponent,
+        ToolbarComponent,
+        SidenavComponent,
+        QuoteDialogComponent
     ],
     exports: [
         HeaderPageComponent,
@@ -51,7 +59,11 @@ import { CTALoginComponent } from './cta-login/cta-login.component';
         CardActionComponent,
         MailboxMessageComponent,
         MessageReaderComponent,
-        CTALoginComponent
+        CTALoginComponent,
+        NotificationAlertComponent,
+        ToolbarComponent,
+        SidenavComponent,
+        QuoteDialogComponent
     ],
     providers: []
 })
