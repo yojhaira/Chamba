@@ -1,0 +1,161 @@
+<div class="quote-dialog" *ngIf="_quoteDialogService.toggleDialogComponent">
+    <div class="quote-dialog--wrapper grid-container-fluid">
+        <div class="grid-row">
+            <div class="quote-dialog--container grid-4" [@dialog]="_quoteDialogService.toggleDialogState">
+                <button class="quote-dialog--close dialog-button--close" (click)="closeQuoteDialog()">
+                    <div class="default-icon">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </button>
+                <div class="quote-dialog--header">
+                    <div class="quote-dialog--header-top">
+                        <div class="quote-dialog--header-icon">
+                            <div class="md-icon">
+                                <svg class="icon">
+                                    <use xlink:href="/assets/images/icons.svg#icon-airplane"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="quote-dialog--header-logo">
+                            <logo-component></logo-component>
+                        </div>
+                    </div>
+                    <div class="quote-dialog--header-bottom">
+                        <div class="quote-dialog--header-subtitle">
+                            <p>Recibe ayuda de los "chambas"</p>
+                        </div>
+                        <div class="quote-dialog--header-title">
+                            <h6 class="heading-lvl-6">Solicitar cotización</h6>
+                        </div>
+                    </div>
+                </div>
+                <form class="quote-dialog--stepper">
+
+                    <div class="quote-dialog--stepper-item active-step" #stepFirst>
+                        <div class="quote-dialog--stepper-body">
+                            <div class="input">
+                                <div class="input-container">
+                                    <input type="text" required>
+                                    <div class="input-container--box"></div>
+                                    <label> ¿Qué chamba necesitas?</label>
+                                    <div class="input-container--icons">
+                                        <div class="default-icon input-container--icons-indicator">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-validation">
+                                    <!-- <div class="input-validation--tag">
+                                                <span>Requerido</span>
+                                            </div>
+                                            <div class="input-validation--message">
+                                                <span>Este campo debe completarse</span>
+                                            </div> -->
+                                </div>
+                            </div>
+                            <div class="input">
+                                <div class="input-container">
+                                    <input type="text" required>
+                                    <div class="input-container--box"></div>
+                                    <label> ¿Qué chamba necesitas?</label>
+                                    <div class="input-container--icons">
+                                        <div class="default-icon input-container--icons-indicator">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-validation">
+                                    <!-- <div class="input-validation--tag">
+                                                <span>Requerido</span>
+                                            </div>
+                                            <div class="input-validation--message">
+                                                <span>Este campo debe completarse</span>
+                                            </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quote-dialog--stepper-footer">
+                            <button class="primary-button active" (click)="nextStep()">
+                                <div class="primary-button--icon">
+                                    <div class="md-icon">
+                                        <svg class="icon">
+                                            <use xlink:href="/assets/images/icons.svg#icon-next"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="primary-button--content">
+                                    <span>Siguiente</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="quote-dialog--stepper-item" #stepSecond>
+                        <div class="quote-dialog--stepper-body">
+                            <div class="textarea">
+                                <div class="textarea-container">
+                                    <textarea type="text" required name="textCoti" id="textCoti"></textarea>
+                                    <div class="textarea-container--box"></div>
+                                    <label> Describe de manera breve </label>
+                                    <div class="textarea-container--icons">
+                                        <div class="default-icon input-container--icons-indicator">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-validation">
+                                    <!-- <div class="input-validation--tag">
+                                  <span>Requerido</span>
+                                </div>
+                                <div class="input-validation--message">
+                                  <span>Este campo debe completarse</span>
+                                </div> -->
+                                </div>
+                            </div>
+                            <div class="toggle">
+                                <label for="toggleInput">
+                                    <input type="checkbox" name="toggleInput" id="toggleInput">
+                                    <div class="toggle-container">
+                                        <div class="toggle-container--trail"></div>
+                                        <div class="toggle-container--dot"></div>
+                                    </div>
+                                    <div class="toggle-text">
+                                        <span>Solicitar con urgencia</span>
+                                    </div>
+                                </label>
+                                <div class="input-validation"></div>
+                            </div>
+                        </div>
+                        <div class="quote-dialog--stepper-footer">
+                            <button class="primary-button--alternate active" (click)="previousStep()">
+                                <div class="primary-button--icon">
+                                    <div class="md-icon">
+                                        <svg class="icon">
+                                            <use xlink:href="/assets/images/icons.svg#icon-previous"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="primary-button--content">
+                                    <span>anterior</span>
+                                </div>
+                            </button>
+                            <button class="primary-button active" routerLink="">
+                                <div class="primary-button--icon">
+                                    <div class="md-icon">
+                                        <svg class="icon">
+                                            <use xlink:href="/assets/images/icons.svg#icon-send-quote"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="primary-button--content">
+                                    <span>Solicitar cotización</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

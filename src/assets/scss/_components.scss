@@ -27,10 +27,7 @@
         margin: 0;
         color: currentColor;
         width: 100%;
-
-        & * {
-            color: currentColor;
-        }
+        display: inline-block;
     }
 }
 
@@ -44,6 +41,8 @@
 
     & > *:first-child {
         fill: currentColor;
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -104,7 +103,7 @@
         letter-spacing: 0.5px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        font-weight: 600;
+        font-weight: 700;
     }
 
     &-1 {
@@ -199,14 +198,11 @@
         }
     }
 
-    &:not(div) {
-    }
-
     &:first-letter {
         text-transform: capitalize;
     }
 
-    &--icon {
+    & .primary-button--icon {
         --size-element: 32px;
         height: var(--size-element);
         width: var(--size-element);
@@ -296,6 +292,28 @@
             --background-color: transparent;
             --color-text-content: white;
             border: 1px solid white;
+        }
+    }
+}
+
+.primary-button {
+    &--icon {
+        --size-element: 36px;
+        --background: white;
+        --color: var(--color-secondary);
+        --shadow: 0 0 5px rgba(0, 0, 0, 0.14);
+        flex: 0 0 var(--size-element);
+        height: var(--size-element);
+        width: var(--size-element);
+        border-radius: calc(var(--size-element) / 2);
+        color: var(--color);
+        background-color: var(--background);
+
+        transition: 0.2s box-shadow ease-in-out;
+
+        &:hover {
+            box-shadow: var(--shadow);
+            cursor: pointer;
         }
     }
 }
@@ -850,9 +868,6 @@
     z-index: 1;
     margin-bottom: 35px;
 
-    &--wrapper {
-    }
-
     &--header {
         margin-bottom: 49px;
 
@@ -1222,3 +1237,142 @@ cta-login-component {
 }
 
 /*=====  End of CTA Login  ======*/
+
+/*=============================================
+=            Dropdown Menu            =
+=============================================*/
+
+.menu-activator {
+    position: relative;
+
+    &:hover {
+        & .dropdown-menu {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.menu-activator-alt {
+    position: relative;
+
+    & input {
+        --size: 1px;
+        height: var(--size);
+        width: var(--size);
+        opacity: 0;
+        position: absolute;
+
+        &:checked {
+            & ~ .dropdown-menu {
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+    padding: 7px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+    border-radius: 3px 9px;
+    min-width: 200px;
+    background-color: white;
+
+    position: absolute;
+    right: 0;
+    top: 100%;
+
+    display: none;
+    opacity: 0;
+
+    z-index: 1;
+
+    &--list {
+        &-group {
+            padding: 7px 0;
+
+            &:first-of-type {
+                margin: -7px 0 0 0;
+            }
+
+            &:last-of-type {
+                margin: 0 0 -7px 0;
+            }
+
+            &:not(:last-of-type) {
+                border-bottom: 1px solid var(--color-border);
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 0 7px;
+
+            transition: 0.2s background-color ease-in-out;
+
+            & span {
+                white-space: nowrap;
+            }
+
+            &:hover {
+                background-color: var(--color-support-light);
+                cursor: pointer;
+            }
+        }
+
+        &-icon {
+            margin-right: 7px;
+        }
+    }
+}
+
+/*=====  End of Dropdown Menu  ======*/
+
+/*=============================================
+=            Section Quote Dialog            =
+=============================================*/
+
+.dialog {
+    &-button {
+        &--close {
+            --size: 30px;
+            height: var(--size);
+            width: var(--size);
+            background-color: var(--color-error);
+            color: white;
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-radius: 50%;
+            transition: 0.2s transform ease-in-out;
+
+            display: flex;
+
+            position: absolute;
+            top: calc((var(--size) - (var(--size) * 2)) / 2);
+            right: calc((var(--size) - (var(--size) * 2)) / 2);
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.15);
+            }
+        }
+    }
+}
+
+quote-dialog-component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+
+    z-index: 10;
+}
+
+/*=====  End of Section comment block  ======*/

@@ -1,0 +1,130 @@
+<div class="notification-wrapper">
+    <div class="notification-dropdown" #notificationPanel>
+        <div class="notification-dropdown--header">
+            <h4>Notificaciones</h4>
+            <label class="notification-more menu-activator-alt" for="dropdown-menu-1">
+                <input type="checkbox" name="dropdown-menu-1" id="dropdown-menu-1">
+                <div class="primary-button--icon">
+                    <div class="sm-icon">
+                        <svg class="icon">
+                            <use xlink:href="/assets/images/icons.svg#icon-ellipsis-vertical"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="dropdown-menu--list">
+                        <div class="dropdown-menu--list-item">
+                            <div class="dropdown-menu--list-icon default-icon">
+                                <svg class="icon">
+                                    <use xlink:href="/assets/images/icons.svg#icon-bookmark"></use>
+                                </svg>
+                            </div>
+                            <span>Configuración de notificaciones</span>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </div>
+        <div class="notification-dropdown--body">
+            <div class="notification-dropdown--title" *ngIf="recentNotifications.length > 0">
+                <h5>Recientes</h5>
+            </div>
+            <div class="notification-dropdown--list" *ngIf="recentNotifications.length > 0">
+                <ng-container *ngFor="let item of recentNotifications">
+                    <div class="notification-dropdown--list-item"
+                        [ngClass]="{'notification-new' : item.notificationState === 'new'}">
+                        <div class="notification-dropdown--item-detail"></div>
+                        <div class="user-photo">
+                            <img [src]="item.notificationSender.photo" alt="Gustavo Saucedo">
+                        </div>
+                        <div class="notification-dropdown--item-content">
+                            <span class="notification-dropdown--item-resumen"><span
+                                    class="user-name">{{item.notificationSender.name}}</span>
+                                ha solicitado una cotización.</span>
+                            <span class="notification-dropdown--item-title">{{item.notificationSubject.title}}</span>
+                            <div class="date-element">
+                                <div class="input-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="/assets/images/icons.svg#icon-date"></use>
+                                    </svg>
+                                </div>
+                                <span>{{formattedDate(item.notificationDateOfIssue)}}</span>
+                            </div>
+                        </div>
+                        <div class="notification-dropdown--item-more primary-button--icon notification-more">
+                            <div class="sm-icon">
+                                <svg class="icon">
+                                    <use xlink:href="/assets/images/icons.svg#icon-ellipsis-vertical"></use>
+                                </svg>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-menu--list">
+                                    <div class="dropdown-menu--list-item">
+                                        <div class="dropdown-menu--list-icon default-icon">
+                                            <svg class="icon">
+                                                <use xlink:href="/assets/images/icons.svg#icon-bookmark"></use>
+                                            </svg>
+                                        </div>
+                                        <span>Configuración de notificaciones</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="notification-dropdown--title" *ngIf="previousNotifications.length > 0">
+                <h5>Anteriores</h5>
+            </div>
+            <div class="notification-dropdown--list" *ngIf="previousNotifications.length > 0">
+                <ng-container *ngFor="let item of previousNotifications">
+                    <div class="notification-dropdown--list-item"
+                        [ngClass]="{'notification-new' : item.notificationState === 'new'}">
+                        <div class="notification-dropdown--item-detail"></div>
+                        <div class="user-photo">
+                            <img [src]="item.notificationSender.photo" alt="Gustavo Saucedo">
+                        </div>
+                        <div class="notification-dropdown--item-content">
+                            <span class="notification-dropdown--item-resumen"><span
+                                    class="user-name">{{item.notificationSender.name}}</span>
+                                ha solicitado una cotización.</span>
+                            <span class="notification-dropdown--item-title">{{item.notificationSubject.title}}</span>
+                            <div class="date-element">
+                                <div class="input-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="/assets/images/icons.svg#icon-date"></use>
+                                    </svg>
+                                </div>
+                                <span>{{formattedDate(item.notificationDateOfIssue)}}</span>
+                            </div>
+                        </div>
+                        <div class="notification-more menu-activator">
+                            <div class="notification-dropdown--item-more primary-button--icon">
+                                <div class="sm-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="/assets/images/icons.svg#icon-ellipsis-vertical"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-menu--list">
+                                    <div class="dropdown-menu--list-item">
+                                        <div class="dropdown-menu--list-icon default-icon">
+                                            <svg class="icon">
+                                                <use xlink:href="/assets/images/icons.svg#icon-bookmark"></use>
+                                            </svg>
+                                        </div>
+                                        <span>Configuración de notificaciones</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="notification-dropdown--footer">
+            <span>Ver todas las notificaciones</span>
+        </div>
+    </div>
+</div>

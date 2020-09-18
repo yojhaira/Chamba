@@ -3,8 +3,16 @@
     overflow: hidden;
     min-height: 100vh;
 
-    &-nav {
+    &-sidenav {
         flex: 0 0 126px;
+        opacity: 1;
+
+        transition: 0.3s flex ease-in-out, 0.2s opacity ease-in-out;
+
+        &.closed {
+            flex: 0 0 0;
+            opacity: 0;
+        }
     }
 
     &-content {
@@ -18,5 +26,12 @@
         margin-right: -17px;
         z-index: 1;
         box-shadow: -3px 0 6px rgba(0, 0, 0, 0.16);
+
+        transition: 0.2s border-radius ease-in-out;
+
+        &.extended {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
     }
 }

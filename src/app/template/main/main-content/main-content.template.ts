@@ -1,10 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { JobService } from '../../../services/job-categories/job-categories.service';
-import { CTALoginComponent } from 'src/app/components/cta-login/cta-login.component';
 import { CTALoginService } from 'src/app/components/cta-login/cta-login.service';
-import { Subscription } from 'rxjs';
-
+import { QuoteDialogService } from 'src/app/components/quote-dialog/quote-dialog.service';
 
 @Component({
     selector: 'main-content',
@@ -20,13 +18,16 @@ export class MainContentTemplate implements OnInit, OnDestroy {
     public orientationCTA: string;
     public categoriesSubcription: Subscription;
 
+    public stateDialog: boolean;
+
     constructor(
         public _jobService: JobService,
-        public _ctaLoginService: CTALoginService
+        public _ctaLoginService: CTALoginService,
+        public _quoteDialogService: QuoteDialogService
     ) { }
 
     ngOnInit() {
-
+        // this.listCategories();
         this.orientationCTA = "left";
         this.showCategoriesMain();
     }
@@ -47,6 +48,10 @@ export class MainContentTemplate implements OnInit, OnDestroy {
 
     public quoteWork(): void {
         this._ctaLoginService.open();
+    }
+
+    public toggleQuoteDialog(): void {
+        this._quoteDialogService.openDialog();
     }
 
 }

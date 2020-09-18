@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavbarComponent } from './navbar.component';
+import { QuoteDialogComponent } from './quote-dialog.component';
 
-describe('HeaderComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+describe('QuoteDialogComponent', () => {
+  let component: QuoteDialogComponent;
+  let fixture: ComponentFixture<QuoteDialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      declarations: [ QuoteDialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarComponent);
+    fixture = TestBed.createComponent(QuoteDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

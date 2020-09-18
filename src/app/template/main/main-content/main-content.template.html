@@ -22,7 +22,8 @@
                             <option value="">1</option>
                             <option value="">1</option>
                         </select>
-                        <button (click)="quoteWork()"><span>Cotiza tu chamba</span></button>
+                        <!-- <button (click)="quoteWork()"><span>Cotiza tu chamba</span></button> -->
+                        <button (click)="toggleQuoteDialog()"><span>Cotiza tu chamba</span></button>
                     </div>
                     <span>Busca y encuentra especialistas en carpintería, construcción, jardineriía y mucho más.</span>
                 </div>
@@ -40,14 +41,13 @@
         </div>
         <div class="grid-row">
             <div class="categories-list">
-                <ng-container *ngFor="let item of arrayCategoriesMain; let i = index">
-                    <ng-container *ngIf="i < 11">
-                        <div class="categories-list--item">
-                            <div class="categories-list--item-content">
-                                <div class="b-icon">
-                                    <div class="ico {{ _jobService.cleanCharacters(item.descripcion) }}-primary"></div>
-                                </div>
-                                <span>{{item.descripcion}}</span>
+                <ng-container *ngFor="let item of arrayCategories">
+                    <div class="categories-list--item">
+                        <div class="categories-list--item-content">
+                            <div class="b-icon">
+                                <svg class="icon">
+                                    <use attr.xlink:href="/assets/images/icons.svg#{{item.categoryIconName}}"></use>
+                                </svg>
                             </div>
                         </div>
                     </ng-container>
@@ -56,7 +56,9 @@
                 <div class="categories-list--item active">
                     <div class="categories-list--item-content">
                         <div class="b-icon">
-                            <div class="ico plus-primary"></div>
+                            <svg class="icon">
+                                <use xlink:href="/assets/images/icons.svg#icon-more"></use>
+                            </svg>
                         </div>
                         <span>Descubrir</span>
                     </div>
