@@ -30,11 +30,12 @@ export class LoginTemplate implements OnInit {
 	ngOnInit(): void {
 		
 		this.loginForm = this.formBuilder.group({
-			emailUser :  ['', Validators.required],
+			emailUser :  ['', [Validators.required,Validators.email]],
 			passwordUser :  ['', Validators.required]
 		})
 
 	}
+
 	onLogin(form){
 		//console.log(form.value);
 
@@ -63,6 +64,19 @@ export class LoginTemplate implements OnInit {
 				//console.log(error);
 			}
 		)
+	}
+
+	getError(valor:String){
+		console.log(valor);
+	}
+
+	getErrorsEmail(){
+		return this.loginForm.get('emailUser').hasError('required')? 'Se requiere correo':
+			   this.loginForm.get('emailUser').hasError('email')? 'Formato de correo incorrecto':'';
+	  }
+	getErrorsPassword(){
+		return this.loginForm.get('passwordUser').hasError('required')? 'Contraseña obligatoria':'';
+			//    this.loginForm.get('passwordUser').hasError('minlength')? 'Ingrese mas de 5 caracteres':'';
 	}
 }
 

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // apiUrl: 'http://chamba-back.test/api/'
-  apiUrl: 'http://127.0.0.1:8000/api/'
+  apiUrl: 'http://chamba-back.test/api/'
+  // apiUrl: 'http://127.0.0.1:8000/api/'
 };
 
 /*

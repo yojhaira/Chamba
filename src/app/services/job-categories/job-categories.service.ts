@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { environment } from '../../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +17,8 @@ export class JobService {
     }
 
     public listCategoriesWorkers() {
-        return this._http.get('http://chamba-back.test/api/oficio');
+        let url = environment.apiUrl+"oficio";
+        return this._http.get(url);
     }
 
     public cleanCharacters(input: string): string {

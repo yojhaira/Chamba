@@ -4,18 +4,20 @@ import { JobService } from '../../../services/job-categories/job-categories.serv
 import { CTALoginService } from 'src/app/components/cta-login/cta-login.service';
 import { QuoteDialogService } from 'src/app/components/quote-dialog/quote-dialog.service';
 import { Subscription } from 'rxjs';
+import { DistritoService } from '../../../services/location/distrito.service';
 
 @Component({
     selector: 'main-content',
     templateUrl: './main-content.template.html',
     styleUrls: ['./main-content.template.scss'],
-    providers: [JobService]
+    providers: [JobService, DistritoService]
 })
 
 export class MainContentTemplate implements OnInit, OnDestroy {
 
     public oficios: Array<any>;
     public arrayCategoriesMain: Array<any>;
+    public distritos: Array<any>;
     public orientationCTA: string;
     public categoriesSubcription: Subscription;
 
@@ -23,14 +25,16 @@ export class MainContentTemplate implements OnInit, OnDestroy {
 
     constructor(
         public _jobService: JobService,
-        public _ctaLoginService: CTALoginService,
-        public _quoteDialogService: QuoteDialogService
+        public _quoteDialogService: QuoteDialogService,
+        public _distritoService: DistritoService,
+        public _ctaLoginService: CTALoginService
     ) { }
 
     ngOnInit() {
         // this.listCategories();
         this.orientationCTA = "left";
         this.showCategoriesMain();
+        this.showDistritosMain();
     }
 
     public ngOnDestroy(): void {
@@ -45,6 +49,19 @@ export class MainContentTemplate implements OnInit, OnDestroy {
             this.arrayCategoriesMain = dataResponse.response;
         });
 
+    }
+
+    public showDistritosMain(){
+        this._distritoService.listar().subscribe(
+            result => {
+                console.log(result);
+                const dataResponse  = JSON.parse(JSON.stringify(result))
+                this.distritos = dataResponse.response;
+            },
+            error => {
+                console.log(error);
+            }
+        )
     }
 
     public quoteWork(): void {

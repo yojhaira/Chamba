@@ -6,7 +6,7 @@
 
     <div class="main-wrapper--container grid-container grid-10">
         <div class="grid-5">
-            <form class="main-wrapper--container-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <form class="main-wrapper--container-form" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
                 <div class="container-form--scrollable">
                     <div class="container-form--logo">
                         <logo-component></logo-component>
@@ -27,12 +27,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-validation">
+                            <div class="input-validation" *ngIf="loginForm.get('emailUser').invalid && loginForm.get('emailUser').touched">
                                 <!-- <div class="input-validation--tag">
                                     <span>Requerido</span>
                                 </div> -->
                                 <div class="input-validation--message">
-                                    <span>{{ getError('emailUser') }}</span>
+                                    <span>{{ getErrorsEmail() }}</span>
                                 </div>
                             </div>
                         </div>
@@ -48,12 +48,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-validation">
+                            <div class="input-validation" *ngIf="loginForm.get('passwordUser').invalid && loginForm.get('passwordUser').touched">
                                 <!-- <div class="input-validation--tag">
                                     <span>Requerido</span>
                                 </div> -->
                                 <div class="input-validation--message">
-                                    <span>{{ getError('passwordUser') }}</span>
+                                    <span>{{ getErrorsPassword() }}</span>
                                 </div>
                             </div>
                         </div>

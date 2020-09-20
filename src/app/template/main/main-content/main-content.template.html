@@ -17,10 +17,7 @@
                     <div class="content-quote--form-inputs">
                         <input type="tel" name="" id="" placeholder="Ingresar categoría">
                         <select name="" id="">
-                            <option value="">1</option>
-                            <option value="">1</option>
-                            <option value="">1</option>
-                            <option value="">1</option>
+                            <option value="{{distrito.id}}" *ngFor="let distrito of distritos; let i = index">{{distrito.descripcion}}</option>
                         </select>
                         <!-- <button (click)="quoteWork()"><span>Cotiza tu chamba</span></button> -->
                         <button (click)="toggleQuoteDialog()"><span>Cotiza tu chamba</span></button>
