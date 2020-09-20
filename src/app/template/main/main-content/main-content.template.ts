@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { JobService } from '../../../services/job-categories/job-categories.service';
 import { CTALoginService } from 'src/app/components/cta-login/cta-login.service';
 import { QuoteDialogService } from 'src/app/components/quote-dialog/quote-dialog.service';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'main-content',

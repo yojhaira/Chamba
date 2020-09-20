@@ -19,8 +19,8 @@ import { SearchComponent } from './template/search/search.template';
 /**
 * Components
 */
-import { NavComponent } from './components/nav/nav.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+//import { NavComponent } from './components/nav/nav.component';
+//import { NavbarComponent } from './components/navbar/navbar.component';
 import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -47,8 +47,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         CategoriesTemplate,
 
 
-        NavbarComponent,
-        NavComponent,
+       // NavbarComponent,
+        //NavComponent,
         MostWantedComponent,
         FooterComponent,
         GraphicLogin
