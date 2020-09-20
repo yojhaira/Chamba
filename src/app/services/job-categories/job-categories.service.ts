@@ -16,7 +16,8 @@ export class JobService {
         this.collectionCategories = [];
     }
 
-    public listCategoriesWorkers() {
+    public listCategoriesWorkers() : Observable<any>
+    {
         let url = environment.apiUrl+"oficio";
         return this._http.get(url);
     }

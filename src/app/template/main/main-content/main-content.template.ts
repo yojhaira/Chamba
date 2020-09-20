@@ -31,7 +31,7 @@ export class MainContentTemplate implements OnInit, OnDestroy {
     ) { }
 
     ngOnInit() {
-        // this.listCategories();
+        //this.listCategories();
         this.orientationCTA = "left";
         this.showCategoriesMain();
         this.showDistritosMain();

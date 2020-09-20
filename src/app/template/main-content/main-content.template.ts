@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-
-import { OficioService } from '../../service/oficio.service';
-    
+import { JobService } from '../../services/job-categories/job-categories.service';
 
 @Component({
     selector: 'main-content',
     templateUrl: './main-content.template.html',
     styleUrls: ['./main-content.template.scss'],
-    providers: [OficioService]
+    providers: [JobService]
 })
 
 export class MainContentTemplate implements OnInit {
     public oficios: Array <any>;
     public acentos:Array <any>
-    constructor(private sOficio:OficioService){
+    constructor(private sOficio:JobService){
 
     }
     listarOficios(){
-        this.sOficio.listar().subscribe(
+        this.sOficio.listCategoriesWorkers().subscribe(
             result => {
                 this.oficios = result.response;
             },
