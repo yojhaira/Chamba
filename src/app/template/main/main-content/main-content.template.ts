@@ -44,10 +44,11 @@ export class MainContentTemplate implements OnInit, OnDestroy {
     }
     
     public showCategoriesMain() {
-        this.categoriesSubcription = this._jobService.listCategoriesWorkers().subscribe(res => {
-            const dataResponse = JSON.parse(JSON.stringify(res));
-            this.arrayCategoriesMain = dataResponse.response;
-        });
+        this.categoriesSubcription = this._jobService.listCategoriesWorkers().subscribe(
+            res => {
+                // const dataResponse = JSON.parse(JSON.stringify(res));
+                this.arrayCategoriesMain = res.response;
+            });
 
     }
 
