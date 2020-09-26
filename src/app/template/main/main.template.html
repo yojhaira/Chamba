@@ -1,7 +1,7 @@
 <div class="main" (scroll)="onScrollEvent($event)" (click)="detectScroll($event)">
 
     <div class="main-sidenav" #sidenavComponent>
-        <sidenav [stateSidenav]="toggleSidenav" *ngIf="toggleSidenav"></sidenav>
+        <sidenav [stateSidenav]="toggleSidenav"></sidenav>
     </div>
 
     <div class="main-content" #mainContent>

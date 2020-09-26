@@ -5,10 +5,10 @@
     </div>
 
     <div class="main-wrapper--container grid-container grid-10">
-        <div class="grid-5">
-            <form class="main-wrapper--container-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="main-wrapper--container-form grid-5">
+            <form class="" [formGroup]="loginForm" (ngSubmit)="onLogin()">
                 <div class="container-form--scrollable">
-                    <div class="container-form--logo">
+                    <div class="container-form--logo" routerLink="">
                         <logo-component></logo-component>
                     </div>
                     <div class="container-form--header">
@@ -97,16 +97,14 @@
                 </div>
             </form>
         </div>
-        <div class="grid-7">
-            <div class="main-wrapper--container-welcome">
-                <div class="container-welcome--header">
-                    <h2>Encuentra al "chamba" que necesitas</h2>
-                    <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu
-                        decides.</p>
-                </div>
-                <div class="container-welcome--image grid-9">
-                    <graphic-login></graphic-login>
-                </div>
+        <div class="main-wrapper--container-welcome grid-7">
+            <div class="container-welcome--header">
+                <h2>Encuentra al "chamba" que necesitas</h2>
+                <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu
+                    decides.</p>
+            </div>
+            <div class="container-welcome--image">
+                <graphic-login></graphic-login>
             </div>
         </div>
     </div>

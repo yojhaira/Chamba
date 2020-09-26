@@ -1,12 +1,15 @@
 .container {
-
     &-form {
-
         &--body {
-
             &-buttons {
                 margin-bottom: 70px;
             }
+        }
+    }
+
+    &-welcome {
+        &--image {
+            width: 45%;
         }
     }
 }

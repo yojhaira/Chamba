@@ -1,0 +1,186 @@
+<div class="navbar-main">
+
+    <div class="navbar-main--button-menu" (click)="toggleSidenavFunction()">
+        <div class="md-icon">
+            <div class="hamburguer" #buttonSidenav>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar-main--search" #inputSearch [ngClass]="{'active' : activeSearch}">
+        <div class="navbar-main--search-icon">
+            <div class="md-icon">
+                <svg class="icon">
+                    <use xlink:href="/assets/images/icons.svg#icon-search"></use>
+                </svg>
+            </div>
+            <span>Buscar</span>
+        </div>
+        <div class="navbar-main--search-input">
+            <input type="text" placeholder="¿Qué buscas?" (focus)="activateSearch(true, $event)"
+                (blur)="activateSearch(false, $event)">
+        </div>
+    </div>
+
+    <ng-container *ngIf="loggedIn">
+        <button class="primary-button--alternate active navbar-main--button-login" routerLink="/login"
+            *ngIf="!_authService.getCurrentUser()">
+            <div class="primary-button--icon">
+                <div class="md-icon">
+                    <svg class="icon">
+                        <use xlink:href="/assets/images/icons.svg#icon-login"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="primary-button--content">
+                <span>ingresar</span>
+            </div>
+        </button>
+
+        <button class="primary-button active" routerLink="/register" *ngIf="!_authService.getCurrentUser()">
+            <div class="primary-button--icon">
+                <div class="md-icon">
+                    <svg class="icon">
+                        <use xlink:href="/assets/images/icons.svg#icon-register"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="primary-button--content">
+                <span>registarse</span>
+            </div>
+        </button>
+    </ng-container>
+
+    <div class="navbar-main--connected loggedIn" *ngIf="loggedIn">
+        <div class="navbar-main--connected-item notification-alert">
+            <div class="notification-alert--button" (click)="toggleNotificationPanel()">
+                <div class="notification-alert--button-badge">
+                    <span>2</span>
+                </div>
+                <div class="sm-icon">
+                    <svg class="icon">
+                        <use xlink:href="/assets/images/icons.svg#icon-bell"></use>
+                    </svg>
+                </div>
+            </div>
+            <notification-alert-component *ngIf="viewNotifications"></notification-alert-component>
+        </div>
+        <div class="navbar-main--connected-item profile-member menu-activator">
+            <div class="profile-member--photo user-photo">
+                <img src="../../assets/images/users/default/gustavo-saucedo.jpg" alt="Gustavo Saucedo">
+            </div>
+            <div class="profile-member--name">
+                <span>Fulanito Jimenez</span>
+            </div>
+            <div class="profile-member--button">
+                <div class="input-icon">
+                    <svg class="icon">
+                        <use xlink:href="/assets/images/icons.svg#icon-arrow-down"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="dropdown-menu">
+                <div class="dropdown-menu--list-group">
+                    <div class="dropdown-menu--list-item">
+                        <div class="dropdown-menu--list-icon default-icon">
+                            <svg class="icon">
+                                <use xlink:href="/assets/images/icons.svg#icon-user"></use>
+                            </svg>
+                        </div>
+                        <span>Mi Perfil</span>
+                    </div>
+                    <div class="dropdown-menu--list-item">
+                        <div class="dropdown-menu--list-icon default-icon">
+                            <svg class="icon">
+                                <use xlink:href="/assets/images/icons.svg#icon-quotes"></use>
+                            </svg>
+                        </div>
+                        <span>Mis Cotizaciones</span>
+                    </div>
+                    <div class="dropdown-menu--list-item">
+                        <div class="dropdown-menu--list-icon default-icon">
+                            <svg class="icon">
+                                <use xlink:href="/assets/images/icons.svg#icon-directory"></use>
+                            </svg>
+                        </div>
+                        <span>Directorio</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu--list-group">
+                    <div class="dropdown-menu--list-item">
+                        <div class="dropdown-menu--list-icon default-icon">
+                            <svg class="icon">
+                                <use xlink:href="/assets/images/icons.svg#icon-user"></use>
+                            </svg>
+                        </div>
+                        <span>Cerrar Sesión</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <ng-container *ngIf="!loggedIn">
+        <div class="offline-profile menu-activator">
+            <div class="offline-profile__user">
+                <div class="sm-icon">
+                    <svg class="icon">
+                        <use xlink:href="/assets/images/icons.svg#icon-user"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="offline-profile__dropdown">
+                <div class="input-icon">
+                    <svg class="icon">
+                        <use xlink:href="/assets/images/icons.svg#icon-arrow-down"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="dropdown-menu">
+                <div class="dropdown-menu--list-group">
+                    <div class="dropdown-menu--list-item" routerLink="/login">
+                        <div class="dropdown-menu--list-icon default-icon">
+                            <svg class="icon">
+                                <use xlink:href="/assets/images/icons.svg#icon-user"></use>
+                            </svg>
+                        </div>
+                        <span>Iniciar sesión</span>
+                    </div>
+                    <div class="dropdown-menu--list-item" routerLink="/register">
+                        <div class="dropdown-menu--list-icon default-icon">
+                            <svg class="icon">
+                                <use xlink:href="/assets/images/icons.svg#icon-quotes"></use>
+                            </svg>
+                        </div>
+                        <span>Registrarse</span>
+                    </div>
+                </div>
+                <!-- <div class="dropdown-menu--list-group">
+                    <div class="dropdown-menu--list-item">
+                        <div class="dropdown-menu--list-icon default-icon">
+                            <svg class="icon">
+                                <use xlink:href="/assets/images/icons.svg#icon-user"></use>
+                            </svg>
+                        </div>
+                        <span>Cerrar Sesión</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- <button class="primary-button active" (click)="onLogout()" *ngIf="_authService.getCurrentUser()">
+        <div class="primary-button--icon">
+            <div class="md-icon">
+                <i class="ico register-primary"></i>
+            </div>
+        </div>
+        <div class="primary-button--content">
+            <span> cerrar sesion</span>
+        </div>
+    </button> -->
+</div>

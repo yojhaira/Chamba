@@ -2,9 +2,11 @@
     display: flex;
     overflow: hidden;
     min-height: 100vh;
+    max-width: 100vw;
+    position: relative;
 
     &-sidenav {
-        flex: 0 0 126px;
+        flex: 0 0 var(--navbar-size);
         opacity: 1;
 
         transition: 0.3s flex ease-in-out, 0.2s opacity ease-in-out;
@@ -16,22 +18,92 @@
     }
 
     &-content {
+        --border-radius: 30px;
         flex-grow: 1;
-        border-bottom-left-radius: 30px;
-        border-top-left-radius: 30px;
+        border-bottom-left-radius: var(--border-radius);
+        border-top-left-radius: var(--border-radius);
         overflow: hidden;
         background-color: var(--color-wrapper);
         max-height: 100vh;
         overflow-y: auto;
-        margin-right: -17px;
+        // margin-right: -17px;
         z-index: 1;
         box-shadow: -3px 0 6px rgba(0, 0, 0, 0.16);
 
         transition: 0.2s border-radius ease-in-out;
 
         &.extended {
-            border-bottom-left-radius: 0;
-            border-top-left-radius: 0;
+            --border-radius: 0;
+            border-bottom-left-radius: var(--border-radius);
+            border-top-left-radius: var(--border-radius);
+        }
+
+        // container scroll
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        // rail scroll
+        &::-webkit-scrollbar-track {
+            // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #ffffff;
+        }
+
+        // scroll
+        &::-webkit-scrollbar-thumb {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background: linear-gradient(to top, var(--color-primary-dark) 0%, #ffffff 100%);
+        }
+    }
+}
+
+@media screen and (max-width: 1081px) {
+    .main {
+        &-sidenav {
+            &.closed {
+                flex: 0 0 var(--navbar-size);
+                opacity: 1;
+            }
+        }
+        &-content {
+            --border-radius: 0;
+            position: absolute;
+            max-width: 100vw;
+            width: 100vw;
+            left: 0;
+            transition: 0.2s left ease-in-out;
+
+            &::before {
+                opacity: 0;
+                left: 0;
+            }
+
+            &.extended {
+                --border-radius: 30px;
+                left: var(--navbar-size);
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    position: fixed;
+                    height: 100%;
+                    width: calc(100% - var(--navbar-size));
+                    background-color: rgba(0, 0, 0, 0.6);
+                    top: 0;
+                    left: initial;
+                    right: 0;
+                    z-index: 10;
+                    border-bottom-left-radius: var(--border-radius);
+                    border-top-left-radius: var(--border-radius);
+                    opacity: 1;
+                }
+            }
+
+            // container scroll
+            &::-webkit-scrollbar {
+                width: 7px;
+            }
         }
     }
 }

@@ -5,7 +5,6 @@ import { DOCUMENT } from '@angular/common';
 import { usuarioI } from 'src/app/models/usuario';
 import { Router } from '@angular/router'
 import { Observable } from 'rxjs';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
     selector: 'register-template',
@@ -46,7 +45,7 @@ export class RegisterTemplate implements OnInit {
             f_nacimiento: form.value.f_nacimiento,
             correo: form.value.correo,
             password: form.value.password,
-            genero: form.value.userGender,
+            genero: form.value.genero,
             telefono: "",
         }
 

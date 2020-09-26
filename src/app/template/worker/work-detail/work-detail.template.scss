@@ -1,8 +1,8 @@
 @import "../../../../assets/scss/variables-scss";
 
 .work-detail {
-    &--container {
-    }
+    // &--container {
+    // }
     &--content {
         background-color: white;
         border-radius: 7px 21px;
@@ -117,10 +117,11 @@
         }
 
         &-group {
-            flex: 0 0 127px;
+            --size-figure: 127px;
+            flex: 0 0 var(--size-figure);
 
             & figure {
-                height: 127px;
+                height: var(--size-figure);
                 border-radius: 7px 21px;
                 overflow: hidden;
                 position: relative;
@@ -277,4 +278,119 @@
 quote-component {
     display: block;
     top: 70px;
+}
+
+@media screen and (max-width: 993px) {
+    .work-detail {
+        &--content {
+            margin-bottom: 15px;
+
+            &-comments {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 681px) {
+    .work-detail {
+        &--images {
+            flex-wrap: wrap;
+
+            &-big {
+                margin-right: 0;
+                margin-bottom: 14px;
+            }
+
+            &-group {
+                display: flex;
+                justify-content: center;
+
+                padding: 0 15px;
+                flex: 0 0 100%;
+
+                & figure {
+                    margin-bottom: 0;
+
+                    flex: 0 0 var(--size-figure);
+
+                    &:not(:last-child) {
+                        margin-right: 14px;
+                    }
+                }
+            }
+        }
+
+        &--description {
+            padding: 0;
+            flex-wrap: wrap;
+
+            &-content {
+                flex: 0 0 100%;
+            }
+
+            &-valuation,
+            &-share {
+                & > span {
+                    position: relative;
+                    left: initial;
+                    bottom: initial;
+                    transform: initial;
+                }
+            }
+
+            &-valuation {
+                margin-right: 5px;
+                padding-bottom: 0;
+                margin-bottom: 0;
+
+                display: flex;
+                flex-direction: column;
+            }
+
+            &-share {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                padding-bottom: 0;
+
+                & .button-icon {
+                    margin: initial;
+                    margin-right: 5px;
+                }
+
+                & > span {
+                    flex: 0 0 100%;
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        &--valuation {
+            &-share {
+                order: 1;
+                position: relative;
+                top: initial;
+                padding-right: 0;
+
+                display: flex;
+                margin: 0 auto;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 471px) {
+    .work-detail {
+        &--images {
+            &-group {
+                & figure {
+                    flex: 0 0 calc(((100vw - 60px) - 28px) / 3);
+                    height: calc(((100vw - 60px) - 28px) / 3);
+                }
+            }
+        }
+    }
 }

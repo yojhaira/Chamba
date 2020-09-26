@@ -22,18 +22,20 @@ export class CategoriesTemplate implements OnInit {
     ) { }
 
     public ngOnInit(): void {
-        this.scrollToElement(this.wrapperMain.nativeElement);
+        // this.scrollToElement(this.wrapperMain.nativeElement);
         this.titlePage = "Categorías";
         this.nameImage = "gardering"
     }
 
     public scrollToElement($element): void {
-        $element.scrollIntoView(
-            {
-                behavior: "smooth",
-                block: "start",
-                inline: "nearest"
-            }
-        );
+        setTimeout(() => {
+            $element.scrollIntoView(
+                {
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest"
+                }
+            );
+        }, 500);
     }
 }
