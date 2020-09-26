@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <ng-container *ngIf="loggedIn">
+    <ng-container *ngIf="!loggedIn">
         <button class="primary-button--alternate active navbar-main--button-login" routerLink="/login"
             *ngIf="!_authService.getCurrentUser()">
             <div class="primary-button--icon">
@@ -50,7 +50,7 @@
         </button>
     </ng-container>
 
-    <div class="navbar-main--connected loggedIn" *ngIf="!loggedIn">
+    <div class="navbar-main--connected loggedIn" *ngIf="loggedIn">
         <div class="navbar-main--connected-item notification-alert">
             <div class="notification-alert--button" (click)="toggleNotificationPanel()">
                 <div class="notification-alert--button-badge">

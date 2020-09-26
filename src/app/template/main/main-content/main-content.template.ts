@@ -5,6 +5,7 @@ import { CTALoginService } from 'src/app/components/cta-login/cta-login.service'
 import { QuoteDialogService } from 'src/app/components/quote-dialog/quote-dialog.service';
 import { Subscription } from 'rxjs';
 import { DistritoService } from '../../../services/location/distrito.service';
+import { HelperService } from 'src/app/@core/services/helper.service';
 
 @Component({
     selector: 'main-content',
@@ -24,6 +25,7 @@ export class MainContentTemplate implements OnInit, OnDestroy {
     public stateDialog: boolean;
 
     constructor(
+        public _helper: HelperService,
         public _jobService: JobService,
         public _quoteDialogService: QuoteDialogService,
         public _distritoService: DistritoService,
@@ -45,11 +47,13 @@ export class MainContentTemplate implements OnInit, OnDestroy {
     
     public showCategoriesMain() {
         this.categoriesSubcription = this._jobService.listCategoriesWorkers().subscribe(res => {
+            console.table(res.response);
             const dataResponse = JSON.parse(JSON.stringify(res));
             this.arrayCategoriesMain = dataResponse.response;
         });
-
+        
     }
+    
 
     public showDistritosMain(){
         this._distritoService.listar().subscribe(

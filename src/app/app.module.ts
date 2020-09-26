@@ -32,6 +32,8 @@ import { routing, appRoutingProviders } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { HelperService } from './@core/services/helper.service';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -47,7 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         CategoriesTemplate,
 
 
-       // NavbarComponent,
+        // NavbarComponent,
         //NavComponent,
         MostWantedComponent,
         FooterComponent,
@@ -64,7 +66,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         BrowserAnimationsModule
     ],
     exports: [],
-    providers: [appRoutingProviders],
+    providers: [
+        appRoutingProviders,
+        HelperService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
