@@ -1,0 +1,46 @@
+<div class="mailbox-message" [ngClass]="{'new-message': dataMessage.state == 'new'}">
+    <div class="mailbox-message--wrapper">
+        <div class="mailbox-message--sender">
+            <div class="sender-header">
+                <div class="sender-user">
+                    <div class="sender-user--photo user-photo">
+                        <img src="{{ dataMessage.sender.photo }}" alt="user">
+                    </div>
+                    <div class="sender-user--name">
+                        <span>{{ dataMessage.sender.name }}</span>
+                    </div>
+                    <div class="sender-user--date date-element">
+                        <div class="input-icon">
+                            <svg class="icon">
+                                <use xlink:href="/assets/images/icons.svg#icon-date"></use>
+                            </svg>
+                        </div>
+                        <span>{{ dataMessage.dateOfIssue }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sender-body">
+                <div class="sender-actions">
+                    <label class="sender-actions--button" for="checkbox-marking-{{ dataMessage.messageID }}">
+                        <input type="checkbox" name="checkbox-marking-{{ dataMessage.messageID }}"
+                            id="checkbox-marking-{{ dataMessage.messageID }}">
+                        <div class="sender-actions--button-marking">
+                            <div class="square">
+                                <div class="square-check"></div>
+                            </div>
+                        </div>
+                    </label>
+                    <button class="sender-actions--button">
+                        <div class="sm-icon">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </button>
+                </div>
+                <div class="sender-description" (click)="assignValues(dataMessage)">
+                    <span class="sender-description--title">{{ dataMessage.messageDescription.title }}</span>
+                    <p>{{ dataMessage.messageDescription.description | slice:0:105 }}...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,7 +5,6 @@ import { DOCUMENT } from '@angular/common';
 import { usuarioI } from 'src/app/models/usuario';
 import { Router } from '@angular/router'
 import { Observable } from 'rxjs';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 
 @Component({

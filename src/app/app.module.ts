@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 /**
-* Template
+* Templates
 */
 import { MainTemplate } from './template/main/main.template';
 import { UserProfileTemplate } from './template/user-profile/user-profile.template';
@@ -14,7 +14,6 @@ import { C404Template } from './template/c404/c404.template';
 import { HttpClientModule } from '@angular/common/http';
 import { MainContentTemplate } from './template/main/main-content/main-content.template';
 import { CategoriesTemplate } from './template/categories/categories.template';
-import { SearchComponent } from './template/search/search.template';
 
 /**
 * Components
@@ -25,14 +24,17 @@ import { MostWantedComponent } from './components/most-wanted/most-wanted.compon
 import { FooterComponent } from './components/footer/footer.component';
 
 // import { InputComponent } from './components/input/input.component';
-import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
+//import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
+
+import { GraphicLogin } from './@shared/components/graphics/graphic-login/graphic-login.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
-import { ComponentsModule } from './components/components.module';
+import { ComponentsModule } from './@shared/components/components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { HelperService } from './@core/services/helper.service';
+import { DropdownDirective } from './directives/dropdown/dropdown.directive';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ParallaxDirective } from './@shared/directives/parallax.directive';
 
 @NgModule({
     declarations: [
@@ -40,7 +42,6 @@ import { HelperService } from './@core/services/helper.service';
         LoginTemplate,
         RegisterTemplate,
         C404Template,
-        SearchComponent,
 
 
         MainTemplate,
@@ -53,7 +54,10 @@ import { HelperService } from './@core/services/helper.service';
         //NavComponent,
         MostWantedComponent,
         FooterComponent,
-        GraphicLogin
+        GraphicLogin,
+
+        DropdownDirective,
+        ParallaxDirective
     ],
     imports: [
         BrowserModule,
@@ -63,12 +67,13 @@ import { HelperService } from './@core/services/helper.service';
         HttpClientModule,
 
         ComponentsModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        CarouselModule
     ],
     exports: [],
     providers: [
         appRoutingProviders,
-        HelperService
+        //HelperService
     ],
     bootstrap: [AppComponent]
 })

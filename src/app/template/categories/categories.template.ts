@@ -41,12 +41,14 @@ export class CategoriesTemplate implements OnInit {
 
 
     public scrollToElement($element): void {
-        $element.scrollIntoView(
-            {
-                behavior: "smooth",
-                block: "start",
-                inline: "nearest"
-            }
-        );
+        setTimeout(() => {
+            $element.scrollIntoView(
+                {
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest"
+                }
+            );
+        }, 500);
     }
 }
