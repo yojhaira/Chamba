@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <ng-container *ngIf="loggedIn">
+    <!-- <ng-container *ngIf="!loggedIn">
         <button class="primary-button--alternate active navbar-main--button-login" routerLink="/login"
             *ngIf="!_authService.getCurrentUser()">
             <div class="primary-button--icon">
@@ -52,9 +52,9 @@
                 <span>registarse</span>
             </div>
         </button>
-    </ng-container>
+    </ng-container> -->
 
-    <div class="navbar-main--connected loggedIn" *ngIf="loggedIn">
+    <div class="navbar-main--connected loggedIn" *ngIf="!loggedIn">
         <div class="navbar-main--connected-item notification-alert">
             <div class="notification-alert--button" (click)="toggleNotificationPanel()">
                 <div class="notification-alert--button-badge">
@@ -124,7 +124,7 @@
 
     </div>
 
-    <ng-container *ngIf="!loggedIn">
+    <ng-container *ngIf="loggedIn">
         <div class="offline-profile menu-activator">
             <div class="offline-profile__user">
                 <div class="sm-icon">
