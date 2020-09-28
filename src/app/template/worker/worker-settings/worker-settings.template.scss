@@ -1,3 +1,9 @@
 .sticky-element {
     top: 70px;
 }
+
+@media screen and (max-width: 993px) {
+    .rail-section {
+        margin-bottom: 14px;
+    }
+}

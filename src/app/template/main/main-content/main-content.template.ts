@@ -1,11 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { JobService } from '../../../services/job-categories/job-categories.service';
-import { CTALoginService } from 'src/app/components/cta-login/cta-login.service';
-import { QuoteDialogService } from 'src/app/components/quote-dialog/quote-dialog.service';
+import { CTALoginService } from 'src/app/@shared/components/cta-login/cta-login.service';
+import { QuoteDialogService } from 'src/app/@shared/components/quote-dialog/quote-dialog.service';
 import { Subscription } from 'rxjs';
 import { DistritoService } from '../../../services/location/distrito.service';
 import { HelperService } from 'src/app/@core/services/helper.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
     selector: 'main-content',
@@ -23,6 +24,9 @@ export class MainContentTemplate implements OnInit, OnDestroy {
     public categoriesSubcription: Subscription;
 
     public stateDialog: boolean;
+    public customOptions: OwlOptions;
+    public buttonOwlPrev: string;
+    public buttonOwlNext: string;
 
     constructor(
         public _helper: HelperService,

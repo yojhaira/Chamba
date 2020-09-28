@@ -1,0 +1,437 @@
+@mixin absolute-element {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+@mixin absolute-pseudoelement {
+    content: "";
+    @include absolute-element();
+}
+
+/**
+   * Register professional
+   */
+
+.register {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        background-color: var(--color-primary-dark);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &-wrapper {
+        padding: 88px 15px 0;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        margin-top: 214px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1200px;
+
+        &--content,
+        &--images {
+            flex: 0 0 50%;
+        }
+
+        &--content {
+            color: white;
+            flex: 0 0 50%;
+            padding: 0 15px 88px;
+
+            & .header-section {
+                &--first {
+                    margin-bottom: 21px;
+                    padding-right: 15px;
+
+                    & > * {
+                        color: currentColor;
+                    }
+                }
+            }
+
+            &-text {
+                margin-bottom: 35px;
+            }
+        }
+
+        &--images {
+            position: relative;
+            display: flex;
+            padding-bottom: 28px;
+            padding-right: 15px;
+
+            &-group {
+                --size: 250px;
+                --border-element: 0px 42px;
+                --size-detail: 35px;
+                --size-position: calc(100% - var(--size-detail));
+                position: relative;
+                line-height: 24px;
+                padding: 21px 33px;
+                border-radius: 10px 30px;
+                max-width: 201px;
+                z-index: 1;
+                margin-top: auto;
+                margin-left: auto;
+
+                &::before {
+                    @include absolute-pseudoelement();
+                    background-color: white;
+                    border-radius: 10px 30px;
+                    z-index: 2;
+                }
+
+                &::after {
+                    @include absolute-pseudoelement();
+                    --border-element: 10px 0 14px 0;
+                    height: var(--size-detail);
+                    width: var(--size-detail);
+                    background-color: var(--color-primary);
+                    border-radius: var(--border-element);
+                    opacity: 0.07;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                }
+
+                & svg {
+                    fill: var(--color-primary-dark);
+                    margin-bottom: -14px;
+                    position: relative;
+                    z-index: 3;
+                }
+            }
+        }
+
+        &.left {
+            & .register-wrapper {
+                &--images {
+                    order: -1;
+                }
+
+                &--content {
+                    &-text {
+                        text-align: right;
+                    }
+
+                    & button {
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.images-group {
+    &--item {
+        --border-element: 14px 42px;
+        --size-detail: 63px;
+        position: absolute;
+        height: var(--size);
+        width: var(--size);
+        border-radius: var(--border-element);
+        z-index: -1;
+        bottom: var(--size-position);
+        right: var(--size-position);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+        &::before {
+            --size-detail: 125px;
+            --border-element: 0 42px;
+            @include absolute-pseudoelement;
+            height: var(--size-detail);
+            width: var(--size-detail);
+            background-color: var(--color-primary);
+            border-radius: var(--border-element);
+            opacity: 0.49;
+            right: 0;
+            top: 0;
+            left: initial;
+        }
+
+        & img {
+            object-fit: cover;
+        }
+
+        & img,
+        & .main {
+            height: 100%;
+            border-radius: var(--border-element);
+        }
+
+        & .main {
+            background-color: white;
+
+            display: flex;
+
+            & span {
+                margin: auto auto 0 auto;
+                font-size: 72px;
+                font-weight: 600;
+                color: var(--color-primary-dark);
+                line-height: 0.72em;
+                font-family: var(--font-display);
+            }
+        }
+
+        &-lower {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            background-color: var(--color-primary-light);
+
+            &:nth-child(2) {
+                --size: 180px;
+                --border-element: 14px 42px;
+                --size-position: calc(100% - var(--size-detail));
+                height: var(--size);
+                width: var(--size);
+                border-radius: var(--border-element);
+                bottom: var(--size-position);
+                right: var(--size-position);
+                position: absolute;
+
+                &::before {
+                    --border-element: 14px 0;
+                    @include absolute-pseudoelement;
+                    height: var(--size-detail);
+                    width: var(--size-detail);
+                    background-color: var(--color-primary-dark);
+                    border-radius: var(--border-element);
+                    opacity: 0.21;
+                    top: initial;
+                    left: initial;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            &:nth-child(3) {
+                --size: 300px;
+                --border-element: 14px 42px;
+                --size-detail: 125px;
+                --size-position: calc(100% - var(--size-detail));
+                height: var(--size);
+                width: var(--size);
+                border-radius: var(--border-element);
+                bottom: var(--size-position);
+                left: var(--size-position);
+                position: absolute;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1081px) {
+    .register {
+        &-wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            &--content {
+                order: 1;
+                text-align: center;
+
+                & button {
+                    margin: 0 auto;
+                }
+            }
+
+            &--images {
+                order: 0;
+                min-height: 250px;
+                width: 52%;
+                max-width: 100%;
+            }
+
+            &.left {
+                & .register-wrapper {
+                    &--content {
+                        &-text {
+                            text-align: center;
+                        }
+
+                        & button {
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .register {
+        &-wrapper {
+            &--images {
+                width: 58%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 921px) {
+    .register {
+        &-wrapper {
+            &--images {
+                width: 64%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 821px) {
+    .register {
+        &-wrapper {
+            &--images {
+                padding: 0;
+                width: 70%;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .register {
+        &-wrapper {
+            &--images {
+                width: 73%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 721px) {
+    .register {
+        &-wrapper {
+            &--images {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 681px) {
+    .register {
+        &-wrapper {
+            &--images {
+                width: 83%;
+                min-height: 200px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 621px) {
+    .register {
+        &-wrapper {
+            &--images {
+                width: 75%;
+
+                &-group {
+                    --size: 200px;
+                }
+            }
+        }
+    }
+
+    .images-group {
+        &--item {
+            &::before {
+                --size-detail: 90px;
+            }
+            &-lower {
+                &:nth-child(2) {
+                    --size: 130px;
+                }
+                &:nth-child(3) {
+                    --size: 250px;
+                    --size-detail: 90px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 521px) {
+    .register {
+        &-wrapper {
+            &--images {
+                width: 90%;
+                min-height: 170px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .register {
+        &-wrapper {
+            &--images {
+                width: 85%;
+                min-height: 140px;
+
+                &-group {
+                    --size: 150px;
+                }
+            }
+        }
+    }
+
+    .images-group {
+        &--item {
+            &::before {
+                --size-detail: 50px;
+            }
+            &-lower {
+                &:nth-child(2) {
+                    --size: 130px;
+                }
+                &:nth-child(3) {
+                    --size: 190px;
+                    --size-detail: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 421px) {
+    .register {
+        &-wrapper {
+            &--images {
+                width: 100%;
+                min-height: 120px;
+            }
+        }
+    }
+
+    .images-group {
+        &--item {
+            &-lower {
+                &:nth-child(2) {
+                    --size: 120px;
+                }
+                &:nth-child(3) {
+                    --size: 160px;
+                }
+            }
+        }
+    }
+}

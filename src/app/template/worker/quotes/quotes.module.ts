@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { QuotesTemplate } from './quotes.template';
 import { QuotesRouting } from './quotes.routing';
 
-import { ComponentsModule } from 'src/app/components/components.module';
+import { ComponentsModule } from 'src/app/@shared/components/components.module';
 
 @NgModule({
     declarations: [

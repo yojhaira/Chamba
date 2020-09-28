@@ -1,0 +1,151 @@
+.quote-dialog {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    pointer-events: all;
+
+    &--wrapper {
+        height: 100%;
+        width: 100%;
+
+        & .grid-row {
+            align-items: center;
+            height: 100%;
+            perspective: 1000px;
+        }
+    }
+
+    &--container {
+        background-color: #fff;
+        border-radius: 21px 7px;
+        padding: 21px 21px 35px;
+        box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 03px rgba(0, 0, 0, 0.14),
+            0 9px 46px 8px rgba(0, 0, 0, 0.12);
+        position: relative;
+
+        flex: 0 0 590px;
+    }
+
+    &--header {
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            margin-bottom: 35px;
+        }
+
+        &-icon {
+            --size: 49px;
+            height: var(--size);
+            width: var(--size);
+            background-color: var(--color-primary-dark);
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        &-logo {
+            width: 67px;
+            color: var(--color-primary-dark);
+        }
+
+        &-bottom {
+            margin-bottom: 35px;
+        }
+
+        &-title {
+            & h6 {
+                margin: 0;
+            }
+        }
+
+        &-subtitle {
+            font-size: 11px;
+            color: var(--color-support-dark);
+            text-transform: uppercase;
+            font-weight: 500;
+
+            & p {
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    &--stepper {
+        position: relative;
+        min-height: 205px;
+        // overflow: hidden;
+
+        &-item {
+            position: absolute;
+            top: 0;
+            left: 101%;
+            width: 100%;
+            height: 100%;
+            transition: 0.2s left ease-in-out, 0.4s opacity ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+
+            &.active-step {
+                left: 0;
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+
+        &-footer {
+            display: flex;
+            justify-content: flex-start;
+
+            & button {
+                &:last-child {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+/*=============================================
+=            Responsive            =
+=============================================*/
+
+@media screen and (max-width: 621px) {
+    .quote-dialog {
+        &--container {
+            flex: 0 0 calc(100% - 30px);
+        }
+
+        &--stepper {
+            &-footer {
+                // flex-direction: column;
+
+                // & button {
+                //     margin: initial;
+                // }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 421px) {
+    .quote-dialog {
+        &--stepper {
+            min-height: 250px;
+            &-item {
+                display: flex;
+                flex-direction: column;
+            }
+            &-footer {
+                margin-top: auto;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+/*=====  End of Responsive  ======*/
