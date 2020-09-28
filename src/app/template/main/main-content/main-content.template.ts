@@ -1,12 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { JobService } from '../../../services/job-categories/job-categories.service';
+import { CTALoginService } from 'src/app/@shared/components/cta-login/cta-login.service';
+import { QuoteDialogService } from 'src/app/@shared/components/quote-dialog/quote-dialog.service';
 import { Subscription } from 'rxjs';
 import { DistritoService } from '../../../services/location/distrito.service';
 import { HelperService } from 'src/app/@core/services/helper.service';
-import { CTALoginService } from 'src/app/@shared/components/cta-login/cta-login.service';
-import { QuoteDialogService } from 'src/app/@shared/components/quote-dialog/quote-dialog.service';
-
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -37,9 +36,8 @@ export class MainContentTemplate implements OnInit, OnDestroy {
         public _ctaLoginService: CTALoginService
     ) { }
 
-    ngOnInit() {
+    public ngOnInit(): void {
         //this.listCategories();
-        this.orientationCTA = "left";
         this.showCategoriesMain();
         this.showDistritosMain();
 
@@ -82,29 +80,31 @@ export class MainContentTemplate implements OnInit, OnDestroy {
             },
             nav: true
         }
+
+        this.orientationCTA = "left";
     }
 
     public ngOnDestroy(): void {
-        if(this.categoriesSubcription) {
+        if (this.categoriesSubcription) {
             this.categoriesSubcription.unsubscribe();
         }
     }
-    
+
     public showCategoriesMain() {
         this.categoriesSubcription = this._jobService.listCategoriesWorkers().subscribe(res => {
             console.table(res.response);
             const dataResponse = JSON.parse(JSON.stringify(res));
             this.arrayCategoriesMain = dataResponse.response;
         });
-        
-    }
-    
 
-    public showDistritosMain(){
+    }
+
+
+    public showDistritosMain() {
         this._distritoService.listar().subscribe(
             result => {
                 console.log(result);
-                const dataResponse  = JSON.parse(JSON.stringify(result))
+                const dataResponse = JSON.parse(JSON.stringify(result))
                 this.distritos = dataResponse.response;
             },
             error => {

@@ -26,7 +26,7 @@ export class CategoriesTemplate implements OnInit {
 
     public ngOnInit(): void {
         this.showCategories();
-        this.scrollToElement(this.wrapperMain.nativeElement);
+        // this.scrollToElement(this.wrapperMain.nativeElement);
         this.titlePage = "Categorías";
         this.nameImage = "gardering"
     }

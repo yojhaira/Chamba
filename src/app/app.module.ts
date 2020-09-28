@@ -15,16 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainContentTemplate } from './template/main/main-content/main-content.template';
 import { CategoriesTemplate } from './template/categories/categories.template';
 
-/**
-* Components
-*/
-//import { NavComponent } from './components/nav/nav.component';
-//import { NavbarComponent } from './components/navbar/navbar.component';
-import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
-import { FooterComponent } from './components/footer/footer.component';
-
-// import { InputComponent } from './components/input/input.component';
-//import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
 
 import { GraphicLogin } from './@shared/components/graphics/graphic-login/graphic-login.component';
 
@@ -35,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownDirective } from './directives/dropdown/dropdown.directive';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ParallaxDirective } from './@shared/directives/parallax.directive';
+import { HelperService } from './@core/services/helper.service';
 
 @NgModule({
     declarations: [
@@ -49,11 +40,6 @@ import { ParallaxDirective } from './@shared/directives/parallax.directive';
         UserProfileTemplate,
         CategoriesTemplate,
 
-
-        // NavbarComponent,
-        //NavComponent,
-        MostWantedComponent,
-        FooterComponent,
         GraphicLogin,
 
         DropdownDirective,
