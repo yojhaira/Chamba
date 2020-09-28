@@ -16,7 +16,8 @@
                 <div class="content-quote--form">
                     <div class="content-quote--form-inputs">
                         <select name="" id="">
-                            <option value="{{distrito.id}}" *ngFor="let distrito of distritos; let i = index">{{distrito.descripcion}}</option>
+                            <option value="{{distrito.id}}" *ngFor="let distrito of distritos; let i = index">
+                                {{distrito.descripcion}}</option>
                         </select>
                         <select name="" id="">
                             <option value="" selected disabled>¿Lugar?</option>
@@ -59,13 +60,15 @@
                         <div class="categories-list--item-content">
                             <div class="b-icon">
                                 <svg class="icon">
-                                    <use attr.xlink:href="/assets/images/icons/sprite/categories.svg#{{_helper.cleanCharacters(item.descripcion)}}"></use>
+                                    <use
+                                        attr.xlink:href="/assets/images/icons/sprite/categories.svg#{{_helper.cleanCharacters(item.descripcion)}}">
+                                    </use>
                                     <!-- /assets/images/icons/sprite/categories.svg#{{item.categoryIconName}} -->
                                 </svg>
                             </div>
                             <span>{{item.descripcion}}</span>
                         </div>
-                    </ng-container>
+                    </div>
                 </ng-container>
                 <div class="categories-list--item active" routerLink="/categories">
                     <div class="categories-list--item-content">

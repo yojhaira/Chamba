@@ -25,35 +25,6 @@
         </div>
     </div>
 
-    <!-- <ng-container *ngIf="!loggedIn">
-        <button class="primary-button--alternate active navbar-main--button-login" routerLink="/login"
-            *ngIf="!_authService.getCurrentUser()">
-            <div class="primary-button--icon">
-                <div class="md-icon">
-                    <svg class="icon">
-                        <use xlink:href="/assets/images/icons.svg#icon-login"></use>
-                    </svg>
-                </div>
-            </div>
-            <div class="primary-button--content">
-                <span>ingresar</span>
-            </div>
-        </button>
-
-        <button class="primary-button active" routerLink="/register" *ngIf="!_authService.getCurrentUser()">
-            <div class="primary-button--icon">
-                <div class="md-icon">
-                    <svg class="icon">
-                        <use xlink:href="/assets/images/icons.svg#icon-register"></use>
-                    </svg>
-                </div>
-            </div>
-            <div class="primary-button--content">
-                <span>registarse</span>
-            </div>
-        </button>
-    </ng-container> -->
-
     <div class="navbar-main--connected loggedIn" *ngIf="loggedIn">
         <div class="navbar-main--connected-item notification-alert">
             <div class="notification-alert--button" (click)="toggleNotificationPanel()">
@@ -124,7 +95,7 @@
 
     </div>
 
-    <ng-container *ngIf="loggedIn">
+    <ng-container *ngIf="!loggedIn">
         <div class="offline-profile menu-activator">
             <div class="offline-profile__user">
                 <div class="sm-icon">
@@ -173,14 +144,4 @@
         </div>
     </ng-container>
 
-    <!-- <button class="primary-button active" (click)="onLogout()" *ngIf="_authService.getCurrentUser()">
-        <div class="primary-button--icon">
-            <div class="md-icon">
-                <i class="ico register-primary"></i>
-            </div>
-        </div>
-        <div class="primary-button--content">
-            <span> cerrar sesion</span>
-        </div>
-    </button> -->
 </div>
