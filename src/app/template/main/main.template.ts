@@ -36,7 +36,6 @@ export class MainTemplate implements OnInit {
 
     public receivedStateSidenav($event) {
         this.toggleSidenav = $event;
-        console.log('esto deberia activar el menu', this.toggleSidenav);
 
         this.stateTemplate($event);
     }

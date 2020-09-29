@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { JobService } from 'src/app/services/job-categories/job-categories.service';
 import { Subscription } from 'rxjs';
+import { HelperService } from 'src/app/@core/services/helper.service';
 
 @Component({
     selector: 'categories',
@@ -21,12 +22,13 @@ export class CategoriesTemplate implements OnInit {
     public categories: Subscription;
 
     constructor(
-        public jobService: JobService
+        public jobService: JobService,
+        public _helper: HelperService
     ) { }
 
     public ngOnInit(): void {
         this.showCategories();
-        this.scrollToElement(this.wrapperMain.nativeElement);
+        // this.scrollToElement(this.wrapperMain.nativeElement);
         this.titlePage = "Categorías";
         this.nameImage = "gardering"
     }
@@ -41,12 +43,14 @@ export class CategoriesTemplate implements OnInit {
 
 
     public scrollToElement($element): void {
-        $element.scrollIntoView(
-            {
-                behavior: "smooth",
-                block: "start",
-                inline: "nearest"
-            }
-        );
+        setTimeout(() => {
+            $element.scrollIntoView(
+                {
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest"
+                }
+            );
+        }, 500);
     }
 }

@@ -52,10 +52,10 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1201px) {
     .grid-row {
         --size-base: calc(1170px - 30px);
-        margin: 0;
+        // margin: 0;
     }
 }
 
@@ -65,7 +65,7 @@
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 993px) {
     @for $i from 1 through 12 {
         .grid-m-#{$i} {
             --size-grid: calc((var(--size-base) * #{$i}) / 12);
@@ -76,12 +76,13 @@
 
     .grid-row {
         --size-base: 750px;
+        flex-wrap: wrap;
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 770px) {
     @for $i from 1 through 12 {
-        .grid-xs-#{$i} {
+        .grid-s-#{$i} {
             --size-grid: calc((var(--size-base) * #{$i}) / 12);
             flex: 0 0 var(--size-grid);
             padding: 0 15px;

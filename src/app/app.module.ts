@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 /**
-* Template
+* Templates
 */
 import { MainTemplate } from './template/main/main.template';
 import { UserProfileTemplate } from './template/user-profile/user-profile.template';
@@ -14,23 +14,18 @@ import { C404Template } from './template/c404/c404.template';
 import { HttpClientModule } from '@angular/common/http';
 import { MainContentTemplate } from './template/main/main-content/main-content.template';
 import { CategoriesTemplate } from './template/categories/categories.template';
-import { SearchComponent } from './template/search/search.template';
 
-/**
-* Components
-*/
-//import { NavComponent } from './components/nav/nav.component';
-//import { NavbarComponent } from './components/navbar/navbar.component';
-import { MostWantedComponent } from './components/most-wanted/most-wanted.component';
-import { FooterComponent } from './components/footer/footer.component';
 
-// import { InputComponent } from './components/input/input.component';
-import { GraphicLogin } from './components/graphics/graphic-login/graphic-login.component';
+import { GraphicLogin } from './@shared/components/graphics/graphic-login/graphic-login.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
-import { ComponentsModule } from './components/components.module';
+import { ComponentsModule } from './@shared/components/components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropdownDirective } from './directives/dropdown/dropdown.directive';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ParallaxDirective } from './@shared/directives/parallax.directive';
+import { HelperService } from './@core/services/helper.service';
 
 @NgModule({
     declarations: [
@@ -38,7 +33,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         LoginTemplate,
         RegisterTemplate,
         C404Template,
-        SearchComponent,
 
 
         MainTemplate,
@@ -46,12 +40,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         UserProfileTemplate,
         CategoriesTemplate,
 
+        GraphicLogin,
 
-       // NavbarComponent,
-        //NavComponent,
-        MostWantedComponent,
-        FooterComponent,
-        GraphicLogin
+        DropdownDirective,
+        ParallaxDirective
     ],
     imports: [
         BrowserModule,
@@ -61,10 +53,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         HttpClientModule,
 
         ComponentsModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        CarouselModule
     ],
     exports: [],
-    providers: [appRoutingProviders],
+    providers: [
+        appRoutingProviders,
+        //HelperService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

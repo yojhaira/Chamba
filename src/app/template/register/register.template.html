@@ -5,10 +5,10 @@
     </div>
 
     <div class="main-wrapper--container grid-container grid-10">
-        <div class="grid-5">
+        <div class="main-wrapper--container-form grid-5">
             <form class="main-wrapper--container-form" [formGroup]="formRegister" (ngSubmit)="registrar(formRegister)">
                 <div class="container-form--scrollable">
-                    <div class="container-form--logo">
+                    <div class="container-form--logo" routerLink="">
                         <logo-component></logo-component>
                     </div>
                     <div class="container-form--header">
@@ -60,14 +60,15 @@
 
                         <div class="input">
                             <div class="input-container">
-                                <input type="date" id="dataBirth" class="active" formControlName="f_nacimiento" required>
+                                <input type="date" id="dataBirth" class="active" formControlName="f_nacimiento"
+                                    required>
                                 <div class="input-container--box"></div>
                                 <label for="dataBirth">Fecha de nacimientos</label>
-                                <div class="input-container--icons">
+                                <!-- <div class="input-container--icons">
                                     <div class="default-icon input-container--icons-indicator">
                                         <i class="far fa-calendar-alt"></i>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="input-validation" *ngIf="formRegister.get('f_nacimiento').invalid && formRegister.get('f_nacimiento').touched">
                                 <div class="input-validation--tag">
@@ -161,7 +162,8 @@
                             <div class="checkbox">
                                 <div class="checkbox-container">
                                     <input type="checkbox" name="" id="recordar-contraseña">
-                                    <label for="recordar-contraseña">Al crear su Cuenta acepta haber leído y estar de
+                                    <label for="recordar-contraseña">Al crear su Cuenta acepta haber leído y estar
+                                        de
                                         acuerdo con nuestras Políticas de Privacidad y Términos de Uso.</label>
                                 </div>
                             </div>
@@ -188,16 +190,15 @@
                 </div>
             </form>
         </div>
-        <div class="grid-7">
-            <div class="main-wrapper--container-welcome">
-                <div class="container-welcome--header">
-                    <h2>Encuentra al "chamba" que necesitas</h2>
-                    <p>Inicia sesión, cuéntanos lo que necesitas y consigue coticaciones GRATIS y sin compromisos. Tu
-                        decides.</p>
-                </div>
-                <div class="container-welcome--image grid-9">
-                    <graphic-login></graphic-login>
-                </div>
+        <div class="main-wrapper--container-welcome grid-7">
+            <div class="container-welcome--header">
+                <h2>Encuentra o sé ese profesional</h2>
+                <p>Registrate e inicia sesión, cuéntanos lo que necesitas y consigue cotizaciones GRATIS y sin
+                    compromisos. Si eres un profesional
+                    ofrece tu servicio y genera mejores ingresos en nuestra comunidad.</p>
+            </div>
+            <div class="container-welcome--image">
+                <graphic-launch></graphic-launch>
             </div>
         </div>
     </div>
