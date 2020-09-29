@@ -205,6 +205,8 @@
             justify-content: center;
             align-items: center;
 
+            text-transform: capitalize;
+
             will-change: transform;
 
             transition: 0.3s background-color ease-in-out, 0.2s transform ease-in-out, 0.3s border-radius ease-in-out;
