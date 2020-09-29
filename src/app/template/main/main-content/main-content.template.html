@@ -55,30 +55,33 @@
         </div>
         <div class="grid-row">
             <div class="categories-list">
-                <ng-container *ngFor="let item of arrayCategoriesMain">
-                    <div class="categories-list--item">
+                <div class="categories-list__wrapper">
+                    <ng-container *ngFor="let item of arrayCategoriesMain; let i = index">
+                        <ng-container *ngIf="i < 11">
+                            <div class="categories-list--item">
+                                <div class="categories-list--item-content">
+                                    <div class="b-icon">
+                                        <svg class="icon">
+                                            <use
+                                                attr.xlink:href="/assets/images/icons/sprite/categories.svg#{{_helper.cleanCharacters(item.descripcion)}}">
+                                            </use>
+                                            <!-- /assets/images/icons/sprite/categories.svg#{{item.categoryIconName}} -->
+                                        </svg>
+                                    </div>
+                                    <span>{{item.descripcion}}</span>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+                    <div class="categories-list--item active" routerLink="/categories">
                         <div class="categories-list--item-content">
                             <div class="b-icon">
                                 <svg class="icon">
-                                    <use
-                                        attr.xlink:href="/assets/images/icons/sprite/categories.svg#{{_helper.cleanCharacters(item.descripcion)}}">
-                                         
-                                    </use>
-                                    <!-- /assets/images/icons/sprite/categories.svg#{{item.categoryIconName}} -->
+                                    <use xlink:href="/assets/images/icons.svg#icon-more"></use>
                                 </svg>
                             </div>
-                            <span>{{item.descripcion}}</span>
+                            <span>Descubrir</span>
                         </div>
-                    </div>
-                </ng-container>
-                <div class="categories-list--item active" routerLink="/categories">
-                    <div class="categories-list--item-content">
-                        <div class="b-icon">
-                            <svg class="icon">
-                                <use xlink:href="/assets/images/icons.svg#icon-more"></use>
-                            </svg>
-                        </div>
-                        <span>Descubrir</span>
                     </div>
                 </div>
             </div>

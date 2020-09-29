@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { JobService } from 'src/app/services/job-categories/job-categories.service';
 import { Subscription } from 'rxjs';
+import { HelperService } from 'src/app/@core/services/helper.service';
 
 @Component({
     selector: 'categories',
@@ -21,7 +22,8 @@ export class CategoriesTemplate implements OnInit {
     public categories: Subscription;
 
     constructor(
-        public jobService: JobService
+        public jobService: JobService,
+        public _helper: HelperService
     ) { }
 
     public ngOnInit(): void {
